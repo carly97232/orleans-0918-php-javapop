@@ -1,0 +1,35 @@
+.pageStandard
+{
+    margin: 0;
+    padding:0;
+}
+.pageStandard h2
+{
+    color:orangered;
+    display: table;
+    white-space: nowrap;
+    text-align: center;
+}
+
+h2:before, h2:after {
+    content: "";
+    display: table-cell;
+    width: 50%;
+    background: linear-gradient(orangered, orangered) repeat-x left center;
+    background-size: 0.9vh 0.9vh;
+}
+.banner
+{
+    height: 40vh;
+    background-image: url("../img/img-bg/evenements2.jpeg");
+}
+
+.information
+{
+    padding-top: 4vh;
+}
+
+footer p
+{
+    color: orangered;
+}
