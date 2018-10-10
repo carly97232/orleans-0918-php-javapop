@@ -1,11 +1,8 @@
+
 {% extends 'layout.html.twig' %}
 
-{% block banner %}banner1{% endblock %}
-
-{% block titre_de_page %}Items{% endblock %}
-
 {% block content %}
-
+    <h1>Items</h1>
     <ul>
         {% for item in items %}
             <li><a href="/item/{{ item.id }}">{{ item.id }}. {{ item.title }}</a></li>

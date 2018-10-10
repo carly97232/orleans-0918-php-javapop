@@ -23,7 +23,7 @@ body
 {
     padding: 0;
 }
-.pageStandard h2
+.pageStandard h1
 {
     color:orangered;
     display: table;
@@ -32,7 +32,7 @@ body
     font-size: 10vh;
 }
 
-h2:before, h2:after {
+h1:before, h1:after {
     content: "";
     display: table-cell;
     width: 50%;
