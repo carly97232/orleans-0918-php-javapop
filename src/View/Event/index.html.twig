@@ -1,0 +1,28 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block banner %}banner2{% endblock %}
+{% block content %}
+    <h1>Evénements</h1>
+    <ul class="timeline">
+        {% set position='image' %}
+        {% for event in events %}
+            <li>
+                <div class="timeline-{{ position }}">
+                    <img class="rounded-circle img-fluid" src="../../../public/assets/images/about/1.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>{{ event.date }}</h4>
+                        <h4 class="subheading">{{ event.title }}</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">{{ event.comment }}</p>
+                    </div>
+                </div>
+            </li>
+            {% if position=='image' %} {% set position='inverted' %} {% else %}{% set position='image' %} {% endif %}
+        {% endfor %}
+    </ul>
+    <a href="/event/add">Ajouter un événement</a>
+{% endblock %}
