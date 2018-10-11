@@ -2,8 +2,11 @@
 {% extends 'layout.html.twig' %}
 
 {% block banner %}banner2{% endblock %}
+
+{% block titre_de_page %}EVENEMENTS{% endblock %}
+
 {% block content %}
-    <h1>Evénements</h1>
+
     <ul class="timeline">
         {% set position='image' %}
         {% for event in events %}

@@ -30,6 +30,7 @@
 
 <body class="pageStandard">
 
+
    <header class="container-fluid bodycontainer ">
         {% block header %}{% include 'navbar.html.twig' %}{% endblock %}
         <div class="row {% block banner %}{% endblock %} align-items-center">
@@ -40,7 +41,6 @@
     </header>
 
     <section class="container-fluid">
-
         {% block content %}{% endblock %}
 
  </section>
