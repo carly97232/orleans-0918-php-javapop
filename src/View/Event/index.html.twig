@@ -8,8 +8,8 @@
 {% block content %}
 
     <ul class="timeline">
-        {% set position='image' %}
         {% for event in events %}
+            {% set position='image' %}
             <li>
                 <div class="timeline-{{ position }}">
                     <img class="rounded-circle img-fluid" src="../../../public/assets/images/about/1.jpg" alt="">
@@ -27,5 +27,6 @@
             {% if position=='image' %} {% set position='inverted' %} {% else %}{% set position='image' %} {% endif %}
         {% endfor %}
     </ul>
+
     <a href="/event/add">Ajouter un événement</a>
 {% endblock %}
