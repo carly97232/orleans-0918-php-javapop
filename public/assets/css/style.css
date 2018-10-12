@@ -69,6 +69,7 @@ footer p
 
 .prestation{
     padding-left: 5vw;
+    padding-top: 20px;
 }
 .formulaire h5 {
     color: orangered;
@@ -100,4 +101,8 @@ footer p
 }
 textarea.form-control{
     height: 20vh;
+}
+.formRow{
+    padding-top: 2vh;
+    padding-bottom: 3vh;
 }

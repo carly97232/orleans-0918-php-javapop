@@ -1,9 +1,10 @@
 {% extends 'layout.html.twig' %}
+
 {% block titre_de_page %}Contact{% endblock %}
 {% block banner %}banner2{% endblock %}
 {%  block content %}
     <form id="contactForm" name="sentMessage" novalidate="novalidate">
-        <div class="row justify-content-around">
+        <div class="row justify-content-around formRow">
             <div class="col-md-5">
                 <div class="form-group">
                     <input class="form-control" id="name" type="text" placeholder="Votre nom *" required="required" data-validation-required-message="Votre nom doit être inscrit.">
