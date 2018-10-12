@@ -4,7 +4,7 @@
  *
  * PHP version 7
  *
- * @author   WCS <contact@wildcodeschool.fr>
+ * @author   WCS <Form@wildcodeschool.fr>
  *
  * @link     https://github.com/WildCodeSchool/simple-mvc
  */
@@ -16,5 +16,12 @@ $routes = [
         ['edit', '/item/edit/{id:\d+}', ['GET', 'POST']], // action, url, method
         ['show', '/item/{id:\d+}', 'GET'], // action, url, method
         ['delete', '/item/delete/{id:\d+}', 'GET'], // action, url, method
+    ],
+    'Form' => [ // Controller
+        ['index', '/form', 'GET'], // action, url, method
+        ['add', '/form/add', ['GET', 'POST']], // action, url, method
+        ['edit', '/form/edit/{id:\d+}', ['GET', 'POST']], // action, url, method
+        ['show', '/form/{id:\d+}', 'GET'], // action, url, method
+        ['delete', '/form/delete/{id:\d+}', 'GET'], // action, url, method
     ],
 ];

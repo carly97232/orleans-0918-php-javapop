@@ -66,3 +66,24 @@ footer p
     color: orangered;
     padding: 0;
 }
+
+.prestation{
+    padding-left: 5vw;
+}
+.formulaire h5 {
+    color: orangered;
+}
+.formulaire .container-fluid {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.formulaire .text-right {
+    padding-right: 1vw;
+}
+.border-media {
+    border-bottom: 2px solid orangered;
+    width: 13vw;
+}
+.selectSujet{
+    width: 100%;
+}
