@@ -50,4 +50,9 @@ abstract class AbstractManager
     {
         return $this->pdo->query('SELECT * FROM ' . $this->table, \PDO::FETCH_CLASS, $this->className)->fetchAll();
     }
+
+    public function selectAllReverse($field): array
+    {
+        return $this->pdo->query('SELECT * FROM ' . $this->table . " ORDER BY $field DESC", \PDO::FETCH_CLASS, $this->className)->fetchAll();
+    }
 }
