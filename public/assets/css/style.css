@@ -66,3 +66,14 @@ footer p
     color: orangered;
     padding: 0;
 }
+.artist
+{
+    text-align: center;
+    font-size: 20px;
+
+}
+.btn-primary{
+    background-color: #fe4d12;
+    border-color: white;
+    margin-bottom: 50px;
+}
