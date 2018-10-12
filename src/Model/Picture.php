@@ -32,7 +32,7 @@ class Picture
      *
      * @return Picture
      */
-    public function setId($id): Picture
+    public function setId(int $id): Picture
     {
         $this->id = $id;
 
@@ -52,7 +52,7 @@ class Picture
      *
      * @return Picture
      */
-    public function setTitle($title):Picture
+    public function setTitle(string $title):Picture
     {
         $this->title = $title;
 

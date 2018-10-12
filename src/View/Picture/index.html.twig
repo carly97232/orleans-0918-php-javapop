@@ -9,8 +9,8 @@
         <div class="row card_galery">
         {% for picture in pictures %}
 
-        <div class="col-lg-3 col-xs-12">
-        <a href="/galery/{{ picture.id }}"><img class="card-img-top pb-3" style="height: 40vh" src="assets/images/galerie/{{ picture.title }}" alt="{{ picture.title }}"/></a>
+        <div class="col-lg-3 col-xs-12 pictureAdmin">
+        <a href="/galery/{{ picture.id }}"><img class="card-img-top pb-3" src="assets/images/galerie/{{ picture.title }}" alt="{{ picture.title }}"/></a>
         </div>
 
         {% else %}
