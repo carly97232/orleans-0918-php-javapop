@@ -95,3 +95,9 @@ footer p
     background-color: #fe6410;
     border-color: #fe6410;
 }
+.messageForm{
+    height: 20vh;
+}
+textarea.form-control{
+    height: 20vh;
+}

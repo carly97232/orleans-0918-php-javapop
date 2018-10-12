@@ -9,7 +9,7 @@
 namespace Model;
 
 
-class Contact
+class Form
 {
     private $id;
 
