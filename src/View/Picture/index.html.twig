@@ -1,18 +1,22 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Picture</h1>
+    <h1>Photos</h1>
+    <div class="row offset-1">
     <a href="/galery/add">Ajouter une image</a>
+    </div>
     <ul>
-        <div class="row">
+        <div class="row card_galery">
         {% for picture in pictures %}
-        <div class="card col-3">
-        <a href="/galery/{{ picture.id }}"><img class="card-img-top" style="height: 40vh" src="assets/images/galerie/{{ picture.title }}" alt="{{ picture.title }}"/></a>
 
+        <div class="col-lg-3 col-xs-12">
+        <a href="/galery/{{ picture.id }}"><img class="card-img-top pb-3" style="height: 40vh" src="assets/images/galerie/{{ picture.title }}" alt="{{ picture.title }}"/></a>
         </div>
+
         {% else %}
             <li class="addPicture">Nothing to display</li>
         {% endfor %}
+
         </div>
     </ul>
 

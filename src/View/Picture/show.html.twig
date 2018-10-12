@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>Photo</h1>
-    <div style="text-align: center">
+    <div class="showPictureAlone">
         <a href="/assets/images/galerie/{{ picture.title }}"><img style="height: 40vh;" src="/assets/images/galerie/{{ picture.title }}" alt="{{ picture.id }}"/><br></a>
         <form action="/galery/delete/{{picture.id}}" class="addPicture" method="GET">
             <input type="hidden" value="{{ picture.title }}" name="title">
