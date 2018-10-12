@@ -31,7 +31,7 @@ class PictureController extends AbstractController
     public function index()
     {
         $pictureManager = new PictureManager($this->getPdo());
-        $pictures = $pictureManager->selectAllReverse('id');
+        $pictures = $pictureManager->selectAll('id', 'DESC');
 
         return $this->twig->render('Picture/index.html.twig', ['pictures' => $pictures]);
     }

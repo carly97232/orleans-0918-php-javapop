@@ -46,13 +46,12 @@ abstract class AbstractManager
      *
      * @return array
      */
-    public function selectAll(): array
+    public function selectAll($field = '', $order = 'ASC'): array
     {
-        return $this->pdo->query('SELECT * FROM ' . $this->table, \PDO::FETCH_CLASS, $this->className)->fetchAll();
-    }
-
-    public function selectAllReverse($field): array
-    {
-        return $this->pdo->query('SELECT * FROM ' . $this->table . " ORDER BY $field DESC", \PDO::FETCH_CLASS, $this->className)->fetchAll();
+        $query = 'SELECT * FROM ' . $this->table;
+        if ($field) {
+            $query .= ' ORDER BY ' . $field . ' ' . $order;
+        }
+        return $this->pdo->query($query, \PDO::FETCH_CLASS, $this->className)->fetchAll();
     }
 }
