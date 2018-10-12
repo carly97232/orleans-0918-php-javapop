@@ -19,8 +19,8 @@ $routes = [
     ],
     'Picture' => [
         ['index', '/galeryadmin', 'GET'],
-        ['addPic', '/galery/add', ['GET', 'POST']], // action, url, method
-        ['show', '/galery/{id:\d+}', 'GET'], // action, url, method
-        ['delete', '/galery/delete/{id:\d+}', 'GET'], // action, url, method
+        ['addPic', '/galery/add', ['GET', 'POST']],
+        ['show', '/galery/{id:\d+}', 'GET'],
+        ['delete', '/galery/delete/{id:\d+}', 'GET'],
     ],
 ];
