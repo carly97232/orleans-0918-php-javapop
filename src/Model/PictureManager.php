@@ -32,4 +32,16 @@ class PictureManager extends AbstractManager
      * @param Picture $picture
      * @return int
      */
+    public function insert(Picture $picture): int
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("INSERT INTO $this->table (`title`) VALUES (:title)");
+        $statement->bindValue('title', $picture->getTitle(), \PDO::PARAM_STR);
+
+
+        if ($statement->execute()) {
+            return $this->pdo->lastInsertId();
+        }
+    }
+
 }
