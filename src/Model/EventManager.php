@@ -8,7 +8,6 @@
 
 namespace Model;
 
-
 class EventManager extends AbstractManager
 {
 
@@ -60,7 +59,7 @@ class EventManager extends AbstractManager
      * @param Event $event
      * @return int
      */
-    public function update(Event $event):int
+    public function update(Event $event): int
     {
 
         // prepared request

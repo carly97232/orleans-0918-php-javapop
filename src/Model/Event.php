@@ -8,7 +8,6 @@
 
 namespace Model;
 
-
 class Event
 {
     private $id;
