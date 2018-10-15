@@ -19,7 +19,6 @@ $routes = [
     ],
     'Event' => [ // Controller
         ['index', '/event', 'GET'], // action, url, method
-        ['show', '/event/{id:\d+}', 'GET'], // action, url, method
     ],
 
 ];
