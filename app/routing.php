@@ -19,6 +19,6 @@ $routes = [
     ],
     'Event' => [ // Controller
         ['index', '/event', 'GET'], // action, url, method
-     ],
 
+     ],
 ];
