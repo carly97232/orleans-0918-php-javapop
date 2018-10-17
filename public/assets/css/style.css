@@ -15,10 +15,7 @@ body
     background: url('../images/img-bg/grey.jpg') ;
 
 }
-.pageStandard header
-{
-    background: url("../images/img-bg/evenements2.jpeg") no-repeat;
-}
+
 .bodycontainer
 {
     padding: 0;
