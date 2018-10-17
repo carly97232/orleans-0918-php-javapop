@@ -21,6 +21,7 @@
         <!-- Custom styles for this template -->
 
     {% endblock %}
+
     <link href="/assets/css/agency.min.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
     <link href="/assets/css/navBar.css" rel="stylesheet">
@@ -30,7 +31,8 @@
 
 <body class="pageStandard">
 
-    <header class="container-fluid bodycontainer ">
+
+   <header class="container-fluid bodycontainer ">
         {% block header %}{% include 'navbar.html.twig' %}{% endblock %}
         <div class="row {% block banner %}{% endblock %} align-items-center">
             <div class="col-lg-12 text-center">
@@ -40,10 +42,9 @@
     </header>
 
     <section class="container-fluid">
-
         {% block content %}{% endblock %}
 
-    </section>
+ </section>
     <footer class="container-fluid justify-content-center">
         <p>la Java Pop - 45 rue de la Charpenterie 45000 Orleans, Centre - Mentions Légales - Design by WCS <a href=""></a> Contact</p>
     </footer>
