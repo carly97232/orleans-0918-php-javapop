@@ -17,45 +17,42 @@ class Picture
 {
     private $id;
 
-    private $title;
+    private $imgName;
 
     /**
-     * @return int
+     * @return mixed
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
 
     /**
      * @param mixed $id
-     *
-     * @return Picture
      */
-    public function setId(int $id): Picture
+    public function setId($id)
     {
         $this->id = $id;
-
-        return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getTitle(): string
+    public function getImgName()
     {
-        return $this->title;
+        return $this->imgName;
     }
 
     /**
-     * @param mixed $title
-     *
-     * @return Picture
+     * @param mixed $imgName
      */
-    public function setTitle(string $title):Picture
+    public function setImgName($imgName)
     {
-        $this->title = $title;
-
-        return $this;
+        $this->imgName = $imgName;
     }
+
+    /**
+     * @return int
+     */
+
 }
