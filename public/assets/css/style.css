@@ -8,6 +8,11 @@ body
     min-height: 100%; position: relative;
 }
 
+section
+{
+      padding: 1em;
+}
+
 .pageStandard
 {
     margin: 0;
@@ -15,10 +20,7 @@ body
     background: url('../images/img-bg/grey.jpg') ;
 
 }
-.pageStandard header
-{
-    background: url("../images/img-bg/evenements2.jpeg") no-repeat;
-}
+
 .bodycontainer
 {
     padding: 0;
