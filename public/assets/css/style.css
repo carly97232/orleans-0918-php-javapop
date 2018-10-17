@@ -53,6 +53,22 @@ h1:before, h1:after {
     padding-top: 4vh;
 }
 
+
+
+.link_cards li
+{
+    display: inline;
+    width: auto;
+    height: 6vh;
+    background-color: orangered;
+    border: #FFFFFF;
+    border-style: solid;
+    font-weight: bold;
+    font-size: 2em;
+    color: #FFFFFF;
+    padding:0.8em;
+}
+
 footer
 {
     position: absolute;
