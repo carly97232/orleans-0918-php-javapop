@@ -18,6 +18,6 @@ $routes = [
         ['delete', '/item/delete/{id:\d+}', 'GET'], // action, url, method
     ],
     'Picture' => [
-        ['index', '/galeryadmin', 'GET'],
+        ['index', '/admin/gallery', 'GET'],
     ],
 ];
