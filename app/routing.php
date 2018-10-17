@@ -17,4 +17,8 @@ $routes = [
         ['show', '/item/{id:\d+}', 'GET'], // action, url, method
         ['delete', '/item/delete/{id:\d+}', 'GET'], // action, url, method
     ],
+    'Event' => [ // Controller
+        ['index', '/event', 'GET'], // action, url, method
+
+     ],
 ];
