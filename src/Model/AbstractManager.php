@@ -28,8 +28,7 @@ abstract class AbstractManager
      */
     protected $className;
 
-
-    /**
+      /**
      * Initializes Manager Abstract class.
      * @param string $table
      * @param PDO $pdo
@@ -40,6 +39,7 @@ abstract class AbstractManager
         $this->className = __NAMESPACE__ . '\\' . ucfirst($table);
         $this->pdo = $pdo;
     }
+
 
     /**
      * Get all row from database.
