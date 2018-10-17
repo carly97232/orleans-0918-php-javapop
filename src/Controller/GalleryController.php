@@ -10,13 +10,13 @@
 namespace Controller;
 
 use Model\Picture;
-use Model\PictureManager;
+use Model\GalleryManager;
 
 /**
- * Class PictureController
+ * Class GalleryController
  *
  */
-class PictureController extends AbstractController
+class GalleryController extends AbstractController
 {
 
 
@@ -30,7 +30,7 @@ class PictureController extends AbstractController
      */
     public function index()
     {
-        $pictureManager = new PictureManager($this->getPdo());
+        $pictureManager = new GalleryManager($this->getPdo());
         $pictures = $pictureManager->selectAll('id', 'DESC');
 
         return $this->twig->render('Picture/index.html.twig', ['pictures' => $pictures]);
