@@ -46,14 +46,17 @@ h1:before, h1:after {
     height: 40vh;
     background-image: url("../images/img-bg/carte-bg.jpg");
 }
+.banner3
+{
+    height: 40vh;
+    background-image: url("../images/img-bg/carteboissons-bg.jpg");
+}
 
 
 .information
 {
     padding-top: 4vh;
 }
-
-
 
 .link_cards li
 {
@@ -69,6 +72,18 @@ h1:before, h1:after {
     padding:0.8em;
 }
 
+
+.panel-right{
+    text-align: left;
+    margin-left: 62%;
+}
+@media (max-width: 768px) {
+    .panel-right{
+        margin-left:15vw;
+    }
+
+}
+
 footer
 {
     position: absolute;
@@ -79,3 +94,4 @@ footer p
     color: orangered;
     padding: 0;
 }
+
