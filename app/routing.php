@@ -33,5 +33,9 @@ $routes = [
         ['edit', '/artistadmin/edit/{id:\d+}', ['GET', 'POST']], // action, url, method
         ['show', '/artistadmin/{id:\d+}', 'GET'], // action, url, method
         ['delete', '/artistadmin/delete/{id:\d+}', 'GET'], // action, url, method
-    ]
+    ],
+    'Event' => [ // Controller
+        ['index', '/event', 'GET'], // action, url, method
+     ],
 ];
+
