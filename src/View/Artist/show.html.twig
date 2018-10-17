@@ -1,0 +1,8 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Artist {{ artist.title }}</h1>
+    <p>{{ artist.id }}. {{ artist.title }}. {{ artist.local }}</p>
+    <a href="/artist">Back</a>
+{% endblock %}
+
