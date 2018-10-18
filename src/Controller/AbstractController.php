@@ -7,9 +7,11 @@
  * PHP version 7
  */
 namespace Controller;
+
 use Twig_Loader_Filesystem;
 use Twig_Environment;
 use App\Connection;
+
 /**
  *
  */
