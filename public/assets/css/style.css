@@ -56,11 +56,11 @@ h1:before, h1:after {
     text-align: left;
     margin-left: 62%;
 }
-@media (max-width: 768px)
-{
+@media (max-width: 768px) {
     .panel-right{
         margin-left:15vw;
     }
+
 }
 footer
 {
@@ -72,12 +72,7 @@ footer p
     color: orangered;
     padding: 0;
 }
-.artist
-{
-    text-align: center;
-    font-size: 20px;
 
-}
 .btn-primary {
     background-color: #fe4d12;
     border-color: white;
@@ -100,4 +95,5 @@ footer p
 {
     background-image: url("../images/img-bg/header-bg.jpg");
 }
+
 
