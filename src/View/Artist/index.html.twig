@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block banner %}bannerArtist{% endblock %}
+
+
+{% block content %}
+    <h1>Artist</h1>
+    <ul>
+        {% for artist in artists %}
+            <li><a href="/artist/{{ artist.id }}">{{ artist.title }}. {{ artist.local }}</a></li>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
