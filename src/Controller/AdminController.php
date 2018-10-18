@@ -8,7 +8,6 @@
 
 namespace Controller;
 
-
 class AdminController extends AbstractController
 {
     /**
@@ -20,11 +19,8 @@ class AdminController extends AbstractController
      * @throws \Twig_Error_Syntax
      */
     public function admin()
-
     {
 
          return $this->twig->render('Admin/index.html.twig');
     }
-
-
 }
