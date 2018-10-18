@@ -31,6 +31,7 @@
 
 <body class="pageStandard">
 
+
 <header class="container-fluid bodycontainer ">
     {% block header %}{% include 'navbar.html.twig' %}{% endblock %}
     <div class="row {% block banner %}{% endblock %} align-items-center">
@@ -41,14 +42,13 @@
     </div>
 </header>
 
-<section class="container-fluid">
-    {% block content %}{% endblock %}
+    <section class="container-fluid">
+        {% block content %}{% endblock %}
 
-</section>
-<footer class="container-fluid justify-content-center">
-    <p>la Java Pop - 45 rue de la Charpenterie 45000 Orleans, Centre - Mentions Légales - Design by WCS <a href=""></a> Contact</p>
-</footer>
-
+ </section>
+    <footer class="container-fluid justify-content-center">
+        <p>la Java Pop - 45 rue de la Charpenterie 45000 Orleans, Centre - Mentions Légales - Design by WCS <a href=""></a> Contact</p>
+    </footer>
 
 
 
