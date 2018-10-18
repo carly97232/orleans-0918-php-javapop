@@ -25,6 +25,7 @@
         <!-- Custom styles for this template -->
 
     {% endblock %}
+
     <link href="/assets/css/agency.min.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
     <link href="/assets/css/navBar.css" rel="stylesheet">
@@ -34,6 +35,7 @@
 
 
 <body class="pageStandard">
+
 
 <header class="container-fluid bodycontainer ">
     {% block header %}{% include 'navbar.html.twig' %}{% endblock %}
@@ -53,6 +55,15 @@
     <p>la Java Pop - 45 rue de la Charpenterie 45000 Orleans, Centre - Mentions Légales - Design by WCS <a href=""></a>
         Contact</p>
 </footer>
+=======
+    <section class="container-fluid">
+        {% block content %}{% endblock %}
+
+ </section>
+    <footer class="container-fluid justify-content-center">
+        <p>la Java Pop - 45 rue de la Charpenterie 45000 Orleans, Centre - Mentions Légales - Design by WCS <a href=""></a> Contact</p>
+    </footer>
+>>>>>>> 3b9c7b665998e23a04f354db6d15550f4bfce890
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
