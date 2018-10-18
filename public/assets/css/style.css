@@ -11,7 +11,7 @@ body
 {
     margin: 0;
     padding:0;
-    background-image: url("../images/img-bg/header-bg.jpg");
+    background-image: url("../images/img-bg/grey.jpg");
 }
 .bodycontainer
 {
@@ -92,9 +92,12 @@ footer p
     text-align: center;
 
 }
-.acc
+.acc .section-heading
 {
     margin-top: 150px;
 }
-
+.acc
+{
+    background-image: url("../images/img-bg/header-bg.jpg");
+}
 
