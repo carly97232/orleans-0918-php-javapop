@@ -1,0 +1,84 @@
+html
+{
+    width: 100%;
+    height: 100%;
+}
+body
+{
+    min-height: 100%; position: relative;
+}
+
+.pageStandard
+{
+    margin: 0;
+    padding:0;
+    background: url('../images/img-bg/grey.jpg') ;
+
+}
+
+.bodycontainer
+{
+    padding: 0;
+}
+.pageStandard h1
+{
+    color:orangered;
+    display: table;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 10vh;
+}
+
+h1:before, h1:after {
+    content: "";
+    display: table-cell;
+    width: 50%;
+    background: linear-gradient(orangered, orangered) repeat-x left center;
+    background-size: 0.9vh 0.9vh;
+}
+.banner1
+{
+    height: 40vh;
+    background-image: url("../images/img-bg/evenements2.jpeg");
+}
+.banner2
+{
+    height: 40vh;
+    background-image: url("../images/img-bg/evenements.jpeg");
+}
+.banner3
+{
+    height: 40vh;
+    background-image: url("../images/img-bg/carteboissons-bg.jpg");
+}
+
+
+.information
+{
+    padding-top: 4vh;
+}
+
+.panel-right{
+    text-align: left;
+    margin-left: 62%;
+}
+@media (max-width: 768px) {
+    .panel-right{
+        margin-left:15vw;
+    }
+
+}
+
+
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+}
+footer p
+{
+    color: orangered;
+    padding: 0;
+}
+
