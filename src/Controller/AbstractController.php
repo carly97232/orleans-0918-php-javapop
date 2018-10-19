@@ -23,12 +23,12 @@ abstract class AbstractController
      * @var Twig_Environment
      */
     protected $twig;
-    
+
     /**
      * @var \PDO
      */
     protected $pdo;
-    
+
     /**
      *  Initializes this class.
      */
@@ -43,11 +43,11 @@ abstract class AbstractController
             ]
         );
         $this->twig->addExtension(new \Twig_Extension_Debug());
-        
+
         $connection = new Connection();
         $this->pdo = $connection->getPdoConnection();
     }
-    
+
     /**
      * @return \PDO
      */
