@@ -54,6 +54,7 @@ h1:before, h1:after {
 .banner3
 {
     height: 40vh;
+
     background-image: url("../images/img-bg/localisation-bg.jpg");
 }
 
@@ -83,6 +84,19 @@ h1:before, h1:after {
     width:6em;
 }
 
+.panel-right{
+    text-align: left;
+    margin-left: 62%;
+}
+@media (max-width: 768px) {
+    .panel-right{
+        margin-left:15vw;
+    }
+
+}
+
+
+
 footer
 {
     position: absolute;
@@ -93,3 +107,4 @@ footer p
     color: orangered;
     padding: 0;
 }
+

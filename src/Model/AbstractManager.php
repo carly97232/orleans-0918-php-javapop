@@ -28,8 +28,7 @@ abstract class AbstractManager
      */
     protected $className;
 
-
-    /**
+      /**
      * Initializes Manager Abstract class.
      * @param string $table
      * @param PDO $pdo
@@ -41,14 +40,19 @@ abstract class AbstractManager
         $this->pdo = $pdo;
     }
 
+
     /**
      * Get all row from database.
      *
      * @return array
      */
-    public function selectAll(): array
+    public function selectAll($field = '', $order = 'ASC'): array
     {
-        return $this->pdo->query('SELECT * FROM ' . $this->table, \PDO::FETCH_CLASS, $this->className)->fetchAll();
+        $query = 'SELECT * FROM ' . $this->table;
+        if ($field) {
+            $query .= ' ORDER BY ' . $field . ' ' . $order;
+        }
+        return $this->pdo->query($query, \PDO::FETCH_CLASS, $this->className)->fetchAll();
     }
 
     /**
