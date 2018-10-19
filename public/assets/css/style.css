@@ -49,7 +49,7 @@ h1:before, h1:after {
 .banner2
 {
     height: 40vh;
-    background-image: url("../images/img-bg/evenements.jpeg");
+    background-image: url("../images/img-bg/carte-bg.jpg");
 }
 .banner3
 {
@@ -84,6 +84,21 @@ h1:before, h1:after {
     width:6em;
 }
 
+.link_cards li
+{
+    display: inline;
+    width: auto;
+    height: 6vh;
+    background-color: orangered;
+    border: #FFFFFF;
+    border-style: solid;
+    font-weight: bold;
+    font-size: 2em;
+    color: #FFFFFF;
+    padding:0.8em;
+}
+
+
 .panel-right{
     text-align: left;
     margin-left: 62%;
@@ -94,8 +109,6 @@ h1:before, h1:after {
     }
 
 }
-
-
 
 footer
 {
