@@ -7,6 +7,11 @@ body
 {
     min-height: 100%; position: relative;
 }
+
+section
+{
+      padding: 1em;
+}
 .pageStandard
 {
     margin: 0;
@@ -40,17 +45,55 @@ h1:before, h1:after {
 .banner2
 {
     height: 40vh;
-    background-image: url("../images/img-bg/evenements.jpeg");
+    background-image: url("../images/img-bg/carte-bg.jpg");
 }
 .banner3
 {
     height: 40vh;
-    background-image: url("../images/img-bg/carteboissons-bg.jpg");
+
+    background-image: url("../images/img-bg/localisation-bg.jpg");
 }
-.information
+
+.location p
 {
-    padding-top: 4vh;
+    margin-top: 1em;
+    padding-top: 1em;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    text-align: center;
+    height:11em;
 }
+
+.location span
+{
+    padding-top: 1em;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    height:6em;
+}
+
+.location hr
+{
+    background-color: orangered;
+    width:6em;
+}
+
+.link_cards li
+{
+    display: inline;
+    width: auto;
+    height: 6vh;
+    background-color: orangered;
+    border: #FFFFFF;
+    border-style: solid;
+    font-weight: bold;
+    font-size: 2em;
+    color: #FFFFFF;
+    padding:0.8em;
+}
+
 
 .panel-right{
     text-align: left;
@@ -62,6 +105,7 @@ h1:before, h1:after {
     }
 
 }
+
 footer
 {
     position: absolute;

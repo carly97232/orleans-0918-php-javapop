@@ -12,6 +12,7 @@ $routes = [
     'Home' => [ // Controller
         ['index', '/', 'GET'], // action, url, method
     ],
+  
     'Item' => [ // Controller
         ['index', '/item', 'GET'], // action, url, method
         ['add', '/item/add', ['GET', 'POST']], // action, url, method
@@ -19,6 +20,15 @@ $routes = [
         ['show', '/item/{id:\d+}', 'GET'], // action, url, method
         ['delete', '/item/delete/{id:\d+}', 'GET'], // action, url, method
     ],
+
+    'Admin' => [ // Controller
+        ['admin', '/admin', 'GET'], // action, url, method
+    ],
+  
+    'Location' => [ // Controller
+        ['index', '/location', 'GET'], // action, url, method
+    ],
+
     'Event' => [ // Controller
         ['index', '/event', 'GET'], // action, url, method
 
