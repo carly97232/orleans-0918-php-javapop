@@ -12,10 +12,10 @@ namespace Controller;
  * Class ArtistController
  *
  */
-class AccueilController extends AbstractController
+class HomeController extends AbstractController
 {
     public function index()
     {
-        return $this->twig->render('Accueil/accueil.html.twig');
+        return $this->twig->render('Home/index.html.twig', ['specificClass'=>'home']);
     }
 }

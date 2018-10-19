@@ -87,11 +87,12 @@ footer p
     text-align: center;
 
 }
-.acc .section-heading
+.section-heading
 {
     margin-top: 150px;
+
 }
-.acc
+.home
 {
     background-image: url("../images/img-bg/header-bg.jpg");
 }

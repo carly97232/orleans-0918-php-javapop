@@ -1,16 +1,21 @@
 {
-    "name": "jovanela/orleans-0918-php-javapop",
-    "description": "Projet 2",
+    "name": "aurel/simple-mvc",
+    "description": "Simple from scratch PHP MVC",
     "authors": [
         {
-            "name": "Jovanela Daribo",
-            "email": "carly972@live.fr"
+            "name": "Aurelien",
+            "email": "barbier.aurelien@wildcodeschool.fr"
         }
     ],
+    "minimum-stability": "stable",
     "require": {
-        "nikic/fast-route": "^1.3",
-        "twig/twig": "^2.5",
-        "ext-pdo": "*"
+        "php" : ">=7",
+        "ext-pdo" : "*",
+        "nikic/fast-route": "^1.2",
+        "twig/twig": "^2.4"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
         "psr-4": {
