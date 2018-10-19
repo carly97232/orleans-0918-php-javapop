@@ -27,8 +27,27 @@ class DrinkController extends AbstractController
     public function index()
     {
         $drinkManager = new DrinkManager($this->getPdo());
-        $drinks = $drinkManager->selectAll();
-        return $this->twig->render('Drink/index.html.twig', ['drinks' => $drinks]);
+        $drinks = $drinkManager->selectAllDrink();
+
+        $types= [];
+        foreach ($drinks as $drink){
+            $type_name = $drink['type_name'];
+            if (!in_array($type_name, $types)) {
+                $types[]= $type_name;
+            }
+        }
+//        foreach ($types as $type){
+//            foreach ($drinks as $drink){
+//                foreach($drink as $key => $value) {
+//                    if ($value = $type && !in_array()) {
+//                        $categoryDrink[$type][] = array($drinks[$type]['name'], $drink['volume']);
+//                    }
+//                }
+//            }
+//        }
+//        var_dump($categoryDrink[$type]);
+        return $this->twig->render('Drink/index.html.twig', ['drinks' => $drinks, 'types'=> $types]);
     }
+
 
 }

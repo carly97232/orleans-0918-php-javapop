@@ -50,6 +50,12 @@ h1:before, h1:after {
     background-image: url("../images/img-bg/evenements.jpeg");
 }
 
+.banner3
+{
+    height: 40vh;
+    background-image: url("../images/img-bg/carteboissons-bg.jpg");
+}
+
 
 .information
 {

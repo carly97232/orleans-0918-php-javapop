@@ -7,11 +7,59 @@
 {% block content %}
 
 
-    <ul>
-        {% for drink in drinks %}
-            <li class="text-white">{{ drink.name }}</li>
-        {% endfor %}
+
+{% set categories = [] %}
+    {% for drink in drinks %}
+        {% if drink.type_name not in categories %}
+            {% set categories = categories|merge([drink.type_name])  %}
+        {% endif %}
+
+    {% endfor %}
+
+
+
+{% for category in categories  %}
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link " id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">{{ category }}</a>
+        </li>
+
     </ul>
+    <div class="tab-content text-primary" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-{% endblock %}
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">nom</th>
+                            <th scope="col">ingredient</th>
+                            <th scope="col">volume</th>
+                            <th scope="col">prix</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for drink in drinks %}
+                        {% if drink.type_name in category %}
+                        <tr>
+                            <td>{{ drink.name }}</td>
+                            <td>{{ drink.ingredients }}</td>
+                            <td>{{ drink.volume }}</td>
+                            <td>{{ drink.prix }}</td>
+                        </tr>
+                        {% endif %}
 
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+
+
+        </div>
+
+
+{% endfor %}
+
+
+
+{%  endblock %}

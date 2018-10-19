@@ -14,7 +14,7 @@ class DrinkManager extends AbstractManager
     /**
      *
      */
-    const TABLE = 'drink';
+    const TABLE = 'drink_has_volume';
 
     /**
      *  Initializes this class.
@@ -24,6 +24,19 @@ class DrinkManager extends AbstractManager
         parent::__construct(self::TABLE, $pdo);
     }
 
-    public function beergit branc
+    public function selectAllDrink()
+    {
+        $stmt = $this->pdo->query("SELECT drink.name, drink.ingredients, dhv.prix,volume.volume, type.name as type_name
+                                            FROM $this->table dhv
+                                            JOIN drink ON drink.id = dhv.drink_id 
+                                            JOIN type ON type.id=drink.type_id
+                                            JOIN volume ON volume.id = dhv.volume_id");
+        $stmt->setFetchMode(\PDO::FETCH_ASSOC);
+        return $stmt->fetchAll();
+    }
+
+
+
+
 }
 
