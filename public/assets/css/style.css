@@ -12,15 +12,12 @@ section
 {
       padding: 1em;
 }
-
 .pageStandard
 {
     margin: 0;
     padding:0;
-    background: url('../images/img-bg/grey.jpg') ;
-
+    background-image: url("../images/img-bg/grey.jpg");
 }
-
 .bodycontainer
 {
     padding: 0;
@@ -33,7 +30,6 @@ section
     text-align: center;
     font-size: 10vh;
 }
-
 h1:before, h1:after {
     content: "";
     display: table-cell;
@@ -120,4 +116,29 @@ footer p
     color: orangered;
     padding: 0;
 }
+
+.btn-primary {
+    background-color: #fe4d12;
+    border-color: white;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+.menuclic
+{
+    text-align: center;
+
+}
+.section-heading
+{
+    margin-top: 150px;
+
+}
+.home
+{
+    background-image: url("../images/img-bg/header-bg.jpg");
+}
+
 
