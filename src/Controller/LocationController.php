@@ -8,12 +8,10 @@
 
 namespace Controller;
 
-
-
 class LocationController extends AbstractController
 {
     public function index()
     {
-      return $this->twig->render('Location/index.html.twig');
+        return $this->twig->render('Location/index.html.twig');
     }
 }
