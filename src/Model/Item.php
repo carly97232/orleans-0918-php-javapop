@@ -16,12 +16,12 @@ namespace Model;
 class Item
 {
     /**
-     * @var
+     * @var int
      */
     private $id;
 
     /**
-     * @var
+     * @var string
      */
     private $title;
 
