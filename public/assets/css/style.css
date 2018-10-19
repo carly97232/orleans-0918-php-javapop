@@ -8,6 +8,11 @@ body
     min-height: 100%; position: relative;
 }
 
+section
+{
+      padding: 1em;
+}
+
 .pageStandard
 {
     margin: 0;
@@ -49,13 +54,34 @@ h1:before, h1:after {
 .banner3
 {
     height: 40vh;
-    background-image: url("../images/img-bg/carteboissons-bg.jpg");
+
+    background-image: url("../images/img-bg/localisation-bg.jpg");
 }
 
-
-.information
+.location p
 {
-    padding-top: 4vh;
+    margin-top: 1em;
+    padding-top: 1em;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    text-align: center;
+    height:11em;
+}
+
+.location span
+{
+    padding-top: 1em;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    height:6em;
+}
+
+.location hr
+{
+    background-color: orangered;
+    width:6em;
 }
 
 .link_cards li

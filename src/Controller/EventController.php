@@ -18,8 +18,6 @@ use Model\EventManager;
  */
 class EventController extends AbstractController
 {
-
-
     /**
      * Display item listing
      *
@@ -35,5 +33,4 @@ class EventController extends AbstractController
 
         return $this->twig->render('Event/index.html.twig', ['events' => $events]);
     }
-
 }

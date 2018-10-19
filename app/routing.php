@@ -21,6 +21,10 @@ $routes = [
     'Admin' => [ // Controller
         ['admin', '/admin', 'GET'], // action, url, method
     ],
+  
+    'Location' => [ // Controller
+        ['index', '/location', 'GET'], // action, url, method
+    ],
 
     'Event' => [ // Controller
         ['index', '/event', 'GET'], // action, url, method
