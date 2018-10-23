@@ -8,6 +8,9 @@
 
 namespace Controller;
 
+use Model\Event;
+use Model\EventManager;
+
 class EventAdminController extends AbstractController
 {
 
@@ -33,7 +36,14 @@ class EventAdminController extends AbstractController
     public function add()
     {
 
-
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $eventManager = new EventManager($this->getPdo());
+            $event = new Event();
+            $event->setTitle($_POST['title']);
+            $event->setDate($_POST['date']);
+            $event->setComment($_POST['comment']);
+            $id = $eventManager->insert($event);
+        }
 
         return $this->twig->render('EventAdmin/add.html.twig');
     }
