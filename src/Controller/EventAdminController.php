@@ -35,6 +35,6 @@ class EventAdminController extends AbstractController
 
 
 
-        return $this->twig->render('Admin/add.html.twig');
+        return $this->twig->render('EventAdmin/add.html.twig');
     }
 }
