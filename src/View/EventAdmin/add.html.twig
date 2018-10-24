@@ -9,6 +9,8 @@
                 {% for error in errors %}{{ error }}{% endfor %}
             {% endif %}
         </p>
+    </div>
+    <div class="row">
         <div class="col-8">
             <form method="post" class="text-white "  >
                 <div class="m-2">
@@ -20,7 +22,7 @@
                 </div>
                 <div class="m-2">
                     <label class="col-3" for="date">Date de l'événement *</label>
-                    <input class="col-8 h-15 p-3" type="text" id="date" value="{{ event.date }}" name="date" required="required" placeholder="AAAA-MM-JJ" >
+                    <input class="col-8 h-15 p-3" type="text" id="date" value="{{ event.date }}" name="date" required="required" placeholder="YYYY-MM-DD" >
                 </div>
                 <div class="m-2">
                     <label class="col-3" for="comment">Présentation de l'événement</label>

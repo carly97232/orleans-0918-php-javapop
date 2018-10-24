@@ -71,7 +71,6 @@ class EventAdminController extends AbstractController
      */
     public function add()
     {
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && empty(self::check())) {
             $eventManager = new EventManager($this->getPdo());
             $event = new Event();
@@ -79,8 +78,8 @@ class EventAdminController extends AbstractController
             $event->setDate(self::testInput($_POST['date']));
             $event->setComment($_POST['comment']);
             $id = $eventManager->insert($event);
+            header('Location: /eventAdmin/add');
         }
-
         return $this->twig->render('EventAdmin/add.html.twig', ['errors'=> self::check()]);
     }
 }
