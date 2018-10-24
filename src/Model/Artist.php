@@ -14,8 +14,11 @@ namespace Model;
 class Artist
 {
     private $id;
-    private $title;
+    private $name;
     private $local;
+    private $picture;
+    private $favorite;
+
     /**
      * @return int
      */
@@ -36,18 +39,18 @@ class Artist
     /**
      * @return mixed
      */
-    public function getTitle(): string
+    public function getName(): string
     {
-        return $this->title;
+        return $this->name;
     }
     /**
-     * @param mixed $title
+     * @param mixed $name
      *
      * @return Artist
      */
-    public function setTitle($title):Artist
+    public function setName($name):Artist
     {
-        $this->title = $title;
+        $this->name = $name;
         return $this;
     }
     /**
@@ -64,4 +67,38 @@ class Artist
     {
         $this->local = $local;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPicture()
+    {
+        return $this->picture;
+    }
+
+    /**
+     * @param mixed $picture
+     */
+    public function setPicture($picture)
+    {
+        $this->picture = $picture;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFavorite()
+    {
+        return $this->favorite;
+    }
+
+    /**
+     * @param mixed $favorite
+     */
+    public function setFavorite($favorite)
+    {
+        $this->favorite = $favorite;
+    }
+
+
 }

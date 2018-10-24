@@ -1,7 +1,12 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Artist {{ artist.title }}</h1>
-    <p>{{ artist.id }}. {{ artist.title }}. {{ artist.local }}</p>
+    <h1>{{ artist.name }}</h1>
     <a href="/artist">Back</a>
+    <div class="picture card">
+        <img class="card-img-top" src="{{ artist.picture }}" alt="Artiste">
+        <div class="card-body">
+            <p>{{ artist.name }}</p>
+        </div>
+    </div>
 {% endblock %}

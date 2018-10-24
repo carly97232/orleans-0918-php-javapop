@@ -58,7 +58,7 @@ class ArtistController extends AbstractController
         $artistManager = new ArtistManager($this->getPdo());
         $artist = $artistManager->selectOneById($id);
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $artist->setTitle($_POST['title']);
+            $artist->setName($_POST['name']);
             $artistManager->update($artist);
         }
         return $this->twig->render('Artist/edit.html.twig', ['artist' => $artist]);
@@ -76,7 +76,7 @@ class ArtistController extends AbstractController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $artistManager = new ArtistManager($this->getPdo());
             $artist = new Artist();
-            $artist->setTitle($_POST['title']);
+            $artist->setName($_POST['name']);
             $id = $artistManager->insert($artist);
             header('Location:/artist/' . $id);
         }

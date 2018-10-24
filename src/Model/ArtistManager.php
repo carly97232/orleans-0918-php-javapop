@@ -30,8 +30,8 @@ class ArtistManager extends AbstractManager
     public function insert(Artist $artist): int
     {
         // prepared request
-        $statement = $this->pdo->prepare("INSERT INTO $this->table (`title`) VALUES (:title)");
-        $statement->bindValue('title', $artist->getTitle(), \PDO::PARAM_STR);
+        $statement = $this->pdo->prepare("INSERT INTO $this->table (`name`) VALUES (:name)");
+        $statement->bindValue('name', $artist->getName(), \PDO::PARAM_STR);
         if ($statement->execute()) {
             return $this->pdo->lastInsertId();
         }
@@ -53,9 +53,9 @@ class ArtistManager extends AbstractManager
     public function update(Artist $artist):int
     {
         // prepared request
-        $statement = $this->pdo->prepare("UPDATE $this->table SET `title` = :title WHERE id=:id");
+        $statement = $this->pdo->prepare("UPDATE $this->table SET `name` = :name WHERE id=:id");
         $statement->bindValue('id', $artist->getId(), \PDO::PARAM_INT);
-        $statement->bindValue('title', $artist->getTitle(), \PDO::PARAM_STR);
+        $statement->bindValue('name', $artist->getName(), \PDO::PARAM_STR);
         return $statement->execute();
     }
 }

@@ -53,6 +53,12 @@ h1:before, h1:after {
 
     background-image: url("../images/img-bg/localisation-bg.jpg");
 }
+.bannerArtist
+{
+    height: 40vh;
+
+    background-image: url("../images/img-bg/artistes-bg.jpg");
+}
 
 .location p
 {
@@ -140,5 +146,37 @@ footer p
 {
     background-image: url("../images/img-bg/header-bg.jpg");
 }
-
+.imgart
+{
+    width:250px;
+    height:250px;
+    border-radius: 50%;
+}
+.local
+{
+    width: 40%;
+    margin-top: 10vw;
+}
+.favorite
+{
+    width: 40%;
+    margin-top: 10vw;
+}
+.artspace
+{
+    margin-top: 5vw;
+    text-align: center;
+    margin-bottom: 10%;
+}
+.picture
+{
+    width: 500px;
+    margin-bottom: 10%;
+}
+.name
+{
+    font-size: 40px;
+    color: #ff0c13;
+    margin-left: 1vw;
+}
 
