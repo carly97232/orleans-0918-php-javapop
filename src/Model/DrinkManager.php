@@ -35,5 +35,3 @@ class DrinkManager extends AbstractManager
     }
 }
 
-
-

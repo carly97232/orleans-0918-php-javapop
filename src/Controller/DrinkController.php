@@ -32,7 +32,7 @@ class DrinkController extends AbstractController
         $drinks = $drinkManager->selectAllDrink();
 
         $drinksByType= [] ;
-        foreach ($drinks as $drink){
+        foreach ($drinks as $drink) {
             $type_name = str_replace(' ', '', $drink['type_name']);
             $type_name = str_replace('è', 'e', $type_name);
             $drinksByType[$type_name][]= $drink;
