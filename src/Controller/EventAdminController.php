@@ -10,6 +10,7 @@ namespace Controller;
 
 use Model\Event;
 use Model\EventManager;
+use Filter\Text;
 
 class EventAdminController extends AbstractController
 {
@@ -26,39 +27,27 @@ class EventAdminController extends AbstractController
         return $this->twig->render('EventAdmin/index.html.twig');
     }
 
+
     /**
-     * @param $data
-     * @return string
+     * @param array $userData
+     * @return array
      */
-    private function testInput(string $data): string
+    private function check(array $userData)
     {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
+        $errorsForm = [];
 
-
-    private function check()
-    {
-        $err=[];
-// Traitement du formulaire
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Teste si tous les champs sont remplis
-            if (empty($_POST["title"])) {
-                $err[] = "ecrire le titre de l'événement";
-            }
-            if (empty($_POST["date"])) {
-                $err[] = "Ecrire la date";
-            } else {
-                if (!preg_match("/(2\d{3})-(0[0-9]|1[0-2])-([0-3][0-9])/", $_POST["date"])) {
-                    $err[] = "Ecrire la date au format YYYY-MM-DD";
-                }
+        if (empty($userData['title'])) {
+            $errorsForm[] = "Ecrire le titre de l'événement";
+        }
+        if (empty($userData["date"])) {
+            $errorsForm[] = "Ecrire la date";
+        } else {
+            if (!preg_match("/(2\d{3})-(0[0-9]|1[0-2])-([0-3][0-9])/", $userData["date"])) {
+                $errorsForm[] = "Ecrire la date au format YYYY-MM-DD";
             }
         }
-        return $err;
+        return $errorsForm;
     }
-
 
 
     /**
@@ -71,15 +60,29 @@ class EventAdminController extends AbstractController
      */
     public function add()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && empty(self::check())) {
-            $eventManager = new EventManager($this->getPdo());
-            $event = new Event();
-            $event->setTitle(self::testInput($_POST['title']));
-            $event->setDate(self::testInput($_POST['date']));
-            $event->setComment($_POST['comment']);
-            $id = $eventManager->insert($event);
-            header('Location: /eventAdmin/add');
+        $errors = $userData = [];
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // filtre $_post
+
+            $userData = $_POST;
+            $textFilter = new Text();
+            $textFilter->setTexts($userData);
+            $userData = $textFilter->filter();
+
+            // check
+            $errors = $this->check($userData);
+            if (empty($errors)) {
+                $eventManager = new EventManager($this->getPdo());
+                $event = new Event();
+                $event->setTitle($userData['title']);
+                $event->setDate($userData['date']);
+                $event->setComment($userData['comment']);
+                $id = $eventManager->insert($event);
+                header('Location: /admin/eventAdmin/add');
+                exit();
+            }
         }
-        return $this->twig->render('EventAdmin/add.html.twig', ['errors'=> self::check()]);
+        return $this->twig->render('EventAdmin/add.html.twig', ['errors' => $errors]);
     }
 }
