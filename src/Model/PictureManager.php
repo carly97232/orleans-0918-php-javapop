@@ -12,12 +12,12 @@ namespace Model;
 /**
  *
  */
-class GalleryManager extends AbstractManager
+class PictureManager extends AbstractManager
 {
     /**
      *
      */
-    const TABLE = 'gallery';
+    const TABLE = 'picture';
 
     /**
      *  Initializes this class.

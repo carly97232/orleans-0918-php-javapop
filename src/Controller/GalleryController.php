@@ -9,8 +9,8 @@
 
 namespace Controller;
 
-use Model\Gallery;
-use Model\GalleryManager;
+use Model\Picture;
+use Model\PictureManager;
 
 /**
  * Class GalleryController
@@ -26,9 +26,9 @@ class GalleryController extends AbstractController
      */
     public function index()
     {
-        $galleryManager = new GalleryManager($this->getPdo());
-        $gallerys = $galleryManager->selectAll('id', 'DESC');
+        $pictureManager = new PictureManager($this->getPdo());
+        $pictures = $pictureManager->selectAll('id', 'DESC');
 
-        return $this->twig->render('Gallery/gallery.html.twig', ['gallerys' => $gallerys]);
+        return $this->twig->render('Gallery/index.html.twig', ['pictures' => $pictures]);
     }
 }
