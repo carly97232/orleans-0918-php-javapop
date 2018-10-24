@@ -34,7 +34,6 @@ class DrinkController extends AbstractController
         $drinksByType= [] ;
         foreach ($drinks as $drink) {
             $type_name = str_replace(' ', '', $drink['type_name']);
-            $type_name = str_replace('è', 'e', $type_name);
             $drinksByType[$type_name][]= $drink;
         }
         return $this->twig->render('Drink/index.html.twig', ['drinksByType' => $drinksByType]);
