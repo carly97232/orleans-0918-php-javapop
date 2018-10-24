@@ -5,3 +5,4 @@ app/db.php
 /.idea/
 /vendor/
 public/assets/images/gallery/*
+!public/assets/images/gallery/.gitkeep
