@@ -8,7 +8,6 @@
 
 namespace Model;
 
-
 class DrinkManager extends AbstractManager
 {
     /**
@@ -34,9 +33,6 @@ class DrinkManager extends AbstractManager
         $stmt->setFetchMode(\PDO::FETCH_ASSOC);
         return $stmt->fetchAll();
     }
-
-
-
-
 }
+
 

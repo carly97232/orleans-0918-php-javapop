@@ -8,6 +8,7 @@
 
 
 namespace Controller;
+
     use Model\Drink;
     use Model\DrinkManager;
     /**
@@ -39,3 +40,4 @@ class DrinkController extends AbstractController
         return $this->twig->render('Drink/index.html.twig', ['drinksByType' => $drinksByType]);
     }
 }
+
