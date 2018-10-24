@@ -19,8 +19,10 @@ class DrinkManager extends AbstractManager
      */
     const TABLE = 'drink_has_volume';
 
+
     /**
-     *  Initializes this class.
+     * DrinkManager constructor.
+     * @param \PDO $pdo
      */
     public function __construct(\PDO $pdo)
     {

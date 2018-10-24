@@ -54,8 +54,10 @@ class Drink
         return $this->title;
     }
 
+
     /**
-     * @param mixed $title
+     * @param $title
+     * @return Drink
      */
     public function setTitle($title) : Drink
     {

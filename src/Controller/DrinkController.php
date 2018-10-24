@@ -12,21 +12,21 @@ namespace Controller;
     use Model\Drink;
     use Model\DrinkManager;
 
+
     /**
-     * Class CardController
-     *
+     * Class DrinkController
+     * @package Controller
      */
-class DrinkController extends AbstractController
+    class DrinkController extends AbstractController
 {
-    /**
-     * Display item listing
-     *
-     * @return string
-     * @throws \Twig_Error_Loader
-     * @throws \Twig_Error_Runtime
-     * @throws \Twig_Error_Syntax
-     */
-    public function index()
+
+        /**
+         * @return string
+         * @throws \Twig_Error_Loader
+         * @throws \Twig_Error_Runtime
+         * @throws \Twig_Error_Syntax
+         */
+        public function index()
     {
         $drinkManager = new DrinkManager($this->getPdo());
         $drinks = $drinkManager->selectAllDrink();
