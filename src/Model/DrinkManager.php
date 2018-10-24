@@ -8,6 +8,10 @@
 
 namespace Model;
 
+/**
+ * Class DrinkManager
+ * @package Model
+ */
 class DrinkManager extends AbstractManager
 {
     /**
@@ -23,6 +27,9 @@ class DrinkManager extends AbstractManager
         parent::__construct(self::TABLE, $pdo);
     }
 
+    /**
+     * @return array
+     */
     public function selectAllDrink()
     {
         $stmt = $this->pdo->query("SELECT drink.name, drink.ingredients, dhv.prix,volume.volume, type.name as type_name

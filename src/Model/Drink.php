@@ -8,10 +8,21 @@
 
 namespace Model;
 
+
+/**
+ * Class Drink
+ * @package Model
+ */
 class Drink
 {
+    /**
+     * @var
+     */
     private $id;
 
+    /**
+     * @var
+     */
     private $title;
 
     /**
