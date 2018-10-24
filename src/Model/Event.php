@@ -103,7 +103,4 @@ class Event
     {
         $this->comment = $comment;
     }
-
-
-
 }

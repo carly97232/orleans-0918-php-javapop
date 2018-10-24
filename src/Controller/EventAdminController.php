@@ -30,7 +30,7 @@ class EventAdminController extends AbstractController
      * @param $data
      * @return string
      */
-    private function testInput($data)
+    private function testInput(string $data): string
     {
         $data = trim($data);
         $data = stripslashes($data);
