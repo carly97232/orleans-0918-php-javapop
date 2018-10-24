@@ -21,6 +21,7 @@
         <!-- Custom styles for this template -->
 
     {% endblock %}
+
     <link href="/assets/css/agency.min.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
     <link href="/assets/css/navBar.css" rel="stylesheet">
@@ -28,25 +29,25 @@
 
 </head>
 
-<body class="pageStandard">
+<body class="pageStandard {{ homeBackImg }}" >
 
-    <header class="container-fluid bodycontainer ">
-        {% block header %}{% include 'navbar.html.twig' %}{% endblock %}
-        <div class="row {% block banner %}{% endblock %} align-items-center">
-            <div class="col-lg-12 text-center">
-                <h1 class="section-heading text-uppercase">{% block titre_de_page %}{% endblock %}</h1>
-            </div>
+
+<header class="container-fluid bodycontainer ">
+    {% block header %}{% include 'navbar.html.twig' %}{% endblock %}
+    <div class="row {% block banner %}{% endblock %} align-items-center">
+        <div class="col-lg-12 text-center">
+            <h1 class="section-heading text-uppercase">{% block titre_de_page %}{% endblock %}</h1>
         </div>
-    </header>
+    </div>
+</header>
 
-    <section class="container-fluid">
+<section class="container-fluid">
+    {% block content %}{% endblock %}
 
-        {% block content %}{% endblock %}
-
-    </section>
-    <footer class="container-fluid justify-content-center">
-        <p>la Java Pop - 45 rue de la Charpenterie 45000 Orleans, Centre - Mentions Légales - Design by WCS <a href=""></a> Contact</p>
-    </footer>
+</section>
+<footer class="container-fluid justify-content-center">
+    <p>la Java Pop - 45 rue de la Charpenterie 45000 Orleans, Centre - Mentions Légales - Design by WCS <a href=""></a> Contact</p>
+</footer>
 
 
 
@@ -69,4 +70,3 @@
 
 
 </html>
-
