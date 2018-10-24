@@ -16,7 +16,7 @@ namespace Model;
 class Picture
 {
     /**
-     * @var
+     * @int
      */
     private $id;
 
@@ -26,33 +26,35 @@ class Picture
     private $imgName;
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $id
+     * @param int $id
+     * @return int
      */
-    public function setId($id)
+    public function setId(int $id): int
     {
         $this->id = $id;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getImgName()
+    public function getImgName(): string
     {
         return $this->imgName;
     }
 
     /**
-     * @param mixed $imgName
+     * @param string $imgName
+     * @return string
      */
-    public function setImgName($imgName)
+    public function setImgName(string $imgName): string
     {
         $this->imgName = $imgName;
     }
