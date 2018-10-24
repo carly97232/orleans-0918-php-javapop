@@ -11,6 +11,7 @@ namespace Controller;
 
     use Model\Drink;
     use Model\DrinkManager;
+
     /**
      * Class CardController
      *
@@ -30,14 +31,12 @@ class DrinkController extends AbstractController
         $drinkManager = new DrinkManager($this->getPdo());
         $drinks = $drinkManager->selectAllDrink();
 
-        $drinksByType= [];
+        $drinksByType= [] ;
         foreach ($drinks as $drink){
             $type_name = str_replace(' ', '', $drink['type_name']);
             $type_name = str_replace('è', 'e', $type_name);
             $drinksByType[$type_name][]= $drink;
         }
-
         return $this->twig->render('Drink/index.html.twig', ['drinksByType' => $drinksByType]);
     }
 }
-

@@ -11,6 +11,7 @@ namespace Controller;
 use Twig_Loader_Filesystem;
 use Twig_Environment;
 use App\Connection;
+
 /**
  *
  */
@@ -49,4 +50,3 @@ abstract class AbstractController
         return $this->pdo;
     }
 }
-
