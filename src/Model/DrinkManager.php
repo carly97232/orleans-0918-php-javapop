@@ -34,4 +34,3 @@ class DrinkManager extends AbstractManager
         return $stmt->fetchAll();
     }
 }
-
