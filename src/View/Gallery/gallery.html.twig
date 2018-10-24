@@ -8,7 +8,19 @@
         <div class="row card_galery">
         {% for gallery in gallerys %}
         <div class="col-lg-3 col-xs-12">
-        <a><img class="card-img-top pb-3  galleryPicture" src="../assets/images/gallery/{{ gallery.imgName }}" alt="images des evenements de la javapop"/></a>
+            <img class="card-img-top pb-3  galleryPicture" src="../assets/images/gallery/{{ gallery.imgName }}" alt="images des evenements de la javapop"/>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{ gallery.id }}">
+                Agrandir l'image
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal{{ gallery.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-dialog-centered modalPicture">
+                            <img class="card-img-top pb-3" src="../assets/images/gallery/{{ gallery.imgName }}" alt="images des evenements de la javapop"/>
+                    </div>
+                </div>
+            </div>
         </div>
         {% else %}
             <li class="addPicture">Nothing to display</li>

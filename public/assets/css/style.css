@@ -160,6 +160,11 @@ footer p
 .galleryPicture
 {
     height: 20vw;
+    width: 20vw;
 
 }
-
+.modalPicture
+{
+    background-color: transparent;
+    border-color: transparent;
+}
