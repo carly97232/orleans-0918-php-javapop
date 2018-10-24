@@ -14,9 +14,6 @@ namespace Model;
  */
 class DrinkManager extends AbstractManager
 {
-    /**
-     *
-     */
     const TABLE = 'drink_has_volume';
 
 
