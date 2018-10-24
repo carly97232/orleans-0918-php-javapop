@@ -11,26 +11,24 @@ namespace Model;
 class Event
 {
     /**
-     * @var
+     * @var int
      */
     private $id;
 
     /**
-     * @var
+     * @var string
      */
     private $title;
 
     /**
-     * @var
+     * @var \DateTime
      */
     private $date;
 
     /**
-     * @var
+     * @var string
      */
     private $comment;
-
-
 
     /**
      * @return int
@@ -41,19 +39,15 @@ class Event
     }
 
     /**
-     * @param mixed $id
-     *
-     * @return Event
+     * @param int $id
      */
-    public function setId($id): Event
+    public function setId(int $id): void
     {
         $this->id = $id;
-
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getTitle(): string
     {
@@ -61,45 +55,41 @@ class Event
     }
 
     /**
-     * @param mixed $title
-     *
-     * @return Event
+     * @param string $title
      */
-    public function setTitle($title):Event
+    public function setTitle(string $title): void
     {
         $this->title = $title;
-
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return \DateTime
      */
-    public function getDate()
+    public function getDate(): \DateTime
     {
         return $this->date;
     }
 
     /**
-     * @param mixed $date
+     * @param \DateTime $date
      */
-    public function setDate($date)
+    public function setDate(\DateTime $date): void
     {
         $this->date = $date;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getComment()
+    public function getComment(): string
     {
         return $this->comment;
     }
 
     /**
-     * @param mixed $comment
+     * @param string $comment
      */
-    public function setComment($comment)
+    public function setComment(string $comment): void
     {
         $this->comment = $comment;
     }

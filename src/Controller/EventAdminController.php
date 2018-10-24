@@ -43,7 +43,7 @@ class EventAdminController extends AbstractController
             $errorsForm[] = "Ecrire la date";
         } else {
             if (!preg_match("/(2\d{3})-(0[0-9]|1[0-2])-([0-3][0-9])/", $userData["date"])) {
-                $errorsForm[] = "Ecrire la date au format YYYY-MM-DD";
+                $errorsForm[] = "Ecrire la date au bon format";
             }
         }
         return $errorsForm;
@@ -63,14 +63,11 @@ class EventAdminController extends AbstractController
         $errors = $userData = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // filtre $_post
-
             $userData = $_POST;
             $textFilter = new Text();
             $textFilter->setTexts($userData);
             $userData = $textFilter->filter();
 
-            // check
             $errors = $this->check($userData);
             if (empty($errors)) {
                 $eventManager = new EventManager($this->getPdo());
