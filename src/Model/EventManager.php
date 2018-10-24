@@ -31,7 +31,8 @@ class EventManager extends AbstractManager
     public function insert(Event $event): int
     {
         // prepared request
-        $statement = $this->pdo->prepare("INSERT INTO $this->table (`title`,`date`,`comment`) VALUES (:title, :date, :comment)");
+        $statement = $this->pdo->prepare("INSERT INTO $this->table (`title`,`date`,`comment`) 
+                                                   VALUES (:title, :date, :comment)");
         $statement->bindValue('title', $event->getTitle(), \PDO::PARAM_STR);
         $statement->bindValue('date', $event->getDate());
         $statement->bindValue('comment', $event->getComment(), \PDO::PARAM_STR);
