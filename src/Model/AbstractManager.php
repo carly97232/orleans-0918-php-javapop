@@ -24,7 +24,8 @@ abstract class AbstractManager
      * @var string
      */
     protected $className;
-    /**
+
+     /**
      * Initializes Manager Abstract class.
      * @param string $table
      * @param PDO $pdo
