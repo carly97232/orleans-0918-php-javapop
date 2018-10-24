@@ -8,7 +8,6 @@
 
 namespace Model;
 
-
 /**
  * Class Drink
  * @package Model
