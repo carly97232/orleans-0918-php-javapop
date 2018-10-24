@@ -7,6 +7,7 @@
  * PHP version 7
  */
 namespace Model;
+
 /**
  * Class ArtistAdmin
  *
@@ -99,6 +100,4 @@ class Artist
     {
         $this->favorite = $favorite;
     }
-
-
 }
