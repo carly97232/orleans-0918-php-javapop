@@ -100,5 +100,6 @@ class Artist
     {
         $this->favorite = $favorite;
     }
+
 }
 
