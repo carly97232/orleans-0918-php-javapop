@@ -67,13 +67,13 @@ class Event
      */
     public function getDate(): \DateTime
     {
-        return $this->date;
+        return new \DateTime($this->date);
     }
 
     /**
      * @param \DateTime $date
      */
-    public function setDate(\DateTime $date): void
+    public function setDate(string $date): void
     {
         $this->date = $date;
     }
@@ -81,7 +81,7 @@ class Event
     /**
      * @return string
      */
-    public function getComment(): string
+    public function getComment(): ?string
     {
         return $this->comment;
     }
