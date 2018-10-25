@@ -32,12 +32,12 @@ class Drink
         return $this->id;
     }
 
+
     /**
-     * @param mixed $id
-     *
+     * @param int $id
      * @return Drink
      */
-    public function setId($id) : Drink
+    public function setId(int $id) : Drink
     {
         $this->id = $id;
 
