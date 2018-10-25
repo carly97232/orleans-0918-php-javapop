@@ -25,4 +25,3 @@ class ArtistManager extends AbstractManager
         parent::__construct(self::TABLE, $pdo);
     }
 }
-
