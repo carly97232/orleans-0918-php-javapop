@@ -24,39 +24,4 @@ class ArtistManager extends AbstractManager
     {
         parent::__construct(self::TABLE, $pdo);
     }
-    /**
-     * @param Artist $artist
-     * @return int
-     */
-    public function insert(Artist $artist): int
-    {
-        // prepared request
-        $statement = $this->pdo->prepare("INSERT INTO $this->table (`name`) VALUES (:name)");
-        $statement->bindValue('name', $artist->getName(), \PDO::PARAM_STR);
-        if ($statement->execute()) {
-            return $this->pdo->lastInsertId();
-        }
-    }
-    /**
-     * @param int $id
-     */
-    public function delete(int $id): void
-    {
-        // prepared request
-        $statement = $this->pdo->prepare("DELETE FROM $this->table WHERE id=:id");
-        $statement->bindValue('id', $id, \PDO::PARAM_INT);
-        $statement->execute();
-    }
-    /**
-     * @param Artist $artist
-     * @return int
-     */
-    public function update(Artist $artist):int
-    {
-        // prepared request
-        $statement = $this->pdo->prepare("UPDATE $this->table SET `name` = :name WHERE id=:id");
-        $statement->bindValue('id', $artist->getId(), \PDO::PARAM_INT);
-        $statement->bindValue('name', $artist->getName(), \PDO::PARAM_STR);
-        return $statement->execute();
-    }
 }

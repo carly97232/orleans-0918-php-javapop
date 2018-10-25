@@ -35,17 +35,6 @@ $routes = [
      ],
     'Artist' => [ // Controller
         ['index', '/artist', 'GET'], // action, url, method
-        ['add', '/artist/add', ['GET', 'POST']], // action, url, method
-        ['edit', '/artist/edit/{id:\d+}', ['GET', 'POST']], // action, url, method
-        ['show', '/artist/{id:\d+}', 'GET'], // action, url, method
-        ['delete', '/artist/delete/{id:\d+}', 'GET'], // action, url, method
-    ],
-    'ArtistAdmin' => [ // Controller
-        ['index', '/artistadmin', 'GET'], // action, url, method
-        ['add', '/artistadmin/add', ['GET', 'POST']], // action, url, method
-        ['edit', '/artistadmin/edit/{id:\d+}', ['GET', 'POST']], // action, url, method
-        ['show', '/artistadmin/{id:\d+}', 'GET'], // action, url, method
-        ['delete', '/artistadmin/delete/{id:\d+}', 'GET'], // action, url, method
     ],
 ];
 
