@@ -25,7 +25,7 @@ class ArtistController extends AbstractController
      * @throws \Twig_Error_Runtime
      * @throws \Twig_Error_Syntax
      */
-    public function index()
+    public function index(): string
     {
         $artistManager = new ArtistManager($this->getPdo());
         $artists = $artistManager->selectAll();
@@ -40,7 +40,7 @@ class ArtistController extends AbstractController
      * @throws \Twig_Error_Runtime
      * @throws \Twig_Error_Syntax
      */
-    public function show(int $id)
+    public function show(int $id): string
     {
         $artistManager = new ArtistManager($this->getPdo());
         $artist = $artistManager->selectOneById($id);
@@ -73,7 +73,7 @@ class ArtistController extends AbstractController
      * @throws \Twig_Error_Runtime
      * @throws \Twig_Error_Syntax
      */
-    public function add()
+    public function add(): string
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $artistManager = new ArtistManager($this->getPdo());
@@ -89,7 +89,7 @@ class ArtistController extends AbstractController
      *
      * @param int $id
      */
-    public function delete(int $id)
+    public function delete(int $id): string
     {
         $artistManager = new ArtistManager($this->getPdo());
         $artistManager->delete($id);

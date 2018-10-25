@@ -154,29 +154,36 @@ footer p
 }
 .local
 {
-    width: 40%;
-    margin-top: 10vw;
+    width: 50px;
+
 }
 .favorite
 {
-    width: 40%;
-    margin-top: 10vw;
+    width: 50px;
 }
 .artspace
 {
-    margin-top: 5vw;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 2%;
 }
 .picture
 {
-    width: 500px;
+    width: 50%;
     margin-bottom: 10%;
+    margin-left: 25%;
 }
 .name
 {
     font-size: 40px;
-    color: #ff0c13;
+    color: #fe4e06;
     margin-left: 1vw;
 }
-
+.artist
+{
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+.artistlg
+{
+    margin-left: 5%;
+}
