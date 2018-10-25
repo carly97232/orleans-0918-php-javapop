@@ -42,11 +42,15 @@ class EventAdminController extends AbstractController
         if (empty($userData["date"])) {
             $errorsForm[] = "Ecrire la date";
         } else {
-            if (!preg_match("/(2\d{3})-(0[0-9]|1[0-2])-([0-3][0-9])/", $userData["date"])) {
+            $data=explode('-', $userData["date"]);
+            if ((checkdate($data[1], $data[2], $data[0])==false) &&
+                !preg_match("/(2\d{3})-(0[0-9]|1[0-2])-([0-3][0-9])/", $userData["date"])) {
                 $errorsForm[] = "Ecrire la date au bon format";
             }
         }
         return $errorsForm;
+        header('Location: ../../View/EventAdmin/add.html.twig');
+        exit();
     }
 
 
