@@ -24,12 +24,12 @@
                             <tbody>
                             {% for drink in drinks %}
                             <tr class="border-0">
-                                <td class="font-weight-bold  border-0">{{ drink.name }} <br>
-                                    <div class="text-lowercase small">
-                                        {{ drink.ingredients }}
-                                    </div>
+                                <td class="font-weight-bold  border-0">
+                                    <p> {{drink.name}} <br/>
+                                        <span class="text-lowercase small">  {{ drink.ingredients }} </span>
+                                    </p>
                                 </td>
-                                <td class="text-center border-0">{{ drink.volume }} cl</td>
+                                <td class="text-center border-0">{{ drink.volume }}</td>
                                 <td class="text-center  border-0">{{ drink.prix |number_format(2, '.', ',') }} €</td>
                                 {% endfor %}
                             </tr>
