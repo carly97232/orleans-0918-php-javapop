@@ -59,7 +59,7 @@ class Drink
      * @param $title
      * @return Drink
      */
-    public function setTitle($title) : Drink
+    public function setTitle(string $title) : Drink
     {
         $this->title = $title;
 
