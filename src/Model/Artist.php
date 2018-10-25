@@ -32,7 +32,7 @@ class Artist
      *
      * @return Artist
      */
-    public function setId($id): Artist
+    public function setId(int $id): int
     {
         $this->id = $id;
         return $this;
@@ -49,7 +49,7 @@ class Artist
      *
      * @return Artist
      */
-    public function setName($name):Artist
+    public function setName(string $name):string
     {
         $this->name = $name;
         return $this;
@@ -64,7 +64,7 @@ class Artist
     /**
      * @param mixed $local
      */
-    public function setLocal($local)
+    public function setLocal(string $local): string
     {
         $this->local = $local;
     }
@@ -72,7 +72,7 @@ class Artist
     /**
      * @return mixed
      */
-    public function getPicture()
+    public function getPicture(): string
     {
         return $this->picture;
     }
@@ -80,7 +80,7 @@ class Artist
     /**
      * @param mixed $picture
      */
-    public function setPicture($picture)
+    public function setPicture(string $picture): string
     {
         $this->picture = $picture;
     }
@@ -88,7 +88,7 @@ class Artist
     /**
      * @return mixed
      */
-    public function getFavorite()
+    public function getFavorite(): string
     {
         return $this->favorite;
     }
@@ -96,8 +96,9 @@ class Artist
     /**
      * @param mixed $favorite
      */
-    public function setFavorite($favorite)
+    public function setFavorite(string $favorite): string
     {
         $this->favorite = $favorite;
     }
 }
+
