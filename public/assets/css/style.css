@@ -8,6 +8,10 @@ body
     min-height: 100%; position: relative;
 }
 
+section
+{
+    padding-bottom: 6em;
+}
 .pageStandard
 {
     margin: 0;

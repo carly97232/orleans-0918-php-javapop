@@ -18,13 +18,15 @@ class ContactController extends AbstractController
     public function sendMail()
     {
         $errors = [];
-        $userData = $_POST ;
+        $userData = $_POST;
+        $subject = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($userData) {
                 if (empty($userData['lastName'])) {
                     $errors['lastName'] = 'Veuillez renseigner votre Nom.';
+
                 } elseif (!preg_match("/^[a-zA-Z ]+$/", $userData['lastName'])) {
                     $errors['lastName'] = 'Veuillez remplir le champ "Nom" uniquement avec des caractères autorisés';
                 }
@@ -38,27 +40,23 @@ class ContactController extends AbstractController
                 }
                 if (empty($errors)) {
 
-                        $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465))
-                            ->setUsername(MAIL_USER)
-                            ->setPassword(MAIL_PASSWORD)
-                            ->setEncryption(MAIL_ENCRYPTION);
-                        $mailer = new Swift_Mailer($transport);
-                        $message = new Swift_Message();
-                        $message->setSubject('Message formulaire Javapop');
-                        $message->setFrom([$userData['email'] => $userData['lastName']]);
-                        $message->addTo(MAIL_USER, 'recipient name');
-                        $message->setBody( $userData['message']);
-                        $result = $mailer->send($message);
-
-                    }
+                    $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465))
+                        ->setUsername(MAIL_USER)
+                        ->setPassword(MAIL_PASSWORD)
+                        ->setEncryption(MAIL_ENCRYPTION);
+                    $mailer = new Swift_Mailer($transport);
+                    $message = new Swift_Message();
+                    $message->setSubject($userData['subject']);
+                    $message->setFrom([$userData['email'] => $userData['lastName']]);
+                    $message->addTo(MAIL_USER);
+                    $message->setBody("Nouveau message de " . $userData['lastName'] . " (".$userData['email'].") :\n" .$userData['message']);
+                    $result = $mailer->send($message);
                     header('Location:/contact');
                     exit();
-
                 }
-            var_dump($errors);
-            }return $errors;
-
-
+            }
+        }
+        return $errors;
     }
 
     public function index()

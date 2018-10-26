@@ -11,44 +11,38 @@
         <div class="mailNotSent">{{ mailNotSent }}</div>
     {% endif %}
 
-    <div class="row justify-content-center">
-        <div class="col-md-5">
+    <div class="row justify-content-between">
+        <div class="col-md-6">
             <form method="post" action="">
+                    <ul>
+                        {% for error in errors %}
+                            <li class="errorsForm">{{ error }}</li>
+                        {% endfor %}
+                    </ul>
                 <div class="form-group">
 
-                    {% if errors.lastName is defined %}
-                        <div class="errorsForm">{{ errors.lastName }}</div>
-                    {% endif %}
-                    <input class="form-control" id="lastName" type="text" name="lastName" value="{{ values.lastName }}" placeholder="Votre nom *">
+                    <input class="form-control" id="lastName" type="text" name="lastName" value="{{ values.lastName }}" placeholder="Votre nom *" required>
                 </div>
                 <div class="form-group">
-
-                    {% if errors.email is defined %}
-                        <div class="errorsForm">{{ errors.email }}</div>
-                    {% endif %}
-                    <input class="form-control" id="email" type="email" name="email" value="{{ values.email }}" placeholder="Votre Email *">
+                    <input class="form-control" id="email" type="email" name="email" value="{{ values.email }}" placeholder="Votre Email *" required>
                 </div>
                 <div class="form-group">
                     <label class="selectSujet">
                         <select class="form-control" id="subject" name="subject" >
-                            <option>Privatiser la JAVAPOP</option>
-                            <option>Organiser un concert</option>
-                            <option>Animation sur demande</option>
-                            <option>Autre sujet</option>
+                            <option value="Privatiser la JAVAPOP">Privatiser la JAVAPOP</option>
+                            <option value="Organiser un concert">Organiser un concert</option>
+                            <option value="Animation sur demande">Animation sur demande</option>
+                            <option value="Autre sujet">Autre sujet</option>
                         </select>
                     </label>
                 </div>
                 <div class="form-group">
-                    {% if errors.message is defined %}
-                        <div class="errorsForm">{{ errors.message }}</div>
-                    {% endif %}
-                    <textarea class="form-control messageForm" name="message" id="message" placeholder="Votre Message *" >{{ values.message }}</textarea>
+                    <textarea class="form-control messageForm" name="message" id="message" placeholder="Votre Message *" required>{{ values.message }}</textarea>
                 </div>
-
                 <button id="sendMessageButton" class="btn btn-primary btn-primary-contact btn-xl text-uppercase btn-form" type="submit">Envoyer</button>
             </form>
         </div>
-        <div class="col-md-5 prestation">
+        <div class="col-md-6 prestation">
             <ul class="list-unstyled">
                 <li class="media">
                     <img class="mr-3" src="http://www.javapop.fr/ressources/img/event_location.jpg" height="150px" alt="Generic placeholder image">
