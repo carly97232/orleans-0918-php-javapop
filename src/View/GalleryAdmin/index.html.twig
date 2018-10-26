@@ -10,6 +10,12 @@
                 <div class="col-lg-3 col-xs-12">
                     <img class="card-img-top pb-3  galleryPicture" src="../assets/images/gallery/{{ picture.imgName }}"
                          alt="images des evenements de la javapop"/>
+
+                <form action="/admin/galleryAdmin/{{ picture.id }}" class="addPicture mb-5" method="POST">
+                    <input type="hidden" value="{{ picture.imgName }}" name="imgName">
+                    <input type="hidden" value="{{ picture.id }}" name="id">
+                    <input type="submit" value="Supprimer" name="submit">
+                </form>
                 </div>
             {% else %}
                 <li class="addPicture">Aucune image à afficher</li>
