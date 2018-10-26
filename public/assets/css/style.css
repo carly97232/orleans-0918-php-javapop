@@ -146,4 +146,33 @@ footer p
 {
     background-image: url("../images/img-bg/header-bg.jpg");
 }
+/* Picture by Math*/
+.addPicture
+{
+    color: orangered;
+}
+.card_galery
+{
+    text-align: center;
+    padding-bottom: 3rem;
+    padding-right: 2rem;
+
+
+}
+.showPictureAlone
+{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+.galleryPicture
+{
+    height: 20vw;
+    width: 20vw;
+
+}
+.modalPicture
+{
+    background-color: transparent;
+    border-color: transparent;
+}
 

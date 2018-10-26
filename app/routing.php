@@ -35,4 +35,8 @@ $routes = [
         ['index', '/event', 'GET'], // action, url, method
 
      ],
+
+    'Gallery' => [
+        ['index', '/gallery', 'GET'],
+    ],
 ];
