@@ -40,7 +40,7 @@ $routes = [
 
     'GalleryAdmin' => [
         ['index', '/admin/galleryAdmin', 'GET'],
-        ['delete', '/admin/galleryAdmin/', 'POST'],
+        ['delete', '/admin/galleryAdmin', 'POST'],
     ],
 ];
 
