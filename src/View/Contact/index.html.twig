@@ -17,24 +17,34 @@
                 <div class="form-group">
 
                     {% if errors.lastName is defined %}
-                        <div class="formErrors">{{ errors.lastName }}</div>
+                        <div class="errorsForm">{{ errors.lastName }}</div>
                     {% endif %}
-                    <input class="form-control" id="lastName" type="text" name="lastName" value="{{ values.lastName }}" placeholder="Votre nom *" required>
+                    <input class="form-control" id="lastName" type="text" name="lastName" value="{{ values.lastName }}" placeholder="Votre nom *">
                 </div>
                 <div class="form-group">
 
                     {% if errors.email is defined %}
-                        <div class="formErrors">{{ errors.email }}</div>
+                        <div class="errorsForm">{{ errors.email }}</div>
                     {% endif %}
-                    <input class="form-control" id="email" type="email" name="email" value="{{ values.email }}" placeholder="Votre Email *" required>
+                    <input class="form-control" id="email" type="email" name="email" value="{{ values.email }}" placeholder="Votre Email *">
                 </div>
                 <div class="form-group">
-
-                    {% if errors.message is defined %}
-                        <div class="formErrors">{{ errors.message }}</div>
-                    {% endif %}
-                    <textarea class="form-control messageForm" name="message" id="message" placeholder="Votre Message *" required>{{ values.message }}</textarea>
+                    <label class="selectSujet">
+                        <select class="form-control" id="subject" name="subject" >
+                            <option>Privatiser la JAVAPOP</option>
+                            <option>Organiser un concert</option>
+                            <option>Animation sur demande</option>
+                            <option>Autre sujet</option>
+                        </select>
+                    </label>
                 </div>
+                <div class="form-group">
+                    {% if errors.message is defined %}
+                        <div class="errorsForm">{{ errors.message }}</div>
+                    {% endif %}
+                    <textarea class="form-control messageForm" name="message" id="message" placeholder="Votre Message *" >{{ values.message }}</textarea>
+                </div>
+
                 <button id="sendMessageButton" class="btn btn-primary btn-primary-contact btn-xl text-uppercase btn-form" type="submit">Envoyer</button>
             </form>
         </div>
