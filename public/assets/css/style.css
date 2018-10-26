@@ -54,6 +54,12 @@ h1:before, h1:after {
     background-image: url("../images/img-bg/localisation-bg.jpg");
 }
 
+.banner3
+{
+    height: 40vh;
+    background-image: url("../images/img-bg/carteboissons-bg.jpg");
+}
+
 .location p
 {
     margin-top: 1em;
@@ -151,6 +157,7 @@ footer p
     padding-bottom: 3rem;
     padding-right: 2rem;
 
+
 }
 .showPictureAlone
 {
@@ -173,3 +180,4 @@ footer p
     background-color: transparent;
     border-color: transparent;
 }
+
