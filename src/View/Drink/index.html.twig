@@ -3,15 +3,11 @@
 {% block titre_de_page %}CARTE DES BOISSONS{% endblock %}
 {% block content %}
     <ul class="nav nav-tabs" id="myTab" role="tablist">
-        {% set active = "active" %}
-        {% set selected = true %}
         {% for type, drinks in drinksByType %}
             <li class="nav-item">
-                <a class="mx-5 nav-link {{ active }}" id="{{ type }}-tab" data-toggle="tab" href="#{{ type }}"
-                   role="tab" aria-controls="{{ type }}" aria-selected="{{ selected }}">{{ drinks[0].type_name }}</a>
+                <a class="mx-5 nav-link {{ loop.first ? 'active' }}" id="{{ type }}-tab" data-toggle="tab" href="#{{ type }}"
+                   role="tab" aria-controls="{{ type }}" aria-selected="{{ loop.first ? 'selected' }}">{{ drinks[0].type_name }}</a>
             </li>
-            {% set active = "" %}
-            {% set selected = false %}
         {% endfor %}
     </ul>
     <div class="tab-content" id="myTabContent">

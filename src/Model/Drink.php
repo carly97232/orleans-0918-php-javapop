@@ -14,13 +14,14 @@ namespace Model;
  */
 class Drink
 {
+
     /**
-     * @var
+     * @int
      */
     private $id;
 
     /**
-     * @var
+     * @string
      */
     private $title;
 
@@ -34,7 +35,7 @@ class Drink
 
 
     /**
-     * @param int $id
+     * @param mixed $id
      * @return Drink
      */
     public function setId(int $id) : Drink
@@ -56,7 +57,7 @@ class Drink
 
 
     /**
-     * @param $title
+     * @param mixed $title
      * @return Drink
      */
     public function setTitle(string $title) : Drink
