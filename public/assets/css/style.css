@@ -163,6 +163,11 @@ footer p
     width: 20vw;
 
 }
+.galleryAdmin
+{
+    height: 10vw;
+    width: 10vw;
+}
 .modalPicture
 {
     background-color: transparent;
