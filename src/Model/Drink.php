@@ -35,7 +35,7 @@ class Drink
 
 
     /**
-     * @param mixed $id
+     * @param int $id
      * @return Drink
      */
     public function setId(int $id) : Drink
@@ -57,7 +57,7 @@ class Drink
 
 
     /**
-     * @param mixed $title
+     * @param string $title
      * @return Drink
      */
     public function setTitle(string $title) : Drink
