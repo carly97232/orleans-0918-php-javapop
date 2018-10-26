@@ -33,5 +33,9 @@ $routes = [
         ['index', '/event', 'GET'], // action, url, method
 
      ],
-];
 
+    'EventAdmin' => [ // Controller
+        ['index', '/admin/eventAdmin/index', 'GET'], // action, url, method
+    ],
+
+];
