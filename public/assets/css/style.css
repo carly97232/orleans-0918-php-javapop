@@ -147,9 +147,11 @@ footer p
     background-image: url("../images/img-bg/header-bg.jpg");
 }
 /* Picture by Math*/
-.addPicture
+.deletePicture
 {
-    color: orangered;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
 }
 .card_galery
 {
@@ -179,5 +181,6 @@ footer p
 {
     background-color: transparent;
     border-color: transparent;
+
 }
 

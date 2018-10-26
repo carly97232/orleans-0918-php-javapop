@@ -14,36 +14,37 @@
 
 
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal"
-                        data-target="#exampleModal{{ picture.id }}">
-                    Supprimer l'image
-                </button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#exampleModal{{ picture.id }}">
+                        Supprimer l'image
+                    </button>
 
-                <!-- Modal -->
-                <div class="modal fade " id="exampleModal{{ picture.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered " role="document">
-                        <div class="modal-content modalPicture">
-                            <div class="modal-header">
-                                <div>
-                                    <form action="" class="addPicture mb-5" method="POST">
-                                        <input type="hidden" value="{{ picture.imgName }}" name="imgName">
-                                        <input type="hidden" value="{{ picture.id }}" name="id">
-                                        <input type="submit" value="Supprimer" name="submit">
-                                    </form>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal{{ picture.id }}" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered " role="document">
+                            <div class="modal-content modalPicture">
+                                <div class="modal-body">
+                                    <div>
+                                        <form action=""  method="POST">
+                                            <input type="hidden" value="{{ picture.imgName }}" name="imgName">
+                                            <input type="hidden" value="{{ picture.id }}" name="id">
+                                            <input type="submit" class="deletePicture" value="⚠⚠⚠ Confirmer la supression de l'image ⚠⚠⚠" name="submit">
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="modal-body">
-                                <img class="" src="../assets/images/gallery/{{ picture.imgName }}"
-                                     alt="images des evenements de la javapop"/>
+                                <div class="modal-header modalPicture">
+
+                                    <img class="" src="../assets/images/gallery/{{ picture.imgName }}"
+                                         alt="images des evenements de la javapop"/>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                </div>
+                    </div>
 
 
-
-            {% else %}
+                    {% else %}
                 <li class="addPicture">Aucune image à afficher</li>
             {% endfor %}
         </div>
