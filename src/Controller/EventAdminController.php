@@ -8,7 +8,6 @@
 
 namespace Controller;
 
-
 use Model\EventManager;
 
 class EventAdminController extends AbstractController
