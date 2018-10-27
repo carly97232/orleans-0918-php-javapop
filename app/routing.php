@@ -40,6 +40,7 @@ $routes = [
 
     'EventAdmin' => [ // Controller
         ['index', '/admin/eventAdmin/index', 'GET'], // action, url, method
+        ['delete', '/admin/eventAdmin/index', 'POST'], // action, url, method
     ],
 
 ];
