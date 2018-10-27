@@ -33,8 +33,6 @@ class EventAdminController extends AbstractController
         $eventManager = new EventManager($this->getPdo());
         $event = $eventManager->selectOneById($id);
 
-        //var_dump($event);die();
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($_POST['validate'])) {
                 $event->setTitle($_POST['title']);
