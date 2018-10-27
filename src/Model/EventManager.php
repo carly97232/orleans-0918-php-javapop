@@ -23,4 +23,19 @@ class EventManager extends AbstractManager
     {
         parent::__construct(self::TABLE, $pdo);
     }
+
+    public function update(Event $event):int
+    {
+
+        // prepared request
+        $statement = $this->pdo->prepare("INSERT INTO $this->table (`title`,`date`,`comment`) 
+                                                   VALUES (:title, :date, :comment)");
+        $statement->bindValue('title', $event->getTitle(), \PDO::PARAM_STR);
+        $statement->bindValue('date', $event->getDate()->format("Y-m-d H:i:s"));
+        $statement->bindValue('comment', $event->getComment(), \PDO::PARAM_STR);
+        if ($statement->execute()) {
+            return $this->pdo->lastInsertId();
+        }
+    }
+
 }

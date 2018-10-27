@@ -40,6 +40,7 @@ $routes = [
 
     'EventAdmin' => [ // Controller
         ['index', '/admin/eventAdmin/index', 'GET'], // action, url, method
+        ['update', '/admin/eventAdmin/update/{id:\d+}', ['GET', 'POST']], // action, url, method
     ],
 
 ];

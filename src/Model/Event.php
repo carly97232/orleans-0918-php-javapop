@@ -1,19 +1,24 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: patricia
- * Date: 11/10/18
- * Time: 10:58
- */
-
 namespace Model;
 
 class Event
 {
+    /**
+     * @var int
+     */
     private $id;
-
+    /**
+     * @var string
+     */
     private $title;
-
+    /**
+     * @var \DateTime
+     */
+    private $date;
+    /**
+     * @var string
+     */
+    private $comment;
     /**
      * @return int
      */
@@ -21,36 +26,53 @@ class Event
     {
         return $this->id;
     }
-
     /**
-     * @param mixed $id
-     *
-     * @return Event
+     * @param int $id
      */
-    public function setId($id): Event
+    public function setId(int $id): void
     {
         $this->id = $id;
-
-        return $this;
     }
-
     /**
-     * @return mixed
+     * @return string
      */
     public function getTitle(): string
     {
         return $this->title;
     }
-
     /**
-     * @param mixed $title
-     *
-     * @return Event
+     * @param string $title
      */
-    public function setTitle($title):Event
+    public function setTitle(string $title): void
     {
         $this->title = $title;
-
-        return $this;
+    }
+    /**
+     * @return \DateTime
+     */
+    public function getDate(): \DateTime
+    {
+        return new \DateTime($this->date);
+    }
+    /**
+     * @param \DateTime $date
+     */
+    public function setDate(string $date): void
+    {
+        $this->date = $date;
+    }
+    /**
+     * @return string
+     */
+    public function getComment(): ?string
+    {
+        return $this->comment;
+    }
+    /**
+     * @param string $comment
+     */
+    public function setComment(string $comment): void
+    {
+        $this->comment = $comment;
     }
 }

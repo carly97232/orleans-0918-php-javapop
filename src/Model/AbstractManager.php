@@ -69,7 +69,6 @@ abstract class AbstractManager
         $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();
-
         return $statement->fetch();
     }
 }

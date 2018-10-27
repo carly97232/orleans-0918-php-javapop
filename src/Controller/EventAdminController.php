@@ -9,6 +9,7 @@
 namespace Controller;
 
 use Model\EventManager;
+use Model\Event;
 
 class EventAdminController extends AbstractController
 {
@@ -19,4 +20,30 @@ class EventAdminController extends AbstractController
 
         return $this->twig->render('EventAdmin/index.html.twig', ['events' => $events]);
     }
+
+    /**
+     * @param int $id
+     * @return string
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
+     */
+    public function update(int $id): string
+    {
+        $eventManager = new EventManager($this->getPdo());
+        $event = $eventManager->selectOneById($id);
+
+        //var_dump($event);die();
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $event->setTitle($_POST['title']);
+            $event->setDate($_POST['date']);
+            $event->setComment($_POST['comment']);
+            $eventManager->update($event);
+        }
+     //   var_dump($_POST);die();
+
+        return $this->twig->render('EventAdmin/update.html.twig', ['event' => $event]);
+    }
+
 }
