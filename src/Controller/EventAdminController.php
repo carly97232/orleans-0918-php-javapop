@@ -19,4 +19,17 @@ class EventAdminController extends AbstractController
 
         return $this->twig->render('EventAdmin/index.html.twig', ['events' => $events]);
     }
+
+
+    public function delete()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (isset($_POST['deleteEvent'])) {
+                $eventManager = new EventManager($this->getPdo());
+                $eventManager->delete($_POST['deleteEvent']);
+                header('location:/admin/eventAdmin/index');
+                exit();
+            }
+        }
+    }
 }
