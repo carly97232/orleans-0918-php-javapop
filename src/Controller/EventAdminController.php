@@ -36,13 +36,13 @@ class EventAdminController extends AbstractController
         //var_dump($event);die();
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $event->setTitle($_POST['title']);
-            $event->setDate($_POST['date']);
-            $event->setComment($_POST['comment']);
-            $eventManager->update($event);
+            if (isset($_POST['validate'])) {
+                $event->setTitle($_POST['title']);
+                $event->setDate($_POST['date']);
+                $event->setComment($_POST['comment']);
+                $eventManager->update($event);
+            }
         }
-     //   var_dump($_POST);die();
-
         return $this->twig->render('EventAdmin/update.html.twig', ['event' => $event]);
     }
 
