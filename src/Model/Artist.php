@@ -14,6 +14,7 @@ namespace Model;
  */
 class Artist
 {
+
     /**
      * @var int
      */
@@ -35,9 +36,7 @@ class Artist
      */
     private $favorite;
 
-    /**
-     * @return int
-     */
+
     public function getId(): int
     {
         return $this->id;
