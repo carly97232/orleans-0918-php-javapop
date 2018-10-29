@@ -20,24 +20,22 @@ class ContactController extends AbstractController
         $userData = $_POST;
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
             if ($userData) {
                 if (empty($userData['lastName'])) {
                     $errors['lastName'] = 'Veuillez renseigner votre Nom.';
-
                 } elseif (!preg_match("/^[a-zA-Z ]+$/", $userData['lastName'])) {
                     $errors['lastName'] = 'Veuillez remplir le champ "Nom" uniquement avec des caractères autorisés';
                 }
                 if (empty($userData['email'])) {
                     $errors['email'] = 'Veuillez renseigner votre E-mail.';
-                } elseif (!preg_match("/^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$/", $userData['email'])) {
+                } elseif (!preg_match("/^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$/", $userData['email']))
+                {
                     $errors['email'] = 'Votre adresse email n\'est pas valide!';
                 }
                 if (empty($userData['message'])) {
                     $errors['message'] = 'Veuillez écrire un Message.';
                 }
                 if (empty($errors)) {
-
                     $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465))
                         ->setUsername(MAIL_USER)
                         ->setPassword(MAIL_PASSWORD)
@@ -60,7 +58,5 @@ class ContactController extends AbstractController
     public function index()
     {
         return $this->twig->render('Contact/index.html.twig', ['errors' => $this->sendMail()]);
-
     }
-
 }
