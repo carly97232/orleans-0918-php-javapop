@@ -4,9 +4,11 @@
  * User: patricia
  * Date: 23/10/18
  * Time: 16:18
+
  */
 
 namespace Controller;
+
 
 use Model\Event;
 use Model\EventManager;
@@ -85,5 +87,6 @@ class EventAdminController extends AbstractController
             }
         }
         return $this->twig->render('EventAdmin/add.html.twig', ['errors' => $errors]);
+
     }
 }
