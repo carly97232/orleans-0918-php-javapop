@@ -14,10 +14,25 @@ namespace Model;
  */
 class Artist
 {
+    /**
+     * @var int
+     */
     private $id;
+    /**
+     * @var string
+     */
     private $name;
+    /**
+     * @var string
+     */
     private $local;
+    /**
+     * @var string
+     */
     private $picture;
+    /**
+     * @var string
+     */
     private $favorite;
 
     /**
