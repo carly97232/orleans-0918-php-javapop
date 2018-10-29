@@ -6,7 +6,6 @@
  * Time: 20:52
  * PHP version 7
  */
-
 namespace Model;
 
 /**
@@ -18,7 +17,6 @@ abstract class AbstractManager
      * @var \PDO
      */
     protected $pdo; //variable de connexion
-
     /**
      * @var string
      */
@@ -28,7 +26,7 @@ abstract class AbstractManager
      */
     protected $className;
 
-      /**
+     /**
      * Initializes Manager Abstract class.
      * @param string $table
      * @param PDO $pdo
@@ -39,8 +37,6 @@ abstract class AbstractManager
         $this->className = __NAMESPACE__ . '\\' . ucfirst($table);
         $this->pdo = $pdo;
     }
-
-
     /**
      * Get all row from database.
      *
@@ -54,7 +50,6 @@ abstract class AbstractManager
         }
         return $this->pdo->query($query, \PDO::FETCH_CLASS, $this->className)->fetchAll();
     }
-
     /**
      * Get one row from database by ID.
      *
@@ -69,7 +64,6 @@ abstract class AbstractManager
         $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();
-
         return $statement->fetch();
     }
 }
