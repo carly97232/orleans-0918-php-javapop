@@ -14,6 +14,9 @@ use \Swift_Message;
 
 class ContactController extends AbstractController
 {
+    /**
+     * @return array
+     */
     private function sendMail()
     {
         $errors = [];
@@ -57,6 +60,12 @@ class ContactController extends AbstractController
         return $errors;
     }
 
+    /**
+     * @return string
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
+     */
     public function index()
     {
         return $this->twig->render('Contact/index.html.twig', ['errors' => $this->sendMail()]);
