@@ -45,7 +45,8 @@ class ContactController extends AbstractController
                     $message->setSubject("Message formulaire JAVAPOP : ". $userData['subject']);
                     $message->setFrom([$userData['email'] => $userData['lastName']]);
                     $message->addTo(MAIL_USER);
-                    $message->setBody("Nouveau message de " . $userData['lastName'] . " (".$userData['email'].") :\n" .$userData['message']);
+                    $message->setBody("Nouveau message de " . $userData['lastName'] . " (".$userData['email'].") :\n"
+                        .$userData['message']);
                     $result = $mailer->send($message);
                     header('Location:/contact');
                     exit();
