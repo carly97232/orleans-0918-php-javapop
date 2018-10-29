@@ -49,7 +49,7 @@ class EventAdminController extends AbstractController
             }
         }
         return $errorsForm;
-        header('Location: ../../View/EventAdmin/add.html.twig');
+        header('Location: /admin/eventAdmin/add');
         exit();
     }
 
