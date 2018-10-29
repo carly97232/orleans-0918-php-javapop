@@ -8,6 +8,10 @@
 
 namespace Model;
 
+/**
+ * Class Event
+ * @package Model
+ */
 class Event
 {
     /**
@@ -67,15 +71,17 @@ class Event
      */
     public function getDate(): \DateTime
     {
-        return $this->date;
+        return (gettype($this->date) === 'string') ? new \DateTime($this->date) : $this->date;
     }
 
     /**
      * @param \DateTime $date
+     * @return Event
      */
-    public function setDate(\DateTime $date): void
+    public function setDate(\DateTime $date): self
     {
         $this->date = $date;
+        return $this;
     }
 
     /**
