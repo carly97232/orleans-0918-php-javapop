@@ -28,7 +28,8 @@ class ContactController extends AbstractController
                 }
                 if (empty($userData['email'])) {
                     $errors['email'] = 'Veuillez renseigner votre E-mail.';
-                } elseif (!preg_match("/^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$/", $userData['email'])) {
+                } elseif (!preg_match("/^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$/",
+                    $userData['email'])) {
                     $errors['email'] = 'Votre adresse email n\'est pas valide!';
                 }
                 if (empty($userData['message'])) {
