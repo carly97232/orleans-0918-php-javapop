@@ -14,12 +14,10 @@ use \Swift_Message;
 
 class ContactController extends AbstractController
 {
-
-    public function sendMail()
+    private function sendMail()
     {
         $errors = [];
         $userData = $_POST;
-        $subject = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -46,7 +44,7 @@ class ContactController extends AbstractController
                         ->setEncryption(MAIL_ENCRYPTION);
                     $mailer = new Swift_Mailer($transport);
                     $message = new Swift_Message();
-                    $message->setSubject($userData['subject']);
+                    $message->setSubject("Message formulaire JAVAPOP : ". $userData['subject']);
                     $message->setFrom([$userData['email'] => $userData['lastName']]);
                     $message->addTo(MAIL_USER);
                     $message->setBody("Nouveau message de " . $userData['lastName'] . " (".$userData['email'].") :\n" .$userData['message']);
@@ -64,4 +62,5 @@ class ContactController extends AbstractController
         return $this->twig->render('Contact/index.html.twig', ['errors' => $this->sendMail()]);
 
     }
+
 }
