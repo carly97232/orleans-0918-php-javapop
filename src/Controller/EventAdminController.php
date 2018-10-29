@@ -9,7 +9,6 @@
 
 namespace Controller;
 
-
 use Model\Event;
 use Model\EventManager;
 use Filter\Text;
@@ -87,6 +86,5 @@ class EventAdminController extends AbstractController
             }
         }
         return $this->twig->render('EventAdmin/add.html.twig', ['errors' => $errors]);
-
     }
 }
