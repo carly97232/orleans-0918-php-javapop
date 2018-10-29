@@ -22,7 +22,7 @@ $routes = [
     ],
     'Contact' => [ // Controller
         ['index', '/contact', ['GET', 'POST']], // action, url, method
-
+    ],
     'Drink' => [ // Controller
         ['index', '/drink', 'GET'], // action, url, method
     ],
