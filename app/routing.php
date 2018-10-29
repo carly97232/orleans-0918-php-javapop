@@ -39,4 +39,8 @@ $routes = [
     'Gallery' => [
         ['index', '/gallery', 'GET'],
     ],
+
+    'DrinkAdmin' => [ // Controller
+        ['index', '/admin/drinkAdmin/index', 'GET'], // action, url, method
+    ],
 ];
