@@ -16,12 +16,7 @@ section
 {
     margin: 0;
     padding:0;
-    background: url('../images/img-bg/grey.jpg') ;
-
-}
-.pageStandard header
-{
-    background: url("../images/img-bg/evenements2.jpeg") no-repeat;
+    background-image: url("../images/img-bg/grey.jpg");
 }
 .bodycontainer
 {
@@ -35,7 +30,6 @@ section
     text-align: center;
     font-size: 10vh;
 }
-
 h1:before, h1:after {
     content: "";
     display: table-cell;
@@ -51,13 +45,71 @@ h1:before, h1:after {
 .banner2
 {
     height: 40vh;
-    background-image: url("../images/img-bg/evenements.jpeg");
+    background-image: url("../images/img-bg/carte-bg.jpg");
+}
+.banner3
+{
+    height: 40vh;
+
+    background-image: url("../images/img-bg/localisation-bg.jpg");
+}
+
+.banner3
+{
+    height: 40vh;
+    background-image: url("../images/img-bg/carteboissons-bg.jpg");
+}
+
+.location p
+{
+    margin-top: 1em;
+    padding-top: 1em;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    text-align: center;
+    height:11em;
+}
+
+.location span
+{
+    padding-top: 1em;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    height:6em;
+}
+
+.location hr
+{
+    background-color: orangered;
+    width:6em;
+}
+
+.link_cards li
+{
+    display: inline;
+    width: auto;
+    height: 6vh;
+    background-color: orangered;
+    border: #FFFFFF;
+    border-style: solid;
+    font-weight: bold;
+    font-size: 2em;
+    color: #FFFFFF;
+    padding:0.8em;
 }
 
 
-.information
-{
-    padding-top: 4vh;
+.panel-right{
+    text-align: left;
+    margin-left: 62%;
+}
+@media (max-width: 768px) {
+    .panel-right{
+        margin-left:15vw;
+    }
+
 }
 
 footer
@@ -112,4 +164,56 @@ textarea.form-control{
 
 .errorsForm {
     color: orangered;
+}
+.btn-primary {
+    background-color: #fe4d12;
+    border-color: white;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+.menuclic
+{
+    text-align: center;
+
+}
+.section-heading
+{
+    margin-top: 150px;
+
+}
+.home
+{
+    background-image: url("../images/img-bg/header-bg.jpg");
+}
+/* Picture by Math*/
+.addPicture
+{
+    color: orangered;
+}
+.card_galery
+{
+    text-align: center;
+    padding-bottom: 3rem;
+    padding-right: 2rem;
+
+
+}
+.showPictureAlone
+{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+.galleryPicture
+{
+    height: 20vw;
+    width: 20vw;
+
+}
+.modalPicture
+{
+    background-color: transparent;
+    border-color: transparent;
 }
