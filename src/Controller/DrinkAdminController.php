@@ -27,12 +27,6 @@ class DrinkAdminController extends AbstractController
     {
         $drinkManager = new DrinkManager($this->getPdo());
         $drinks = $drinkManager->selectAllDrink();
-
-        $drinksByType= [] ;
-        foreach ($drinks as $drink) {
-            $typeName = str_replace(' ', '', $drink['type_name']);
-            $drinksByType[$typeName][]= $drink;
-        }
         return $this->twig->render('DrinkAdmin/index.html.twig', ['drinks' => $drinks]);
     }
 }
