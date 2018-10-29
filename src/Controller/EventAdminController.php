@@ -43,8 +43,7 @@ class EventAdminController extends AbstractController
             $errorsForm[] = "Ecrire la date";
         } else {
             $data=explode('-', $userData["date"]);
-            if ((checkdate($data[1], $data[2], $data[0])==false) &&
-                !preg_match("/(2\d{3})-(0[0-9]|1[0-2])-([0-3][0-9])/", $userData["date"])) {
+            if (checkdate($data[1], $data[2], $data[0])==false) {
                 $errorsForm[] = "Ecrire la date au bon format";
             }
         }
