@@ -28,8 +28,7 @@ class ContactController extends AbstractController
                 }
                 if (empty($userData['email'])) {
                     $errors['email'] = 'Veuillez renseigner votre E-mail.';
-                } elseif (!preg_match("/^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$/",
-                    $userData['email'])) {
+                } elseif (!preg_match("/^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$/", $userData['email'])) {
                     $errors['email'] = 'Votre adresse email n\'est pas valide!';
                 }
                 if (empty($userData['message'])) {
@@ -42,11 +41,12 @@ class ContactController extends AbstractController
                         ->setEncryption(MAIL_ENCRYPTION);
                     $mailer = new Swift_Mailer($transport);
                     $message = new Swift_Message();
-                    $message->setSubject("Message formulaire JAVAPOP : ". $userData['subject']);
+                    $message->setSubject("Message formulaire JAVAPOP : " . $userData['subject']);
                     $message->setFrom([$userData['email'] => $userData['lastName']]);
                     $message->addTo(MAIL_USER);
-                    $message->setBody("Nouveau message de " . $userData['lastName'] . " (".$userData['email'].") :\n"
-                        .$userData['message']);
+                    $message->setBody("Nouveau message de " . $userData['lastName'] .
+                        " (" . $userData['email'] . ") :\n"
+                        . $userData['message']);
                     $result = $mailer->send($message);
                     header('Location:/contact');
                     exit();
