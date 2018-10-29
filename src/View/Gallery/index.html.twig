@@ -3,7 +3,6 @@
 {% block title %}Photo{% endblock %}
 {% block titre_de_page %}Photos{% endblock %}
 {% block content %}
-    {% block admin %}{% endblock %}
     <div>
         <div class="row card_galery">
             {% for picture in pictures %}
@@ -22,8 +21,6 @@
                             <div class="modal-dialog-centered modalPicture">
                                 <img src="../assets/images/gallery/{{ picture.imgName }}"
                                      alt="images des evenements de la javapop"/>
-                                {% block delete %}{% endblock %}
-
                             </div>
                         </div>
                     </div>
