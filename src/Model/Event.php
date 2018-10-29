@@ -71,14 +71,14 @@ class Event
      */
     public function getDate(): \DateTime
     {
-        return (gettype($this->date) === 'string') ? new \DateTime($this->date) : $this->date;
+        return $this->date;
     }
 
     /**
      * @param \DateTime $date
      * @return Event
      */
-    public function setDate(\DateTime $date): self
+    public function setDate(\DateTime $date): Event
     {
         $this->date = $date;
         return $this;
