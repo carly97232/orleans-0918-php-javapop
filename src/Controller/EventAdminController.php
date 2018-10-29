@@ -14,8 +14,6 @@ use Filter\Text;
 
 class EventAdminController extends AbstractController
 {
-
-
     /**
      * @return string
      * @throws \Twig_Error_Loader
@@ -63,7 +61,6 @@ class EventAdminController extends AbstractController
      */
     public function add()
     {
-
         $errors = $userData = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
