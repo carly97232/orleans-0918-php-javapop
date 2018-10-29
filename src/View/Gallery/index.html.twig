@@ -4,8 +4,8 @@
 {% block titre_de_page %}Photos{% endblock %}
 {% block content %}
     {% block admin %}{% endblock %}
-    <ul>
-        <li class="row card_galery">
+    <div>
+        <div class="row card_galery">
             {% for picture in pictures %}
                 <div class="col-lg-3 col-xs-12">
                     <img class="card-img-top pb-3  galleryPicture" src="../assets/images/gallery/{{ picture.imgName }}"
@@ -29,8 +29,8 @@
                     </div>
                 </div>
             {% else %}
-                <li class="addPicture">Aucune image à afficher</li>
+                <div class="addPicture">Aucune image à afficher</div>
             {% endfor %}
-        </li>
-    </ul>
+        </div>
+    </div>
 {% endblock %}
