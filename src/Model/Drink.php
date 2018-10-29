@@ -1,27 +1,27 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: wcs
- * Date: 23/10/17
- * Time: 10:57
- * PHP version 7
+ * User: wilder16
+ * Date: 17/10/18
+ * Time: 06:37
  */
 
 namespace Model;
 
 /**
- * Class Item
- *
+ * Class Drink
+ * @package Model
  */
-class Item
+class Drink
 {
+
     /**
-     * @var int
+     * @int
      */
     private $id;
 
     /**
-     * @var string
+     * @string
      */
     private $title;
 
@@ -33,32 +33,34 @@ class Item
         return $this->id;
     }
 
+
     /**
-     * @param mixed $id
-     *
-     * @return Item
+     * @param int $id
+     * @return Drink
      */
-    public function setId($id): Item
+    public function setId(int $id) : Drink
     {
         $this->id = $id;
 
         return $this;
     }
 
+
+
     /**
-     * @return mixed
+     * @return string
      */
-    public function getTitle(): string
+    public function getTitle()
     {
         return $this->title;
     }
 
+
     /**
-     * @param mixed $title
-     *
-     * @return Item
+     * @param string $title
+     * @return Drink
      */
-    public function setTitle($title):Item
+    public function setTitle(string $title) : Drink
     {
         $this->title = $title;
 

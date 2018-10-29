@@ -1,28 +1,17 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: wcs
- * Date: 23/10/17
- * Time: 10:57
- * PHP version 7
+ * User: patricia
+ * Date: 11/10/18
+ * Time: 10:58
  */
 
 namespace Model;
 
-/**
- * Class Item
- *
- */
-class Item
+class Event
 {
-    /**
-     * @var int
-     */
     private $id;
 
-    /**
-     * @var string
-     */
     private $title;
 
     /**
@@ -36,9 +25,9 @@ class Item
     /**
      * @param mixed $id
      *
-     * @return Item
+     * @return Event
      */
-    public function setId($id): Item
+    public function setId($id): Event
     {
         $this->id = $id;
 
@@ -56,9 +45,9 @@ class Item
     /**
      * @param mixed $title
      *
-     * @return Item
+     * @return Event
      */
-    public function setTitle($title):Item
+    public function setTitle($title):Event
     {
         $this->title = $title;
 
