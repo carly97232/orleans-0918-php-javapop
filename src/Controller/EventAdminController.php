@@ -63,6 +63,7 @@ class EventAdminController extends AbstractController
      */
     public function add()
     {
+
         $errors = $userData = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -76,7 +77,7 @@ class EventAdminController extends AbstractController
                 $eventManager = new EventManager($this->getPdo());
                 $event = new Event();
                 $event->setTitle($userData['title']);
-                $event->setDate($userData['date']);
+                $event->setDate(new \DateTime($userData['date']));
                 $event->setComment($userData['comment']);
                 $id = $eventManager->insert($event);
                 header('Location: /admin/eventAdmin/add');

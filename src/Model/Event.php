@@ -67,13 +67,13 @@ class Event
      */
     public function getDate(): \DateTime
     {
-        return new \DateTime($this->date);
+        return $this->date;
     }
 
     /**
      * @param \DateTime $date
      */
-    public function setDate(string $date): void
+    public function setDate(\DateTime $date): void
     {
         $this->date = $date;
     }
