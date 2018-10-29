@@ -17,7 +17,7 @@ class ContactController extends AbstractController
     /**
      * @return array
      */
-    private function sendMail()
+    private function sendMail(): array
     {
         $errors = [];
         $userData = $_POST;
@@ -66,7 +66,7 @@ class ContactController extends AbstractController
      * @throws \Twig_Error_Runtime
      * @throws \Twig_Error_Syntax
      */
-    public function index()
+    public function index():string
     {
         return $this->twig->render('Contact/index.html.twig', ['errors' => $this->sendMail()]);
     }

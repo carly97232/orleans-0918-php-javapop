@@ -3,16 +3,9 @@
 {% block titre_de_page %}Contact{% endblock %}
 {% block banner %}banner2{% endblock %}
 {% block content %}
-<div class="container p-tb-150 p-b-150">
-    {% if mailSent is not empty %}
-        <div class="mailSent">{{ mailSent }}</div>
-    {% endif %}
-    {% if mailNotSent is not empty %}
-        <div class="mailNotSent">{{ mailNotSent }}</div>
-    {% endif %}
-
-    <div class="row justify-content-between">
-        <div class="col-md-6">
+<div class="container-fluid">
+    <div class="row justify-content-around">
+        <div class="col-md-4">
             <form method="post" action="">
                     <ul>
                         {% for error in errors %}
@@ -42,7 +35,7 @@
                 <button id="sendMessageButton" class="btn btn-primary btn-primary-contact btn-xl text-uppercase btn-form" type="submit">Envoyer</button>
             </form>
         </div>
-        <div class="col-md-6 prestation">
+        <div class="col-md-5 prestation">
             <ul class="list-unstyled">
                 <li class="media">
                     <img class="mr-3" src="http://www.javapop.fr/ressources/img/event_location.jpg" height="150px" alt="Generic placeholder image">
