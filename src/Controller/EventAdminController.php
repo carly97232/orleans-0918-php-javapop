@@ -49,8 +49,6 @@ class EventAdminController extends AbstractController
             }
         }
         return $errorsForm;
-        header('Location: /admin/eventAdmin/add');
-        exit();
     }
 
 
@@ -82,7 +80,6 @@ class EventAdminController extends AbstractController
                 $event->setComment($userData['comment']);
                 $id = $eventManager->insert($event);
                 header('Location: /admin/eventAdmin/add');
-                exit();
             }
         }
         return $this->twig->render('EventAdmin/add.html.twig', ['errors' => $errors]);
