@@ -33,7 +33,7 @@ class EventAdminController extends AbstractController
      * @param array $userData
      * @return array
      */
-    private function check(array $userData)
+    private function check(array $userData):array
     {
         $errorsForm = [];
 
