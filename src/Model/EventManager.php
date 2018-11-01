@@ -41,4 +41,29 @@ class EventManager extends AbstractManager
             return $this->pdo->lastInsertId();
         }
     }
+
+    /**
+     * @return array
+     */
+    public function selectAll($field = '', $order = 'ASC') : array
+    {
+        $events=[];
+        $query = 'SELECT * FROM ' . $this->table;
+        if ($field) {
+            $query .= ' ORDER BY ' . $field . ' ' . $order;
+        }
+        $results=$this->pdo->query($query, \PDO::FETCH_ASSOC)->fetchAll();
+
+
+        foreach ($results as $e) {
+            $event=new Event();
+            $event->setTitle($e['title']);
+            $event->setDate(\DateTime::createFromFormat('Y-m-d', $e['date']));
+            if (!empty($e['comment'])) {
+                $event->setComment($e['comment']);
+            }
+            $events[]=$event;
+        }
+        return $events;
+    }
 }
