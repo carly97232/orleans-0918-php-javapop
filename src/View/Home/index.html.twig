@@ -5,6 +5,29 @@
 
 {% block titre_de_page %}<img src="/assets/images/logos/javapop-live.png" alt="logo live javapop">{% endblock %}
 
+    {% block header %}
+        {% include 'navbar.html.twig' %}
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                {% for home in homes %}
+                    {% set view='' %}
+                    {% if loop.index is even %}
+
+                    <div class="carousel-item active">
+                        <p class="carousel-content">Le {{ home.date }} , venez nombreux voir {{ home.title }}</p>
+                    </div>
+                        {% else %}
+                    <div class="carousel-item ">
+                        <p class="carousel-content">Le {{ home.date }} , venez nombreux voir {{ home.title }}</p>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endblock %}
+
+
 {% block content %}
     <div class="container-fluid menuclic">
         <div class="row">

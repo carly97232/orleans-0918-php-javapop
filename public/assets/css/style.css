@@ -176,3 +176,21 @@ footer p
     border-color: transparent;
 }
 
+.carousel-content {
+    font-weight: bold;
+    font-size: 3em;
+    color:orangered;
+    text-align: center;
+    padding-bottom: 0;
+
+}
+
+.carousel {
+    left: 25%;
+    width: 50%;
+    height: auto;
+    padding: 50px;
+    position: relative;
+}
+
+

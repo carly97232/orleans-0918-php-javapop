@@ -8,6 +8,8 @@
 
 namespace Controller;
 
+use Model\HomeManager;
+
 /**
  * Class ArtistController
  *
@@ -16,6 +18,8 @@ class HomeController extends AbstractController
 {
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig', ['homeBackImg'=>'home']);
+        $homeManager = new HomeManager($this->getPdo());
+        $homes = $homeManager->selectClosedEvent();
+        return $this->twig->render('Home/index.html.twig', ['homeBackImg'=>'home','homes' => $homes]);
     }
 }
