@@ -24,11 +24,17 @@ section
 }
 .pageStandard h1
 {
-    color:orangered;
+    background: linear-gradient(to right, #F7E81F 0%, orangered, red 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: table;
     white-space: nowrap;
     text-align: center;
-    font-size: 10vh;
+    font-size: 12vh;
+    //text-shadow: 10px 6px #000000;
+    //font-family: 'Righteous', cursive;
+    font-family: 'Fredoka One', cursive;
+
 }
 h1:before, h1:after {
     content: "";
@@ -40,6 +46,7 @@ h1:before, h1:after {
 .banner1
 {
     height: 40vh;
+
     background-image: url("../images/img-bg/evenements2.jpeg");
 }
 .banner2
@@ -54,11 +61,12 @@ h1:before, h1:after {
     background-image: url("../images/img-bg/localisation-bg.jpg");
 }
 
-.banner3
+.banner4
 {
     height: 40vh;
-    background-image: url("../images/img-bg/carteboissons-bg.jpg");
+    background-image: url("../images/img-bg/carte-bg.jpg");
 }
+
 
 .location p
 {
