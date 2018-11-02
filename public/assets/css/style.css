@@ -183,7 +183,7 @@ footer p
     color:orangered;
     text-align: center;
     padding-bottom: 0;
-    background: -webkit-linear-gradient(left, yellow 0% , orangered, red 100%);
+    background: -webkit-linear-gradient(left, yellow 0% , orangered 70%, red 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -192,7 +192,7 @@ footer p
     left: 25%;
     width: 50%;
     height: auto;
-    padding-top: 30px;
+    padding-top: 25px;
     position: relative;
 }
 

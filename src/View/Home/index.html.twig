@@ -15,11 +15,11 @@
                     {% if loop.index is even %}
 
                     <div class="carousel-item active">
-                        <p class="carousel-content">Le {{ home.date }} , venez nombreux voir {{ home.title }}</p>
+                        <p class="carousel-content">Le {{ home.date }} <br/> Venez nombreux voir {{ home.title }}</p>
                     </div>
                         {% else %}
                     <div class="carousel-item ">
-                        <p class="carousel-content">Le {{ home.date }} , venez nombreux voir {{ home.title }}</p>
+                        <p class="carousel-content">Le {{ home.date }} <br/>  {{ home.title }} en concert!</p>
                     </div>
                     {% endif %}
                 {% endfor %}
