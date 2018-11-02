@@ -12,6 +12,7 @@ section
 {
       padding: 1em;
 }
+
 .pageStandard
 {
     margin: 0;
@@ -139,7 +140,7 @@ footer p
 }
 .section-heading
 {
-    margin-top: 150px;
+    margin-top: 80px;
 
 }
 .home
@@ -178,18 +179,20 @@ footer p
 
 .carousel-content {
     font-weight: bold;
-    font-size: 3em;
+    font-size: 2em;
     color:orangered;
     text-align: center;
     padding-bottom: 0;
-
+    background: -webkit-linear-gradient(left, yellow 0% , orangered, red 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .carousel {
     left: 25%;
     width: 50%;
     height: auto;
-    padding: 50px;
+    padding-top: 30px;
     position: relative;
 }
 
