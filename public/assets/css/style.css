@@ -202,5 +202,6 @@ footer span
 
 footer span:hover
 {
-    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
 }
