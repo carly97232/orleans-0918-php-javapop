@@ -41,7 +41,5 @@ class GalleryAdminController extends AbstractController
         $pictureManager->delete($_POST['id']);
         unlink("assets/images/gallery/" .$_POST['imgName']);
         header('Location: /admin/galleryAdmin');
-
     }
-
 }
