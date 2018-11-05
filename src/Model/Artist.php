@@ -70,16 +70,16 @@ class Artist
         return $this;
     }
     /**
-     * @return string
+     * @return boolean
      */
-    public function getLocal(): string
+    public function getLocal(): bolean
     {
         return $this->local;
     }
     /**
-     * @param string $local
+     * @param boolean $local
      */
-    public function setLocal(string $local): string
+    public function setLocal(boolean $local): boolean
     {
         $this->local = $local;
     }
@@ -101,17 +101,17 @@ class Artist
     }
 
     /**
-     * @return string
+     * @return boolean
      */
-    public function getFavorite(): string
+    public function getFavorite(): boolean
     {
         return $this->favorite;
     }
 
     /**
-     * @param string $favorite
+     * @param boolean $favorite
      */
-    public function setFavorite(string $favorite): string
+    public function setFavorite(boolean $favorite): boolean
     {
         $this->favorite = $favorite;
     }
