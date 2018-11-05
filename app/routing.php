@@ -44,4 +44,14 @@ $routes = [
         ['index', '/admin/galleryAdmin', 'GET'],
         ['delete', '/admin/galleryAdmin', 'POST'],
     ],
+
+    'EventAdmin' => [ // Controller
+        ['index', '/admin/eventAdmin/index', 'GET'], // action, url, method
+    ],
+
+
+    'DrinkAdmin' => [ // Controller
+        ['index', '/admin/drinkAdmin/index', 'GET'], // action, url, method
+    ],
+
 ];
