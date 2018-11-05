@@ -20,7 +20,9 @@ $routes = [
         ['show', '/item/{id:\d+}', 'GET'], // action, url, method
         ['delete', '/item/delete/{id:\d+}', 'GET'], // action, url, method
     ],
-
+    'Drink' => [ // Controller
+        ['index', '/drink', 'GET'], // action, url, method
+    ],
     'Admin' => [ // Controller
         ['admin', '/admin', 'GET'], // action, url, method
     ],
@@ -38,9 +40,18 @@ $routes = [
         ['index', '/gallery', 'GET'],
     ],
 
+    'GalleryAdmin' => [
+        ['index', '/admin/galleryAdmin', 'GET'],
+    ],
+
     'EventAdmin' => [ // Controller
         ['index', '/admin/eventAdmin/index', 'GET'], // action, url, method
         ['update', '/admin/eventAdmin/update/{id:\d+}', ['GET', 'POST']], // action, url, method
+    ],
+
+
+    'DrinkAdmin' => [ // Controller
+        ['index', '/admin/drinkAdmin/index', 'GET'], // action, url, method
     ],
 
 ];

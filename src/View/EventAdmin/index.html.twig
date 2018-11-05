@@ -27,7 +27,7 @@
              {% for event in events %}
              <tr>
                  <td>{{ event.title }}</td>
-                 <td>{{ event.date|date("m/d/Y") }}</td>
+                 <td>{{ event.date|date("d/m/Y") }}</td>
                  <td>{{ event.comment }}</td>
                  <td class="p-3"><a href="" class="btn btn-danger">Supprimer</a></td>
                  <td class="p-3"><a href="/admin/eventAdmin/update/{{ event.id }}" class="btn btn-secondary" role="button" aria-pressed="true">Modifier</a></td>
