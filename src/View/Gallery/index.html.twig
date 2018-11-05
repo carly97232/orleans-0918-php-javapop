@@ -6,13 +6,13 @@
     <div>
         <div class="row card_galery">
             {% for picture in pictures %}
-                <div class="col-lg-3 col-xs-12">
+                <div class="col-lg-3 col-xs-12 buttonPic">
+                    <button type="button" class="imgModal" data-toggle="modal"
+                            data-target="#exampleModal{{ picture.id }}">
+
                     <img class="card-img-top pb-3  galleryPicture" src="../assets/images/gallery/{{ picture.imgName }}"
                          alt="images des evenements de la javapop"/>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#exampleModal{{ picture.id }}">
-                        Agrandir l'image
+                        <div class="overPic">Cliquez pour agrandir</div>
                     </button>
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal{{ picture.id }}" tabindex="-1" role="dialog"
