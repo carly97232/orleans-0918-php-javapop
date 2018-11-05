@@ -45,9 +45,10 @@ class Event
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(int $id): Event
     {
         $this->id = $id;
+        return $this;
     }
 
     /**
@@ -61,9 +62,10 @@ class Event
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(string $title): Event
     {
         $this->title = $title;
+        return $this;
     }
 
     /**
@@ -95,8 +97,9 @@ class Event
     /**
      * @param string $comment
      */
-    public function setComment(string $comment): void
+    public function setComment(string $comment): Event
     {
         $this->comment = $comment;
+        return $this;
     }
 }
