@@ -120,8 +120,8 @@ h1:before, h1:after {
 
 footer
 {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    margin-top: 2%;
 }
 footer p
 {
@@ -129,15 +129,12 @@ footer p
     padding: 0;
     font-size: 1em;
 }
-
-.btn-primary {
+.btn-primary
+{
     background-color: #fe4d12;
-    border-color: white;
+    border-color: black;
     border-radius: 15px;
-    margin-bottom: 50px;
-    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-
+    background-image: linear-gradient(to top right, #feab00, #F50023);
 }
 .menuclic
 {
@@ -181,6 +178,23 @@ footer p
 {
     background-color: transparent;
     border-color: transparent;
+}
+@media (min-width:992px){
+    .bulles
+    {
+        width: 20%;
+        position: absolute;
+        margin-left: 15%;
+        margin-top: 2%;
+    }
+}
+.btn
+{
+    position: relative;
+    border: black solid 4px;
+    border-bottom: black solid 10px;
+    border-right: black solid 10px;
+    margin-top: 5%;
 }
 
 p
