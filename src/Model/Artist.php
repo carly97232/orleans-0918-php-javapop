@@ -43,9 +43,9 @@ class Artist
         return $this->id;
     }
     /**
-     * @param mixed $id
+     * @param int $id
      *
-     * @return Artist
+     * @return int
      */
     public function setId(int $id): int
     {
@@ -53,16 +53,16 @@ class Artist
         return $this;
     }
     /**
-     * @return mixed
+     * @return string
      */
     public function getName(): string
     {
         return $this->name;
     }
     /**
-     * @param mixed $name
+     * @param string $name
      *
-     * @return Artist
+     * @return string
      */
     public function setName(string $name):string
     {
@@ -70,14 +70,14 @@ class Artist
         return $this;
     }
     /**
-     * @return mixed
+     * @return string
      */
     public function getLocal(): string
     {
         return $this->local;
     }
     /**
-     * @param mixed $local
+     * @param string $local
      */
     public function setLocal(string $local): string
     {
@@ -85,7 +85,7 @@ class Artist
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getPicture(): string
     {
@@ -93,7 +93,7 @@ class Artist
     }
 
     /**
-     * @param mixed $picture
+     * @param string $picture
      */
     public function setPicture(string $picture): string
     {
@@ -101,7 +101,7 @@ class Artist
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getFavorite(): string
     {
@@ -109,7 +109,7 @@ class Artist
     }
 
     /**
-     * @param mixed $favorite
+     * @param string $favorite
      */
     public function setFavorite(string $favorite): string
     {
