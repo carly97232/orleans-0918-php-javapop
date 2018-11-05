@@ -23,7 +23,7 @@ class Artist
      */
     private $name;
     /**
-     * @var string
+     * @var boolean
      */
     private $local;
     /**
