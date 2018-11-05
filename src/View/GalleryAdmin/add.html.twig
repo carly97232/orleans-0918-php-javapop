@@ -5,15 +5,15 @@
     <form action="" class="addPicture" enctype="multipart/form-data" method="post">
         <input type="file" id='upload' name="upload[]"  multiple="multiple" />
         <input type="hidden" value="{{ picture.id }}" name="id">
-        <input type="hidden" value="{{ picture.name }}" name="title">
+        <input type="hidden" value="{{ picture.imgName }}" name="name">
         <input type="submit" value="Valider" name="submit">
     </form>
     <a href="/galeryadmin">Revenir à la galerie</a>
 
-    {% if error%}
+    {% if errors%}
         <div class="alert alert-danger">
             <ul>
-                <li>{{ error.name }}</li>
+                <li>{{ errors.name }}</li>
             </ul>
         </div>
     {% endif %}
