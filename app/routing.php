@@ -45,10 +45,13 @@ $routes = [
         ['index', '/gallery', 'GET'],
     ],
 
+    'GalleryAdmin' => [
+        ['index', '/admin/galleryAdmin', 'GET'],
+    ],
+
 
     'DrinkAdmin' => [ // Controller
         ['index', '/admin/drinkAdmin/index', 'GET'], // action, url, method
     ],
-
 
 ];
