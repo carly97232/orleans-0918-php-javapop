@@ -72,7 +72,7 @@ class Artist
     /**
      * @return boolean
      */
-    public function getLocal(): bolean
+    public function getLocal(): boolean
     {
         return $this->local;
     }
