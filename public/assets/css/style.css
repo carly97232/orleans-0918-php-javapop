@@ -181,6 +181,8 @@ footer p
 {
     background-color: transparent;
     border-color: transparent;
-
 }
-
+.cancelDelete
+{
+    color: white;
+}
