@@ -26,7 +26,12 @@ $routes = [
     'Admin' => [ // Controller
         ['admin', '/admin', 'GET'], // action, url, method
     ],
-  
+
+    'EventAdmin' => [ // Controller
+        ['index', '/admin/eventAdmin/index', 'GET'], // action, url, method
+        ['add', '/admin/eventAdmin/add', ['GET', 'POST']], // action, url, method
+    ],
+
     'Location' => [ // Controller
         ['index', '/location', 'GET'], // action, url, method
     ],
@@ -44,13 +49,10 @@ $routes = [
         ['index', '/admin/galleryAdmin', 'GET'],
     ],
 
-    'EventAdmin' => [ // Controller
-        ['index', '/admin/eventAdmin/index', 'GET'], // action, url, method
-    ],
-
 
     'DrinkAdmin' => [ // Controller
         ['index', '/admin/drinkAdmin/index', 'GET'], // action, url, method
     ],
+
 
 ];
