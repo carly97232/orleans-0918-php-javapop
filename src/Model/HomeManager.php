@@ -23,12 +23,5 @@ class HomeManager extends AbstractManager
         parent::__construct(self::TABLE, $pdo);
     }
 
-    public function selectClosedEvent()
-    {
-        $query = 'SELECT * FROM ' . $this->table .' WHERE date>NOW()
-                                                  ORDER BY date ASC
-                                                  LIMIT 3 ';
 
-        return $this->pdo->query($query, \PDO::FETCH_ASSOC)->fetchAll();
-    }
 }

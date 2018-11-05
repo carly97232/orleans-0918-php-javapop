@@ -10,16 +10,16 @@
 
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                {% for home in homes %}
+                {% for closedEvent in closedEvents %}
                     {% set view='' %}
                     {% if loop.index is even %}
 
                     <div class="carousel-item active">
-                        <p class="carousel-content">Le {{ home.date }} <br/> Venez nombreux voir {{ home.title }}</p>
+                        <p class="carousel-content">Le {{ closedEvent.date }} <br/> Venez nombreux voir {{ closedEvent.title }}</p>
                     </div>
                         {% else %}
                     <div class="carousel-item ">
-                        <p class="carousel-content">Le {{ home.date }} <br/>  {{ home.title }} en concert!</p>
+                        <p class="carousel-content">Le {{ closedEvent.date }} <br/>  {{ closedEvent.title }} en concert!</p>
                     </div>
                     {% endif %}
                 {% endfor %}
