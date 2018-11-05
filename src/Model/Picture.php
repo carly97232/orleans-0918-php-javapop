@@ -52,9 +52,8 @@ class Picture
 
     /**
      * @param string $imgName
-     * @return string
      */
-    public function setImgName(string $imgName): string
+    public function setImgName(string $imgName): void
     {
         $this->imgName = $imgName;
     }

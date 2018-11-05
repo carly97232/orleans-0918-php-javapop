@@ -42,6 +42,7 @@ $routes = [
 
     'GalleryAdmin' => [
         ['index', '/admin/galleryAdmin', 'GET'],
+        ['addPic', '/admin/galleryAdmin/add', ['GET','POST']],
     ],
 
     'EventAdmin' => [ // Controller
