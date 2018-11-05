@@ -31,9 +31,8 @@ section
     white-space: nowrap;
     text-align: center;
     font-size: 12vh;
-    //text-shadow: 10px 6px #000000;
-    //font-family: 'Righteous', cursive;
     font-family: 'Fredoka One', cursive;
+    margin-top: 0.3em;
 
 }
 h1:before, h1:after {
@@ -46,7 +45,6 @@ h1:before, h1:after {
 .banner1
 {
     height: 40vh;
-
     background-image: url("../images/img-bg/evenements2.jpeg");
 }
 .banner2
