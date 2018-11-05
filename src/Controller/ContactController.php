@@ -24,7 +24,8 @@ class ContactController extends AbstractController
         $errorsForm = [];
         if (empty($userData['lastName'])) {
             $errorsForm['lastName'] = 'Veuillez renseigner votre "Nom".';
-        } elseif (!preg_match("#[a-zA-ZÀÁÂÃÄàáâãäÒÓÔÕÖòóôõöÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ' ]$#", $userData['lastName'])) {
+        } elseif (!preg_match("#[a-zA-ZÀÁÂÃÄàáâãäÒÓÔÕÖòóôõöÈÉÊËèéêëÇç
+        ÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ' ]$#", $userData['lastName'])) {
             $errorsForm['lastname'] = 'Veuillez remplir le champ "Nom" uniquement avec des caractères autorisés';
         }
         if (empty($userData['email'])) {
@@ -34,7 +35,8 @@ class ContactController extends AbstractController
         }
         if (empty($userData['message'])) {
             $errors['message'] = 'Veuillez écrire un Message.';
-        } elseif (!preg_match(" #[a-zA-ZÀÁÂÃÄàáâãäÒÓÔÕÖòóôõöÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ)(,;.?!/-:\"%' ]$# ", $userData['message'])) {
+        } elseif (!preg_match(" #[a-zA-ZÀÁÂÃÄàáâãäÒÓÔÕÖòóôõöÈÉÊËèéêëÇç
+        ÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ)(,;.?!/-:\"%' ]$# ", $userData['message'])) {
             $errorsForm['message'] = 'Veuillez écrire un Message sans caractères spéciaux.';
         }
         return $errorsForm;
@@ -63,9 +65,7 @@ class ContactController extends AbstractController
         $result = $mailer->send($message);
 
         return $result;
-
     }
-
 
     /**
      * @return string
@@ -89,7 +89,5 @@ class ContactController extends AbstractController
             }
         }
         return $this->twig->render('Contact/index.html.twig', ['errors' => $errors, 'post' => $userData]);
-
     }
-
 }
