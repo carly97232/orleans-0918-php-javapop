@@ -10,7 +10,7 @@ body
 
 section
 {
-      padding: 1em;
+    padding-bottom: 6em;
 }
 .pageStandard
 {
@@ -129,6 +129,50 @@ footer p
     padding: 0;
     font-size: 1em;
 }
+.prestation{
+    padding-left: 5vw;
+    padding-top: 20px;
+}
+.formulaire h5 {
+    color: orangered;
+}
+.formulaire .container-fluid {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.formulaire .text-right {
+    padding-right: 1vw;
+}
+.border-media {
+    border-bottom: 2px solid orangered;
+    width: 13vw;
+}
+.selectSujet{
+    width: 100%;
+}
+.btn-primary:hover
+{
+    background-color: #fec810;
+}
+.btn-primary-contact{
+    background-color: #fe6410;
+    border-color: #fe6410;
+}
+.messageForm{
+    height: 20vh;
+}
+textarea.form-control{
+    height: 20vh;
+}
+.formRow{
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+}
+
+.errorsForm {
+    color: orangered;
+}
+
 .btn-primary
 {
     background-color: #fe4d12;
@@ -186,6 +230,7 @@ footer p
     background-color: transparent;
     border-color: transparent;
 }
+
 .imgModal:hover
  {
     opacity: 1;
@@ -229,3 +274,4 @@ p
     font-family: 'Dosis', sans-serif;
     font-size: 1.2em;
 }
+
