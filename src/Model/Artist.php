@@ -31,7 +31,7 @@ class Artist
      */
     private $picture;
     /**
-     * @var string
+     * @var boolean
      */
     private $favorite;
 
