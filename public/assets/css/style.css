@@ -169,10 +169,35 @@ footer p
     height: 20vw;
     width: 20vw;
 
+
 }
-.modalPicture
+.overPic
 {
+    display: none;
+
+}
+.imgModal
+{
+    opacity: 0.8;
     background-color: transparent;
     border-color: transparent;
 }
-
+.imgModal:hover
+ {
+    opacity: 1;
+ }
+.imgModal:hover .overPic
+{
+    position: absolute;
+    top:25%;
+    left: 20%;
+    right: 20%;
+    background-color: transparent;
+    opacity: 1;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px orangered;
+    display: block;
+    font-size: 4vh;
+    font-weight: bold;
+}
