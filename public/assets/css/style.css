@@ -127,6 +127,7 @@ footer p
 {
     color: orangered;
     padding: 0;
+    font-size: 1em;
 }
 
 .btn-primary {
@@ -182,3 +183,9 @@ footer p
     border-color: transparent;
 }
 
+p
+{
+    color: #FFFFFF;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.2em;
+}
