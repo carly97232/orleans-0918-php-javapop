@@ -10,7 +10,8 @@ body
 
 section
 {
-    padding-bottom: 6em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 .pageStandard
 {
@@ -132,6 +133,9 @@ h1:before, h1:after {
 
     .panelright
     { margin-left: 60px; }
+
+    .teaser
+    {padding-bottom: 18em;}
 }
 
 footer
