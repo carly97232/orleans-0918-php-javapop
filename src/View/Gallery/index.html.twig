@@ -29,44 +29,5 @@
         {% endfor %}
 
     </div>
-    <!-- Grid row -->
-
-
-
-
-
-   {#
-    <div>
-        <div class="row card_galery">
-            {% for picture in pictures %}
-                <div class="col-lg-3 col-xs-12 buttonPic">
-                    <button type="button" class="imgModal" data-toggle="modal"
-                            data-target="#exampleModal{{ picture.id }}">
-
-                    <img class="card-img-top pt-3  galleryPicture img-fluid" src="../assets/images/gallery/{{ picture.imgName }}"
-                         alt="images des evenements de la javapop"/>
-                        <div class="overPic">Cliquez pour agrandir</div>
-                    </button>
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal{{ picture.id }}" tabindex="-1" role="dialog"
-                         aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-dialog-centered modalPicture">
-                                <img src="../assets/images/gallery/{{ picture.imgName }}"
-                                     alt="images des evenements de la javapop"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% else %}
-                <div class="addPicture">Aucune image à afficher</div>
-            {% endfor %}
-        </div>
-    </div>
-    #}
-
-
-
-
 
 {% endblock %}
