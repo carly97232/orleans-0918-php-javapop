@@ -10,7 +10,7 @@
             {% for artist in artists %}
                 <div class="artspace col-lg-6">
                     <div class="row m-2">
-                        <div class="artistlg col-lg-3"><img class="imgart card-img-top" style="width: 150px; height:150px" src="{{ artist.picture }}" alt="Artiste"></a></div>
+                        <div class="artistlg col-lg-3"><img class="imgart card-img-top imgArtist" src="{{ artist.picture }}" alt="Artiste"></a></div>
                         <div class="artistlg col-lg-5">
                             <p class="name" style="font-weight: bold">{{ artist.name }}</p>
                             {% if artist.favorite == true %}

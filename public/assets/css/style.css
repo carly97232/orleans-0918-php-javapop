@@ -504,3 +504,9 @@ footer a:hover
     font-weight: bold;
     cursor: pointer;
 }
+
+.imgArtist
+{
+    width: 150px;
+    height: 150px;
+}
