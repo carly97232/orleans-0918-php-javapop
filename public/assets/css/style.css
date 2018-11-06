@@ -10,7 +10,8 @@ body
 
 section
 {
-    padding-bottom: 6em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .pageStandard
@@ -117,6 +118,25 @@ h1:before, h1:after {
         margin-left:15vw;
     }
 
+    header
+    { margin-top: 6em; }
+
+    .pageStandard h1
+    {
+        font-size: 3em;
+    }
+    section
+    {
+        padding-top: 1em;
+        padding-bottom: 1em;
+
+    }
+
+    .panelright
+    { margin-left: 60px; }
+
+    .teaser
+    {padding-bottom: 18em;}
 }
 
 footer
@@ -244,6 +264,37 @@ textarea.form-control{
 }
 
 
+.modal-content
+{
+    margin: 1em;
+    text-align: left;
+}
+
+.modal-content h1
+{
+   font-size: 2em;
+}
+.modal-content h3
+{
+    font-size: 1em;
+}
+.modal-content p
+{
+    font-size: 0.5em;
+}
+
+footer span
+{
+    text-decoration-line: underline;
+}
+
+footer span:hover
+{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
 .carousel-content {
     font-weight: bold;
     font-size: 2em;
@@ -262,6 +313,7 @@ textarea.form-control{
     padding-top: 25px;
     position: relative;
 }
+
 
 
 .imgModal:hover
