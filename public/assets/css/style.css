@@ -195,9 +195,11 @@ textarea.form-control{
     background-image: url("../images/img-bg/header-bg.jpg");
 }
 /* Picture by Math*/
-.addPicture
+.deletePicture
 {
-    color: orangered;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
 }
 .card_galery
 {
@@ -214,21 +216,30 @@ textarea.form-control{
 }
 .galleryPicture
 {
-    height: 20vw;
+    height: auto;
     width: 20vw;
 
 
 }
-.overPic
+.galleryAdmin
 {
-    display: none;
-
+    height: 10vw;
+    width: 10vw;
+}
+.modalPicture
+{
+    background-color: transparent;
+    border-color: transparent;
 }
 .imgModal
 {
     opacity: 0.8;
     background-color: transparent;
     border-color: transparent;
+}
+.cancelDelete
+{
+    color: white;
 }
 
 .imgModal:hover
@@ -274,4 +285,3 @@ p
     font-family: 'Dosis', sans-serif;
     font-size: 1.2em;
 }
-
