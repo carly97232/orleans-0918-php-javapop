@@ -12,6 +12,7 @@ section
 {
     padding-bottom: 6em;
 }
+
 .pageStandard
 {
     margin: 0;
@@ -187,7 +188,7 @@ textarea.form-control{
 }
 .section-heading
 {
-    margin-top: 150px;
+    margin-top: 80px;
 
 }
 .home
@@ -195,9 +196,11 @@ textarea.form-control{
     background-image: url("../images/img-bg/header-bg.jpg");
 }
 /* Picture by Math*/
-.addPicture
+.deletePicture
 {
-    color: orangered;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
 }
 .card_galery
 {
@@ -214,15 +217,20 @@ textarea.form-control{
 }
 .galleryPicture
 {
-    height: 20vw;
+    height: auto;
     width: 20vw;
 
 
 }
-.overPic
+.galleryAdmin
 {
-    display: none;
-
+    height: 10vw;
+    width: 10vw;
+}
+.modalPicture
+{
+    background-color: transparent;
+    border-color: transparent;
 }
 .imgModal
 {
@@ -230,6 +238,63 @@ textarea.form-control{
     background-color: transparent;
     border-color: transparent;
 }
+.cancelDelete
+{
+    color: white;
+}
+
+
+.modal-content
+{
+    margin: 1em;
+    text-align: left;
+}
+
+.modal-content h1
+{
+   font-size: 2em;
+}
+.modal-content h3
+{
+    font-size: 1em;
+}
+.modal-content p
+{
+    font-size: 0.5em;
+}
+
+footer span
+{
+    text-decoration-line: underline;
+}
+
+footer span:hover
+{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.carousel-content {
+    font-weight: bold;
+    font-size: 2em;
+    color:orangered;
+    text-align: center;
+    padding-bottom: 0;
+    background: -webkit-linear-gradient(left, yellow 0% , orangered 70%, red 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carousel {
+    left: 25%;
+    width: 50%;
+    height: auto;
+    padding-top: 25px;
+    position: relative;
+}
+
+
 
 .imgModal:hover
  {
