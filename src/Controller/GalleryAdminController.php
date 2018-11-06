@@ -37,7 +37,6 @@ class GalleryAdminController extends AbstractController
     private function pictureVerification()
     {
         $errors = [];
-        if (isset($_POST['submit'])) {
             if (count($_FILES['upload']['name']) > 0) {
                 for ($i = 0; $i < count($_FILES['upload']['name']); $i++) {
                     $size = filesize($_FILES['upload']['tmp_name'][$i]);
@@ -53,17 +52,17 @@ class GalleryAdminController extends AbstractController
                     }
                 }
             }
-        }
+
         return $errors;
     }
 
     public function addPic()
     {
-        $errors = $this->pictureVerification();
-
-        if (empty($errors)) {
-            if (isset($_POST['submit'])) {
-                for ($i = 0; $i < count($_FILES['upload']['name']); $i++) {
+            $errors = [];
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $errors = $this->pictureVerification();
+                if (empty($errors)) {
+                    for ($i = 0; $i < count($_FILES['upload']['name']); $i++) {
                     $tmpFilePath = $_FILES['upload']['tmp_name'][$i];
                     $shortName = $_FILES['upload']['name'][$i];
                     $filePath = "assets/images/gallery/" . 'image' . date('d-m-Y-H-i-s')
