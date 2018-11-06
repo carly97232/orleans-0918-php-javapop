@@ -292,6 +292,7 @@ footer span:hover
 {
     font-weight: bold;
     cursor: pointer;
+    color: #fed136;
 }
 
 
@@ -358,8 +359,7 @@ footer span:hover
     margin-top: 5%;
 }
 
-p
-{
+p {
     color: #FFFFFF;
     font-family: 'Dosis', sans-serif;
     font-size: 1.2em;
@@ -422,14 +422,29 @@ link, .nav-tabs .nav-link.active
 }
 .hoverDrink
 {
+    color: white;
     font-size: 1.8em;
 }
 .drinkFonts
 {
     font-size: 1.2em;
 }
-.mobileRow
-{
+.mobileRow {
     margin-right: -110px;
     margin-left: -60px;
 }
+.burgerNav
+{
+    background-color: #181818;
+}
+footer a
+{
+    color: orangered;
+    text-decoration-line: underline;
+}
+footer a:hover
+{
+    font-weight: bold;
+    cursor: pointer;
+}
+
