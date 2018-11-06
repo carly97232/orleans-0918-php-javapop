@@ -11,11 +11,12 @@ namespace Controller;
 use Model\EventManager;
 
 /**
- * Class ArtistController
- *
+ * Class HomeController
+ * @package Controller
  */
 class HomeController extends AbstractController
 {
+
     public function index()
     {
         $eventManager = new EventManager($this->getPdo());
