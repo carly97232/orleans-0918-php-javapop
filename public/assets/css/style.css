@@ -360,7 +360,35 @@ p
     font-size: 1.2em;
 }
 
-header
+link, .nav-tabs .nav-link.active
 {
-
+    color: white;
+    background-image: linear-gradient(to top right, #feab00, #F50023);
+    border-color: orangered;
 }
+.nav-tabs
+{
+    border-bottom: 1px solid orangered;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+
+    border-color: #ff450080;
+    background-color: #ff45001a;
+}
+.hoverDrink:hover
+{
+    color: white;
+}
+.hoverDrink
+{
+    font-size: 1.8em;
+}
+.drinkFonts
+{
+    font-size: 1.2em;
+}
+.mobileRow
+{
+    margin-right: -110px;
+    margin-left: -60px;
+
