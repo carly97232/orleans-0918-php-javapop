@@ -25,7 +25,7 @@ class EventManager extends AbstractManager
     }
 
 
-    public function selectClosedEvent()
+    public function selectNextEvent()
     {
         $query = 'SELECT * FROM ' . $this->table .' WHERE date>NOW()
                                                   ORDER BY date ASC
