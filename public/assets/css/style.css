@@ -63,7 +63,7 @@ h1:before, h1:after {
 {
     height: 40vh;
 
-    background-image: url("../images/img-bg/artistes-bg.jpg");
+    background-image: url("../images/img-bg/artistes_bg.jpg");
 }
 
 .banner4
@@ -505,9 +505,16 @@ footer a:hover
     cursor: pointer;
 }
 
+
 .adminTable
 {
    margin-left: 3em;
 }
 
+
+.imgArtist
+{
+    width: 150px;
+    height: 150px;
+}
 
