@@ -72,14 +72,14 @@ class Artist
     /**
      * @return boolean
      */
-    public function getLocal(): boolean
+    public function getLocal(): bool
     {
         return $this->local;
     }
     /**
      * @param boolean $local
      */
-    public function setLocal(boolean $local): boolean
+    public function setLocal(bool $local)
     {
         $this->local = $local;
     }
@@ -95,7 +95,7 @@ class Artist
     /**
      * @param string $picture
      */
-    public function setPicture(string $picture): string
+    public function setPicture(string $picture)
     {
         $this->picture = $picture;
     }
@@ -103,7 +103,7 @@ class Artist
     /**
      * @return boolean
      */
-    public function getFavorite(): boolean
+    public function getFavorite(): bool
     {
         return $this->favorite;
     }
@@ -111,7 +111,7 @@ class Artist
     /**
      * @param boolean $favorite
      */
-    public function setFavorite(boolean $favorite): boolean
+    public function setFavorite(bool $favorite):
     {
         $this->favorite = $favorite;
     }
