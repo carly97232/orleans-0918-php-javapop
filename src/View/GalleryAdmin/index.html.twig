@@ -3,13 +3,45 @@
 {% block title %}Gallery Admin{% endblock %}
 {% block titre_de_page %}Administrateur{% endblock %}
 {% block content %}
+    {% block admin %}{% endblock %}
     <div>
         <div class="row card_galery">
             {% for picture in pictures %}
-                <div class="col-lg-3 col-xs-12">
-                    <img class="card-img-top pb-3  galleryPicture" src="../assets/images/gallery/{{ picture.imgName }}"
+                <div class="col-lg-2 col-xs-12">
+                    <img class="card-img-top pb-3  galleryAdmin" src="../assets/images/gallery/{{ picture.imgName }}"
                          alt="images des evenements de la javapop"/>
+
+
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#exampleModal{{ picture.id }}">
+                        Supprimer l'image
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal{{ picture.id }}" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered " role="document">
+                            <div class="modal-content modalPicture">
+                                <div class="modal-body">
+                                    <div>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span class="cancelDelete" aria-hidden="true">&times;</span>
+                                        </button>
+                                        <form action="" method="POST">
+                                            <input type="hidden" value="{{ picture.imgName }}" name="imgName">
+                                            <input type="hidden" value="{{ picture.id }}" name="id">
+                                            <input type="submit" class="deletePicture" value="⚠⚠⚠ Confirmer la supression de l'image ⚠⚠⚠" name="submit">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
             {% else %}
                 <div class="addPicture">Aucune image à afficher</div>
             {% endfor %}

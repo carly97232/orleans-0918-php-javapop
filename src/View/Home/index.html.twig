@@ -5,6 +5,29 @@
 
 {% block titre_de_page %}<img src="/assets/images/logos/javapop-live.png" alt="logo live javapop">{% endblock %}
 
+    {% block header %}
+        {% include 'navbar.html.twig' %}
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                {% for nextEvent in nextEvents %}
+                    {% set view='' %}
+                    {% if loop.index is even %}
+
+                    <div class="carousel-item active">
+                        <p class="carousel-content">Le {{ nextEvent.date|date ('d/m/Y') }} <br/> Venez nombreux voir {{ nextEvent.title }}</p>
+                    </div>
+                        {% else %}
+                    <div class="carousel-item ">
+                        <p class="carousel-content">Le {{ nextEvent.date|date ('d/m/Y') }} <br/>  {{ nextEvent.title }} en concert!</p>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endblock %}
+
+
 {% block content %}
     <div class="container-fluid menuclic">
         <div class="row"><img class="bulles" src="https://i.goopics.net/8nQnn.jpeg">
