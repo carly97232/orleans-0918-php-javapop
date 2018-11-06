@@ -8,14 +8,19 @@
 
 namespace Controller;
 
+use Model\EventManager;
+
 /**
- * Class ArtistController
- *
+ * Class HomeController
+ * @package Controller
  */
 class HomeController extends AbstractController
 {
+
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig', ['homeBackImg'=>'home']);
+        $eventManager = new EventManager($this->getPdo());
+        $nextEvents = $eventManager->selectNextEvent();
+        return $this->twig->render('Home/index.html.twig', ['homeBackImg'=>'home','nextEvents' => $nextEvents]);
     }
 }
