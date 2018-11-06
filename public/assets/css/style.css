@@ -11,7 +11,6 @@ body
 section
 {
     padding-top: 2em;
-    padding-bottom: 2em;
 }
 
 .pageStandard
@@ -34,7 +33,7 @@ section
     text-align: center;
     font-size: 12vh;
     font-family: 'Fredoka One', cursive;
-    margin-top: 0.3em;
+    margin-top: 0em;
 
 }
 h1:before, h1:after {
@@ -148,7 +147,6 @@ h1:before, h1:after {
 footer
 {
     position: relative;
-    margin-top: 2%;
 }
 footer p
 {
@@ -440,6 +438,16 @@ p {
         -webkit-column-width: 100%;
         -moz-column-width: 100%;
         column-width: 100%;
+    }
+    .section-heading img
+    {
+        width: 6em;
+        height: auto;
+    }
+    .carousel-content
+    {
+        font-size: 1.2em;
+        padding-top: 1em;
     }
 }
 
