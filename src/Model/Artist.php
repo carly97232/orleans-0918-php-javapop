@@ -38,6 +38,7 @@ class Artist
      */
     private $favorite;
 
+
     /**
      * @return int
      */
@@ -45,16 +46,18 @@ class Artist
     {
         return $this->id;
     }
+
     /**
      * @param int $id
      *
      * @return int
      */
-    public function setId($id): int
+    public function setId(int $id)
     {
         $this->id = $id;
         return $this;
     }
+
     /**
      * @return string
      */
@@ -62,16 +65,18 @@ class Artist
     {
         return $this->name;
     }
+
     /**
      * @param string $name
      *
      * @return string
      */
-    public function setName($name): string
+    public function setName(string $name)
     {
         $this->name = $name;
         return $this;
     }
+
     /**
      * @return boolean
      */
@@ -79,10 +84,11 @@ class Artist
     {
         return $this->local;
     }
+
     /**
      * @param boolean $local
      */
-    public function setLocal($local)
+    public function setLocal(bool $local)
     {
         $this->local = $local;
     }
@@ -98,7 +104,7 @@ class Artist
     /**
      * @param string $picture
      */
-    public function setPicture($picture)
+    public function setPicture(string $picture)
     {
         $this->picture = $picture;
     }
@@ -114,10 +120,9 @@ class Artist
     /**
      * @param boolean $favorite
      */
-    public function setFavorite($favorite)
+
+    public function setFavorite(bool $favorite)
     {
         $this->favorite = $favorite;
     }
-
-
 }
