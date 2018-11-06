@@ -116,6 +116,22 @@ h1:before, h1:after {
         margin-left:15vw;
     }
 
+    header
+    { margin-top: 6em; }
+
+    .pageStandard h1
+    {
+        font-size: 3em;
+    }
+    section
+    {
+        padding-top: 1em;
+        padding-bottom: 1em;
+
+    }
+
+    .panelright
+    { margin-left: 60px; }
 }
 
 footer
@@ -275,3 +291,7 @@ p
     font-size: 1.2em;
 }
 
+header
+{
+
+}
