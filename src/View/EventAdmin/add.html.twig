@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Ajouter un nouvel événement</h1>
+
+        <div class="row">
+        <p class="text-primary col-4">Les champs indiqués par une * sont obligatoires.</p>
+        <p class="text-danger justify-content-center">
+            {% if errors is not empty %}
+                {% for error in errors %}{{ error }}{% endfor %}
+            {% endif %}
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <form method="post" class="text-white "  >
+
+                <div class="m-2">
+                    <label class="col-3" for="title">Titre de l'événement *</label>
+                    <input class="col-8 h-15 p-3" type="text" id="title" value="{{ event.title }}" name="title" required="required">
+                </div>
+                <div class="m-2">
+                    <label class="col-3" for="date">Date de l'événement *</label>
+                    <input class="col-8 h-15 p-3" type="date" id="date" value="{{ event.date }}" name="date" required="required"  >
+                </div>
+                <div class="m-2">
+                    <label class="col-3" for="comment">Présentation de l'événement</label>
+                    <input class="col-8 h-15 p-3" type="text" id="comment" value="{{ event.comment }}" name="comment">
+                </div>
+                <div class="d-flex justify-content-center m-2">
+                    <input type="submit" value="Valider">
+                    <input type="reset" value="Effacer">
+                </div>
+            </form>
+        </div>
+        <div class="col-3 d-flex align-items-center">
+            <i><a href="/event">retour à la page Evénements</a></i>
+
+        </div>
+    </div>
+
+{% endblock %}
