@@ -2,9 +2,10 @@
 /**
  * Created by PhpStorm.
  * User: patricia
- * Date: 06/11/18
- * Time: 13:19
+ * Date: 24/10/18
+ * Time: 16:57
  */
+
 namespace Filter;
 
 class Text implements FilterInterface

@@ -1,6 +1,10 @@
 <?php
 namespace Model;
 
+/**
+ * Class Event
+ * @package Model
+ */
 class Event
 {
     /**
@@ -20,6 +24,16 @@ class Event
      */
     private $comment;
     /**
+     * @var \DateTime
+     */
+    private $date;
+
+    /**
+     * @var string
+     */
+    private $comment;
+
+    /**
      * @return int
      */
     public function getId(): int
@@ -29,9 +43,10 @@ class Event
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(int $id): Event
     {
         $this->id = $id;
+        return $this;
     }
     /**
      * @return string
@@ -43,10 +58,12 @@ class Event
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(string $title): Event
     {
         $this->title = $title;
+        return $this;
     }
+
     /**
      * @return \DateTime
      */
@@ -54,13 +71,17 @@ class Event
     {
         return new \DateTime($this->date);
     }
+
     /**
      * @param \DateTime $date
+     * @return Event
      */
-    public function setDate(string $date): void
+    public function setDate(\DateTime $date): Event
     {
         $this->date = $date;
+        return $this;
     }
+
     /**
      * @return string
      */
@@ -71,8 +92,9 @@ class Event
     /**
      * @param string $comment
      */
-    public function setComment(string $comment): void
+    public function setComment(string $comment): Event
     {
         $this->comment = $comment;
+        return $this;
     }
 }

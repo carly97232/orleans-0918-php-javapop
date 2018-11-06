@@ -27,10 +27,34 @@
              {% for event in events %}
              <tr>
                  <td>{{ event.title }}</td>
-                 <td>{{ event.date|date("m/d/Y") }}</td>
+                 <td>{{ event.date|date("d/m/Y") }}</td>
                  <td>{{ event.comment }}</td>
-                 <td class="p-3"><a href="" class="btn btn-danger">Supprimer</a></td>
-                 <td class="p-3"><a href="/admin/eventAdmin/update/{{ event.id }}" class="btn btn-secondary" role="button" aria-pressed="true">Modifier</a></td>
+                 <td class="p-3"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal{{ event.id }}">Supprimer</button>
+                     <div class="modal fade" id="Modal{{ event.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                         <div class="modal-dialog modal-dialog-centered" role="document">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                                     <h5 class="modal-title pl-1" id="exampleModalLabel">Confirmation de la suppression</h5>
+                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                         <span aria-hidden="true">&times;</span>
+                                     </button>
+                                 </div>
+                                 <div class="modal-body">
+                                     <p>Souhaitez-vous vraiment supprimer: {{ event.title }} à la date du {{ event.date|date("d/m/Y")}} ?</p>
+                                 </div>
+                                 <div class="modal-footer">
+                                     <form action="" method="post" role="form">
+                                         <input type="hidden"  name="deleteEvent" value="{{ event.id }}" >
+                                         <button type="submit" class="btn btn-danger" name="delete">Supprimer</button>
+                                     </form>
+                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+
+                 </td>
+                 <td class="p-3"><a href="" class="btn btn-warning">Modifier</a></td>
              </tr>
              {% endfor %}
              </tbody>
