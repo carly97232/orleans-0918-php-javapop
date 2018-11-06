@@ -60,6 +60,12 @@ h1:before, h1:after {
 
     background-image: url("../images/img-bg/localisation-bg.jpg");
 }
+.bannerArtist
+{
+    height: 40vh;
+
+    background-image: url("../images/img-bg/artistes-bg.jpg");
+}
 
 .banner4
 {
@@ -215,6 +221,48 @@ textarea.form-control{
 {
     background-image: url("../images/img-bg/header-bg.jpg");
 }
+.imgart
+{
+    width:250px;
+    height:250px;
+    border-radius: 50%;
+}
+.local
+{
+    width: 50px;
+
+}
+.favorite
+{
+    width: 50px;
+}
+.artspace
+{
+    text-align: center;
+    margin-bottom: 2%;
+}
+.picture
+{
+    width: 50%;
+    margin-bottom: 10%;
+    margin-left: 25%;
+}
+.name
+{
+    font-size: 40px;
+    color: #fe4e06;
+    margin-left: 1vw;
+}
+.artist
+{
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+.artistlg
+{
+    margin-left: 5%;
+}
+.addPicture
 /* Picture by Math*/
 .deletePicture
 {
@@ -433,6 +481,7 @@ link, .nav-tabs .nav-link.active
     margin-right: -110px;
     margin-left: -60px;
 }
+
 .burgerNav
 {
     background-color: #181818;
@@ -447,4 +496,3 @@ footer a:hover
     font-weight: bold;
     cursor: pointer;
 }
-

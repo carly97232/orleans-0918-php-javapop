@@ -46,6 +46,10 @@ $routes = [
         ['index', '/event', 'GET'], // action, url, method
 
      ],
+  
+    'Artist' => [ // Controller
+        ['index', '/artist', 'GET'], // action, url, method
+    ],
 
     'Gallery' => [
         ['index', '/gallery', 'GET'],
