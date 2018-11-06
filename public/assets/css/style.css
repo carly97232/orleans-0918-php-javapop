@@ -244,6 +244,37 @@ textarea.form-control{
 }
 
 
+.modal-content
+{
+    margin: 1em;
+    text-align: left;
+}
+
+.modal-content h1
+{
+   font-size: 2em;
+}
+.modal-content h3
+{
+    font-size: 1em;
+}
+.modal-content p
+{
+    font-size: 0.5em;
+}
+
+footer span
+{
+    text-decoration-line: underline;
+}
+
+footer span:hover
+{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
 .carousel-content {
     font-weight: bold;
     font-size: 2em;
@@ -262,6 +293,7 @@ textarea.form-control{
     padding-top: 25px;
     position: relative;
 }
+
 
 
 .imgModal:hover
