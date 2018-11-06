@@ -7,10 +7,8 @@
  * PHP version 7
  */
 namespace Controller;
-
 use Model\Artist;
 use Model\ArtistManager;
-
 /**
  * Class ArtistController
  *
@@ -25,7 +23,7 @@ class ArtistController extends AbstractController
      * @throws \Twig_Error_Runtime
      * @throws \Twig_Error_Syntax
      */
-    public function index(): string
+    public function index()
     {
         $artistManager = new ArtistManager($this->getPdo());
         $artists = $artistManager->selectAll();

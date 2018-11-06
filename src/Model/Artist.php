@@ -7,84 +7,88 @@
  * PHP version 7
  */
 namespace Model;
-
 /**
  * Class ArtistAdmin
  *
  */
 class Artist
 {
-
     /**
      * @var int
      */
     private $id;
+
     /**
      * @var string
      */
     private $name;
+
     /**
-     * @var string
+     * @var boolean
      */
     private $local;
+
     /**
      * @var string
      */
     private $picture;
+
     /**
-     * @var string
+     * @var boolean
      */
     private $favorite;
 
-
+    /**
+     * @return int
+     */
     public function getId(): int
     {
         return $this->id;
     }
     /**
-     * @param mixed $id
+     * @param int $id
      *
-     * @return Artist
+     * @return int
      */
-    public function setId(int $id): int
+    public function setId($id): int
     {
         $this->id = $id;
         return $this;
     }
     /**
-     * @return mixed
+     * @return string
      */
     public function getName(): string
     {
         return $this->name;
     }
     /**
-     * @param mixed $name
+     * @param string $name
      *
-     * @return Artist
+     * @return string
      */
-    public function setName(string $name):string
+    public function setName($name): string
     {
         $this->name = $name;
         return $this;
     }
     /**
-     * @return mixed
+     * @return boolean
      */
-    public function getLocal(): string
+    public function getLocal(): bool
     {
         return $this->local;
     }
     /**
-     * @param mixed $local
+     * @param boolean $local
      */
-    public function setLocal(string $local): string
+    public function setLocal($local)
     {
         $this->local = $local;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getPicture(): string
     {
@@ -92,26 +96,28 @@ class Artist
     }
 
     /**
-     * @param mixed $picture
+     * @param string $picture
      */
-    public function setPicture(string $picture): string
+    public function setPicture($picture)
     {
         $this->picture = $picture;
     }
 
     /**
-     * @return mixed
+     * @return boolean
      */
-    public function getFavorite(): string
+    public function getFavorite(): bool
     {
         return $this->favorite;
     }
 
     /**
-     * @param mixed $favorite
+     * @param boolean $favorite
      */
-    public function setFavorite(string $favorite): string
+    public function setFavorite($favorite)
     {
         $this->favorite = $favorite;
     }
+
+
 }
