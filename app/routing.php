@@ -34,6 +34,8 @@ $routes = [
         ['index', '/admin/eventAdmin/index', 'GET'], // action, url, method
         ['add', '/admin/eventAdmin/add', ['GET', 'POST']], // action, url, method
         ['delete', '/admin/eventAdmin/index', 'POST'], // action, url, method
+        ['update', '/admin/eventAdmin/update/{id:\d+}', ['GET', 'POST']], // action, url, method
+
     ],
 
     'Location' => [ // Controller
@@ -49,7 +51,6 @@ $routes = [
         ['index', '/gallery', 'GET'],
     ],
 
-
     'GalleryAdmin' => [
         ['index', '/admin/galleryAdmin', 'GET'],
         ['delete', '/admin/galleryAdmin', 'POST'],
@@ -59,6 +60,5 @@ $routes = [
     'DrinkAdmin' => [ // Controller
         ['index', '/admin/drinkAdmin/index', 'GET'], // action, url, method
     ],
-
 
 ];

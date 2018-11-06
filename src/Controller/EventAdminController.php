@@ -97,4 +97,35 @@ class EventAdminController extends AbstractController
             }
         }
     }
+
+    /**
+     * @param int $id
+     * @return string
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
+     */
+    public function update(int $id): string
+    {
+        $eventManager = new EventManager($this->getPdo());
+        $event = $eventManager->selectOneById($id);
+
+        $errors = $userData = [];
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $userData = $_POST;
+            $textFilter = new Text();
+            $textFilter->setTexts($userData);
+            $userData = $textFilter->filter();
+            $errors = $this->check($userData);
+
+            if (empty($errors)) {
+                $event->setTitle($userData['title']);
+                $event->setDate(\DateTime::createFromFormat('Y-m-d', $userData['date']));
+                $event->setComment($userData['comment']);
+                $eventManager->update($event);
+            }
+        }
+        return $this->twig->render('EventAdmin/update.html.twig', ['event' => $event]);
+    }
 }

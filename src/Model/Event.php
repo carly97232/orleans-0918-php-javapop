@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: patricia
- * Date: 11/10/18
- * Time: 10:58
- */
-
 namespace Model;
 
 /**
@@ -18,17 +11,14 @@ class Event
      * @var int
      */
     private $id;
-
     /**
      * @var string
      */
     private $title;
-
     /**
      * @var \DateTime
      */
     private $date;
-
     /**
      * @var string
      */
@@ -41,7 +31,6 @@ class Event
     {
         return $this->id;
     }
-
     /**
      * @param int $id
      */
@@ -50,7 +39,6 @@ class Event
         $this->id = $id;
         return $this;
     }
-
     /**
      * @return string
      */
@@ -58,7 +46,6 @@ class Event
     {
         return $this->title;
     }
-
     /**
      * @param string $title
      */
@@ -94,8 +81,10 @@ class Event
         return $this->comment;
     }
 
+
     /**
      * @param string $comment
+     * @return Event
      */
     public function setComment(string $comment): Event
     {
