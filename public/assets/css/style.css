@@ -359,6 +359,10 @@ p
     font-family: 'Dosis', sans-serif;
     font-size: 1.2em;
 }
+.addPicture
+{
+    color: white;
+}
 
 link, .nav-tabs .nav-link.active
 {
@@ -391,4 +395,4 @@ link, .nav-tabs .nav-link.active
 {
     margin-right: -110px;
     margin-left: -60px;
-
+}

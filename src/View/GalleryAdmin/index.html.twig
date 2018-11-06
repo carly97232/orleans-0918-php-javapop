@@ -3,7 +3,7 @@
 {% block title %}Gallery Admin{% endblock %}
 {% block titre_de_page %}Administrateur{% endblock %}
 {% block content %}
-    {% block admin %}{% endblock %}
+    <a href="/admin/galleryAdmin/add">Ajouter une image</a>
     <div>
         <div class="row card_galery">
             {% for picture in pictures %}
@@ -27,7 +27,6 @@
                                 <div class="modal-body">
                                     <div>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span class="cancelDelete" aria-hidden="true">&times;</span>
                                         </button>
                                         <form action="" method="POST">
                                             <input type="hidden" value="{{ picture.imgName }}" name="imgName">
