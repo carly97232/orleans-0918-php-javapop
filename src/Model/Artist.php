@@ -9,7 +9,7 @@
 namespace Model;
 
 /**
- * Class ArtistAdmin
+ * Class Artist
  *
  */
 class Artist
