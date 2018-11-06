@@ -302,4 +302,8 @@ link, .nav-tabs .nav-link.active
 {
     font-size: 1.2em;
 }
-
+.mobileRow
+{
+    margin-right: -110px;
+    margin-left: -60px;
+}
