@@ -30,7 +30,6 @@ class EventController extends AbstractController
     {
         $eventManager = new EventManager($this->getPdo());
         $events = $eventManager->selectAll('date', 'DESC');
-
         return $this->twig->render('Event/index.html.twig', ['events' => $events]);
     }
 }
