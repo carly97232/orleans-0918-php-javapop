@@ -57,9 +57,8 @@ $routes = [
     'GalleryAdmin' => [
         ['index', '/admin/galleryAdmin', 'GET'],
         ['delete', '/admin/galleryAdmin', 'POST'],
-
+        ['addPic', '/admin/galleryAdmin/add', ['GET','POST']],
     ],
-
 
     'DrinkAdmin' => [ // Controller
         ['index', '/admin/drinkAdmin/index', 'GET'], // action, url, method

@@ -27,6 +27,16 @@ class PictureManager extends AbstractManager
         parent::__construct(self::TABLE, $pdo);
     }
 
+    public function insert(Picture $picture): int
+    {
+        $statement = $this->pdo->prepare("INSERT INTO $this->table (`imgName`) VALUES (:imgName)");
+        $statement->bindValue('imgName', $picture->getImgName(), \PDO::PARAM_STR);
+
+
+        if ($statement->execute()) {
+            return $this->pdo->lastInsertId();
+        }
+    }
     public function delete(int $id): void
     {
         $statement = $this->pdo->prepare("DELETE FROM $this->table WHERE id=:id");
