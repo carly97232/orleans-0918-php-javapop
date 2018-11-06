@@ -83,4 +83,14 @@ class GalleryAdminController extends AbstractController
         }
         return $this->twig->render('GalleryAdmin/add.html.twig', ['errors' => $errors]);
     }
+    /**
+     *
+     */
+    public function delete()
+    {
+        $pictureManager = new PictureManager($this->getPdo());
+        $pictureManager->delete($_POST['id']);
+        unlink("assets/images/gallery/" .$_POST['imgName']);
+        header('Location: /admin/galleryAdmin');
+    }
 }
