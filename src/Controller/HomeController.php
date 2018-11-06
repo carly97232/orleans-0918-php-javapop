@@ -19,7 +19,7 @@ class HomeController extends AbstractController
     public function index()
     {
         $eventManager = new EventManager($this->getPdo());
-        $closedEvents = $eventManager->selectClosedEvent();
-        return $this->twig->render('Home/index.html.twig', ['homeBackImg'=>'home','closedEvents' => $closedEvents]);
+        $nextEvents = $eventManager->selectClosedEvent();
+        return $this->twig->render('Home/index.html.twig', ['homeBackImg'=>'home','nextEvents' => $nextEvents]);
     }
 }
