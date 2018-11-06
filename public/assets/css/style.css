@@ -292,6 +292,7 @@ footer span:hover
 {
     font-weight: bold;
     cursor: pointer;
+    color: #fed136;
 }
 
 
@@ -394,4 +395,14 @@ link, .nav-tabs .nav-link.active
 .burgerNav
 {
     background-color: #181818;
+}
+footer a
+{
+    color: orangered;
+    text-decoration-line: underline;
+}
+footer a:hover
+{
+    font-weight: bold;
+    cursor: pointer;
 }
