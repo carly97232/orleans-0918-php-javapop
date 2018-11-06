@@ -10,8 +10,10 @@ body
 
 section
 {
-    padding-bottom: 6em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
+
 .pageStandard
 {
     margin: 0;
@@ -116,6 +118,25 @@ h1:before, h1:after {
         margin-left:15vw;
     }
 
+    header
+    { margin-top: 6em; }
+
+    .pageStandard h1
+    {
+        font-size: 3em;
+    }
+    section
+    {
+        padding-top: 1em;
+        padding-bottom: 1em;
+
+    }
+
+    .panelright
+    { margin-left: 60px; }
+
+    .teaser
+    {padding-bottom: 18em;}
 }
 
 footer
@@ -187,7 +208,7 @@ textarea.form-control{
 }
 .section-heading
 {
-    margin-top: 150px;
+    margin-top: 80px;
 
 }
 .home
@@ -241,6 +262,59 @@ textarea.form-control{
 {
     color: white;
 }
+
+
+.modal-content
+{
+    margin: 1em;
+    text-align: left;
+}
+
+.modal-content h1
+{
+   font-size: 2em;
+}
+.modal-content h3
+{
+    font-size: 1em;
+}
+.modal-content p
+{
+    font-size: 0.5em;
+}
+
+footer span
+{
+    text-decoration-line: underline;
+}
+
+footer span:hover
+{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.carousel-content {
+    font-weight: bold;
+    font-size: 2em;
+    color:orangered;
+    text-align: center;
+    padding-bottom: 0;
+    background: -webkit-linear-gradient(left, yellow 0% , orangered 70%, red 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carousel {
+    left: 25%;
+    width: 50%;
+    height: auto;
+    padding-top: 25px;
+    position: relative;
+}
+
+
 
 .imgModal:hover
  {
@@ -322,4 +396,36 @@ p
         padding-left: 1.1rem;
         padding-right: 1.1rem;
     }
+}
+link, .nav-tabs .nav-link.active
+{
+    color: white;
+    background-image: linear-gradient(to top right, #feab00, #F50023);
+    border-color: orangered;
+}
+.nav-tabs
+{
+    border-bottom: 1px solid orangered;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+
+    border-color: #ff450080;
+    background-color: #ff45001a;
+}
+.hoverDrink:hover
+{
+    color: white;
+}
+.hoverDrink
+{
+    font-size: 1.8em;
+}
+.drinkFonts
+{
+    font-size: 1.2em;
+}
+.mobileRow
+{
+    margin-right: -110px;
+    margin-left: -60px;
 }
