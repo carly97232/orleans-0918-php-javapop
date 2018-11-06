@@ -111,13 +111,13 @@ class EventAdminController extends AbstractController
             $userData = $textFilter->filter();
             $errors = $this->check($userData);
 
-            if (isset($_POST['validate'])) {
+            if (empty($errors)) {
                 $event->setTitle($userData['title']);
-                $event->setDate($userData['date']);
+                $event->setDate(new \DateTime($userData['date']));
                 $event->setComment($userData['comment']);
                 $eventManager->update($event);
             }
         }
-        return $this->twig->render('EventAdmin/update.html.twig', ['event' => $event]);
+        return $this->twig->render('EventAdmin/update.html.twig', ['event' => $event, 'errors'=>$errors]);
     }
 }
