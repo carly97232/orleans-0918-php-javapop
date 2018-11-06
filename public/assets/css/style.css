@@ -10,7 +10,7 @@ body
 
 section
 {
-      padding: 1em;
+    padding-bottom: 6em;
 }
 .pageStandard
 {
@@ -120,23 +120,65 @@ h1:before, h1:after {
 
 footer
 {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    margin-top: 2%;
 }
 footer p
 {
     color: orangered;
     padding: 0;
+    font-size: 1em;
+}
+.prestation{
+    padding-left: 5vw;
+    padding-top: 20px;
+}
+.formulaire h5 {
+    color: orangered;
+}
+.formulaire .container-fluid {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.formulaire .text-right {
+    padding-right: 1vw;
+}
+.border-media {
+    border-bottom: 2px solid orangered;
+    width: 13vw;
+}
+.selectSujet{
+    width: 100%;
+}
+.btn-primary:hover
+{
+    background-color: #fec810;
+}
+.btn-primary-contact{
+    background-color: #fe6410;
+    border-color: #fe6410;
+}
+.messageForm{
+    height: 20vh;
+}
+textarea.form-control{
+    height: 20vh;
+}
+.formRow{
+    padding-top: 2vh;
+    padding-bottom: 3vh;
 }
 
-.btn-primary {
-    background-color: #fe4d12;
-    border-color: white;
-    border-radius: 15px;
-    margin-bottom: 50px;
-    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+.errorsForm {
+    color: orangered;
+}
 
+.btn-primary
+{
+    background-color: #fe4d12;
+    border-color: black;
+    border-radius: 15px;
+    background-image: linear-gradient(to top right, #feab00, #F50023);
 }
 .menuclic
 {
@@ -177,6 +219,7 @@ footer p
     height: auto;
     width: 20vw;
 
+
 }
 .galleryAdmin
 {
@@ -188,7 +231,57 @@ footer p
     background-color: transparent;
     border-color: transparent;
 }
+.imgModal
+{
+    opacity: 0.8;
+    background-color: transparent;
+    border-color: transparent;
+}
 .cancelDelete
 {
     color: white;
+}
+
+.imgModal:hover
+ {
+    opacity: 1;
+ }
+.imgModal:hover .overPic
+{
+    position: absolute;
+    top:25%;
+    left: 20%;
+    right: 20%;
+    background-color: transparent;
+    opacity: 1;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px orangered;
+    display: block;
+    font-size: 4vh;
+    font-weight: bold;
+}
+@media (min-width:992px){
+    .bulles
+    {
+        width: 20%;
+        position: absolute;
+        margin-left: 15%;
+        margin-top: 2%;
+    }
+}
+.btn
+{
+    position: relative;
+    border: black solid 4px;
+    border-bottom: black solid 10px;
+    border-right: black solid 10px;
+    margin-top: 5%;
+}
+
+p
+{
+    color: #FFFFFF;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.2em;
 }
