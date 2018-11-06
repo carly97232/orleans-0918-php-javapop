@@ -99,27 +99,6 @@ class EventAdminController extends AbstractController
     }
 
     /**
-     * @param array $userData
-     * @return array
-     */
-    private function check(array $userData):array
-    {
-        $errorsForm = [];
-        if (empty($userData['title'])) {
-            $errorsForm[] = "Ecrire le titre de l'événement";
-        }
-        if (empty($userData["date"])) {
-            $errorsForm[] = "Ecrire la date";
-        } else {
-            $data=explode('-', $userData["date"]);
-            if (checkdate($data[1], $data[2], $data[0])==false) {
-                $errorsForm[] = "Ecrire la date au bon format";
-            }
-        }
-        return $errorsForm;
-    }
-
-    /**
      * @param int $id
      * @return string
      * @throws \Twig_Error_Loader
@@ -134,15 +113,15 @@ class EventAdminController extends AbstractController
         $errors = $userData = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                $userData = $_POST;
-                $textFilter = new Text();
-                $textFilter->setTexts($userData);
-                $userData = $textFilter->filter();
-                $errors = $this->check($userData);
+            $userData = $_POST;
+            $textFilter = new Text();
+            $textFilter->setTexts($userData);
+            $userData = $textFilter->filter();
+            $errors = $this->check($userData);
 
-            if (isset($_POST['validate'])) {
+            if (empty($errors)) {
                 $event->setTitle($userData['title']);
-                $event->setDate($userData['date']);
+                $event->setDate(\DateTime::createFromFormat('Y-m-d', $userData['date']));
                 $event->setComment($userData['comment']);
                 $eventManager->update($event);
             }

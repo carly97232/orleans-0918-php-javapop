@@ -38,6 +38,7 @@ class EventManager extends AbstractManager
 
 
         return $statement->execute();
+    }
 
 
     public function delete(int $id): void
@@ -108,5 +109,30 @@ class EventManager extends AbstractManager
             $events[]=$event;
         }
         return $events;
+    }
+
+
+    /**
+     * @param int $id
+     * @return Event
+     */
+    public function selectOneById(int $id) : Event
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("SELECT * FROM $this->table WHERE id=:id");
+        $statement->setFetchMode(\PDO::FETCH_ASSOC);
+        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+        $row = $statement->fetch();
+
+        $event = new Event();
+        $event->setId($row['id']);
+        $event->setTitle($row['title']);
+        $event->setDate(\DateTime::createFromFormat('Y-m-d', $row['date']));
+        if (!empty($row['comment'])) {
+            $event->setComment($row['comment']);
+        }
+
+        return $event;
     }
 }

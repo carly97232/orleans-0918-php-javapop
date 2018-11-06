@@ -25,7 +25,7 @@
                 </div>
                 <div class="m-2">
                     <label class="col-3" for="date">Date de l'événement *</label>
-                    <input class="col-8  p-3" type="text" id="date" value="{{ event.date|date('d-m-Y') }}" name="date" required="required"  >
+                    <input class="col-8  p-3" type="date" id="date" value="{{ event.date|date('Y-m-d') }}" name="date" required="required"  >
                 </div>
                 <div class="m-2">
                     <label class="col-3" for="comment">Présentation de l'événement</label>

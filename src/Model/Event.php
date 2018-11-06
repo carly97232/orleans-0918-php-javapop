@@ -23,15 +23,6 @@ class Event
      * @var string
      */
     private $comment;
-    /**
-     * @var \DateTime
-     */
-    private $date;
-
-    /**
-     * @var string
-     */
-    private $comment;
 
     /**
      * @return int
@@ -69,7 +60,7 @@ class Event
      */
     public function getDate(): \DateTime
     {
-        return new \DateTime($this->date);
+        return $this->date;
     }
 
     /**
@@ -89,8 +80,11 @@ class Event
     {
         return $this->comment;
     }
+
+
     /**
      * @param string $comment
+     * @return Event
      */
     public function setComment(string $comment): Event
     {
