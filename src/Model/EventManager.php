@@ -75,7 +75,5 @@ class EventManager extends AbstractManager
             $events[]=$event;
         }
         return $events;
-    }
-
-    
+    }   
 }
