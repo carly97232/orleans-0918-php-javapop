@@ -31,7 +31,17 @@ class EventManager extends AbstractManager
                                                   ORDER BY date ASC
                                                   LIMIT 3 ';
 
-        return $this->pdo->query($query, \PDO::FETCH_ASSOC)->fetchAll();
+        $results= $this->pdo->query($query, \PDO::FETCH_ASSOC)->fetchAll();
+        foreach ($results as $e) {
+            $event=new Event();
+            $event->setTitle($e['title']);
+            $event->setDate(\DateTime::createFromFormat('Y-m-d', $e['date']));
+            if (!empty($e['comment'])) {
+                $event->setComment($e['comment']);
+            }
+            $events[]=$event;
+        }
+        return $events;
     }
 
     /**
