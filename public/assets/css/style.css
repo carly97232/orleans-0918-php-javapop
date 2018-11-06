@@ -504,3 +504,10 @@ footer a:hover
     font-weight: bold;
     cursor: pointer;
 }
+
+.adminTable
+{
+   margin-left: 3em;
+}
+
+
