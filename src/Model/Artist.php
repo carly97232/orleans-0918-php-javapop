@@ -7,6 +7,7 @@
  * PHP version 7
  */
 namespace Model;
+
 /**
  * Class ArtistAdmin
  *

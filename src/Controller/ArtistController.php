@@ -7,8 +7,10 @@
  * PHP version 7
  */
 namespace Controller;
+
 use Model\Artist;
 use Model\ArtistManager;
+
 /**
  * Class ArtistController
  *
