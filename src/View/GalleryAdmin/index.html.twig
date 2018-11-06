@@ -3,14 +3,16 @@
 {% block title %}Gallery Admin{% endblock %}
 {% block titre_de_page %}Administrateur{% endblock %}
 {% block content %}
-    <a href="/admin/galleryAdmin/add">Ajouter une image</a>
+    <div class="row">
+        <a class="col-3 offset-1" href="/admin">Revenir à la page administration</a>
+        <a class="col-3 offset-1" href="/admin/galleryAdmin/add">Ajouter une image </a>
+    </div>
     <div>
         <div class="row card_galery">
             {% for picture in pictures %}
                 <div class="col-lg-2 col-xs-12">
                     <img class="card-img-top pb-3  galleryAdmin" src="../assets/images/gallery/{{ picture.imgName }}"
                          alt="images des evenements de la javapop"/>
-
 
 
                     <!-- Button trigger modal -->
@@ -31,7 +33,8 @@
                                         <form action="" method="POST">
                                             <input type="hidden" value="{{ picture.imgName }}" name="imgName">
                                             <input type="hidden" value="{{ picture.id }}" name="id">
-                                            <input type="submit" class="deletePicture" value="⚠⚠⚠ Confirmer la supression de l'image ⚠⚠⚠" name="submit">
+                                            <input type="submit" class="deletePicture"
+                                                   value="⚠⚠⚠ Confirmer la supression de l'image ⚠⚠⚠" name="submit">
                                         </form>
                                     </div>
                                 </div>
