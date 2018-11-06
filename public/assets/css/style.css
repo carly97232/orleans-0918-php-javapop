@@ -216,7 +216,7 @@ textarea.form-control{
 }
 .galleryPicture
 {
-    height: auto;
+    height: 20vw;
     width: 20vw;
 
 
@@ -246,8 +246,13 @@ textarea.form-control{
  {
     opacity: 1;
  }
+.overPic
+{
+    display: none;
+}
 .imgModal:hover .overPic
 {
+    display: block;
     position: absolute;
     top:25%;
     left: 20%;
@@ -284,4 +289,37 @@ p
     color: #FFFFFF;
     font-family: 'Dosis', sans-serif;
     font-size: 1.2em;
+}
+
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%; }
+.gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease; }
+.gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+
+@media (max-width: 450px) {
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn.filter {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+    }
 }
