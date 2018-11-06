@@ -10,6 +10,7 @@ namespace Controller;
 
 use Model\EventManager;
 use Model\Event;
+use Filter\Text;
 
 class EventAdminController extends AbstractController
 {
@@ -19,6 +20,27 @@ class EventAdminController extends AbstractController
         $events = $eventManager->selectAll('date', 'DESC');
 
         return $this->twig->render('EventAdmin/index.html.twig', ['events' => $events]);
+    }
+
+    /**
+     * @param array $userData
+     * @return array
+     */
+    private function check(array $userData):array
+    {
+        $errorsForm = [];
+        if (empty($userData['title'])) {
+            $errorsForm[] = "Ecrire le titre de l'événement";
+        }
+        if (empty($userData["date"])) {
+            $errorsForm[] = "Ecrire la date";
+        } else {
+            $data=explode('-', $userData["date"]);
+            if (checkdate($data[1], $data[2], $data[0])==false) {
+                $errorsForm[] = "Ecrire la date au bon format";
+            }
+        }
+        return $errorsForm;
     }
 
     /**
@@ -33,11 +55,19 @@ class EventAdminController extends AbstractController
         $eventManager = new EventManager($this->getPdo());
         $event = $eventManager->selectOneById($id);
 
+        $errors = $userData = [];
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $userData = $_POST;
+                $textFilter = new Text();
+                $textFilter->setTexts($userData);
+                $userData = $textFilter->filter();
+                $errors = $this->check($userData);
+
             if (isset($_POST['validate'])) {
-                $event->setTitle($_POST['title']);
-                $event->setDate($_POST['date']);
-                $event->setComment($_POST['comment']);
+                $event->setTitle($userData['title']);
+                $event->setDate($userData['date']);
+                $event->setComment($userData['comment']);
                 $eventManager->update($event);
             }
         }
