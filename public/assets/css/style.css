@@ -10,8 +10,9 @@ body
 
 section
 {
-      padding: 1em;
+    padding-top: 2em;
 }
+
 .pageStandard
 {
     margin: 0;
@@ -24,11 +25,16 @@ section
 }
 .pageStandard h1
 {
-    color:orangered;
+    background: linear-gradient(to right, #F7E81F 0%, orangered, red 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: table;
     white-space: nowrap;
     text-align: center;
-    font-size: 10vh;
+    font-size: 12vh;
+    font-family: 'Fredoka One', cursive;
+    margin-top: 0em;
+
 }
 h1:before, h1:after {
     content: "";
@@ -40,12 +46,12 @@ h1:before, h1:after {
 .banner1
 {
     height: 40vh;
-    background-image: url("../images/img-bg/evenements2.jpeg");
+    background-image: url("../images/img-bg/evenement-bg.jpg");
 }
 .banner2
 {
     height: 40vh;
-    background-image: url("../images/img-bg/carte-bg.jpg");
+    background-image: url("../images/img-bg/photo-bg.jpg");
 }
 .banner3
 {
@@ -53,11 +59,29 @@ h1:before, h1:after {
 
     background-image: url("../images/img-bg/localisation-bg.jpg");
 }
-
-.banner3
+.bannerArtist
 {
     height: 40vh;
-    background-image: url("../images/img-bg/carteboissons-bg.jpg");
+
+    background-image: url("../images/img-bg/artistes_bg.jpg");
+}
+
+.banner4
+{
+    height: 40vh;
+    background-image: url("../images/img-bg/photos-bg.jpg");
+}
+
+.banner5
+{
+    height: 40vh;
+    background-image: url("../images/img-bg/contact-bg.jpg");
+}
+
+.banner6
+{
+    height: 40vh;
+    background-image: url("../images/img-bg/carte-bg.jpg");
 }
 
 .location p
@@ -110,27 +134,87 @@ h1:before, h1:after {
         margin-left:15vw;
     }
 
+    header
+    { margin-top: 6em; }
+
+    .pageStandard h1
+    {
+        font-size: 3em;
+    }
+    section
+    {
+        padding-top: 1em;
+        padding-bottom: 1em;
+
+    }
+
+    .panelright
+    { margin-left: 60px; }
+
+    .teaser
+    {padding-bottom: 18em;}
 }
 
 footer
 {
-    position: absolute;
-    bottom: 0;
+    position: relative;
 }
 footer p
 {
     color: orangered;
     padding: 0;
+    font-size: 1em;
+}
+.prestation{
+    padding-left: 5vw;
+    padding-top: 20px;
+}
+.formulaire h5 {
+    color: orangered;
+}
+.formulaire .container-fluid {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.formulaire .text-right {
+    padding-right: 1vw;
+}
+.border-media {
+    border-bottom: 2px solid orangered;
+    width: 13vw;
+}
+.selectSujet{
+    width: 100%;
+}
+.btn-primary:hover
+{
+    background-color: #fec810;
+}
+.btn-primary-contact{
+    background-color: #fe6410;
+    border-color: #fe6410;
+}
+.messageForm{
+    height: 20vh;
+}
+textarea.form-control{
+    height: 20vh;
+}
+.formRow{
+    padding-top: 2vh;
+    padding-bottom: 3vh;
 }
 
-.btn-primary {
-    background-color: #fe4d12;
-    border-color: white;
-    border-radius: 15px;
-    margin-bottom: 50px;
-    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+.errorsForm {
+    color: orangered;
+}
 
+.btn-primary
+{
+    background-color: #fe4d12;
+    border-color: black;
+    border-radius: 15px;
+    background-image: linear-gradient(to top right, #feab00, #F50023);
 }
 .menuclic
 {
@@ -139,17 +223,61 @@ footer p
 }
 .section-heading
 {
-    margin-top: 150px;
+    margin-top: 80px;
 
 }
 .home
 {
     background-image: url("../images/img-bg/header-bg.jpg");
 }
-/* Picture by Math*/
-.addPicture
+.imgart
 {
-    color: orangered;
+    width:250px;
+    height:250px;
+    border-radius: 50%;
+}
+.local
+{
+    width: 50px;
+
+}
+.favorite
+{
+    width: 50px;
+}
+.artspace
+{
+    text-align: center;
+    margin-bottom: 2%;
+}
+.picture
+{
+    width: 50%;
+    margin-bottom: 10%;
+    margin-left: 25%;
+}
+.name
+{
+    font-size: 40px;
+    color: #fe4e06;
+    margin-left: 1vw;
+}
+.artist
+{
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+.artistlg
+{
+    margin-left: 5%;
+}
+.addPicture
+/* Picture by Math*/
+.deletePicture
+{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
 }
 .card_galery
 {
@@ -169,10 +297,240 @@ footer p
     height: 20vw;
     width: 20vw;
 
+
+}
+.galleryAdmin
+{
+    height: 10vw;
+    width: 10vw;
 }
 .modalPicture
 {
     background-color: transparent;
     border-color: transparent;
 }
+.imgModal
+{
+    opacity: 0.8;
+    background-color: transparent;
+    border-color: transparent;
+}
+.cancelDelete
+{
+    color: white;
+}
 
+
+.modal-content
+{
+    margin: 1em;
+    text-align: left;
+}
+
+.modal-content h1
+{
+   font-size: 2em;
+}
+.modal-content h3
+{
+    font-size: 1em;
+}
+.modal-content p
+{
+    font-size: 0.5em;
+}
+
+footer span
+{
+    text-decoration-line: underline;
+}
+
+footer span:hover
+{
+    font-weight: bold;
+    cursor: pointer;
+    color: #fed136;
+}
+
+
+.carousel-content {
+    font-weight: bold;
+    font-size: 2em;
+    color:orangered;
+    text-align: center;
+    padding-bottom: 0;
+    background: -webkit-linear-gradient(left, yellow 0% , orangered 70%, red 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carousel {
+    left: 25%;
+    width: 50%;
+    height: auto;
+    padding-top: 25px;
+    position: relative;
+}
+
+
+
+.imgModal:hover
+ {
+    opacity: 1;
+ }
+.overPic
+{
+    display: none;
+}
+.imgModal:hover .overPic
+{
+    display: block;
+    position: absolute;
+    top:25%;
+    left: 20%;
+    right: 20%;
+    background-color: transparent;
+    opacity: 1;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px orangered;
+    display: block;
+    font-size: 4vh;
+    font-weight: bold;
+}
+@media (min-width:992px){
+    .bulles
+    {
+        width: 20%;
+        position: absolute;
+        margin-left: 15%;
+        margin-top: 2%;
+    }
+}
+.btn
+{
+    position: relative;
+    border: black solid 4px;
+    border-bottom: black solid 10px;
+    border-right: black solid 10px;
+    margin-top: 5%;
+}
+
+p {
+    color: #FFFFFF;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.2em;
+}
+.addPicture
+{
+    color: white;
+}
+
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%; }
+.gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease; }
+.gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+
+@media (max-width: 450px) {
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+    .section-heading img
+    {
+        width: 6em;
+        height: auto;
+    }
+    .carousel-content
+    {
+        font-size: 1.2em;
+        padding-top: 1em;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn.filter {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+    }
+}
+link, .nav-tabs .nav-link.active
+{
+    color: white;
+    background-image: linear-gradient(to top right, #feab00, #F50023);
+    border-color: orangered;
+}
+.nav-tabs
+{
+    border-bottom: 1px solid orangered;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+
+    border-color: #ff450080;
+    background-color: #ff45001a;
+}
+.hoverDrink:hover
+{
+    color: white;
+}
+.hoverDrink
+{
+    color: white;
+    font-size: 1.8em;
+}
+.drinkFonts
+{
+    font-size: 1.2em;
+}
+.mobileRow {
+    margin-right: -110px;
+    margin-left: -60px;
+}
+
+.burgerNav
+{
+    background-color: #181818;
+}
+footer a
+{
+    color: orangered;
+    text-decoration-line: underline;
+}
+footer a:hover
+{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.adminTable
+{
+   margin-left: 3em;
+}
+
+
+.imgArtist
+{
+    width: 150px;
+    height: 150px;
+}
+
+.modal-text
+{
+    color: #000000;
+    font-size: 0.8em!important;
+}
