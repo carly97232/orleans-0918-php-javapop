@@ -2,32 +2,25 @@
 /**
  * Created by PhpStorm.
  * User: patricia
- * Date: 23/10/18
- * Time: 16:18
-
+ * Date: 25/10/18
+ * Time: 10:19
  */
 
 namespace Controller;
 
-use Model\Event;
 use Model\EventManager;
+use Model\Event;
 use Filter\Text;
 
 class EventAdminController extends AbstractController
 {
-
-
-    /**
-     * @return string
-     * @throws \Twig_Error_Loader
-     * @throws \Twig_Error_Runtime
-     * @throws \Twig_Error_Syntax
-     */
     public function index()
     {
-        return $this->twig->render('EventAdmin/index.html.twig');
-    }
+        $eventManager = new EventManager($this->getPdo());
+        $events = $eventManager->selectAll('date', 'DESC');
 
+        return $this->twig->render('EventAdmin/index.html.twig', ['events' => $events]);
+    }
 
     /**
      * @param array $userData
@@ -36,7 +29,6 @@ class EventAdminController extends AbstractController
     private function check(array $userData):array
     {
         $errorsForm = [];
-
         if (empty($userData['title'])) {
             $errorsForm[] = "Ecrire le titre de l'événement";
         }
@@ -121,11 +113,11 @@ class EventAdminController extends AbstractController
 
             if (empty($errors)) {
                 $event->setTitle($userData['title']);
-                $event->setDate(\DateTime::createFromFormat('Y-m-d', $userData['date']));
+                $event->setDate(new \DateTime($userData['date']));
                 $event->setComment($userData['comment']);
                 $eventManager->update($event);
             }
         }
-        return $this->twig->render('EventAdmin/update.html.twig', ['event' => $event]);
+        return $this->twig->render('EventAdmin/update.html.twig', ['event' => $event, 'errors'=>$errors]);
     }
 }

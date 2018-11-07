@@ -505,8 +505,16 @@ footer a:hover
     cursor: pointer;
 }
 
+
+.adminTable
+{
+   margin-left: 3em;
+}
+
+
 .imgArtist
 {
     width: 150px;
     height: 150px;
 }
+

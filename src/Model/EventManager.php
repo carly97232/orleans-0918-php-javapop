@@ -101,6 +101,7 @@ class EventManager extends AbstractManager
 
         foreach ($results as $e) {
             $event=new Event();
+            $event->setId($e['id']);
             $event->setTitle($e['title']);
             $event->setDate(\DateTime::createFromFormat('Y-m-d', $e['date']));
             if (!empty($e['comment'])) {
