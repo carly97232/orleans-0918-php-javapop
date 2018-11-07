@@ -3,17 +3,17 @@
 
 {% block title %}Eventadmin{% endblock %}
 {% block banner %}banner2{% endblock %}
-{% block titre_de_page %}Administration des événements{% endblock %}
+{% block titre_de_page %}Administration <br/>des événements{% endblock %}
 
 
 
 
  {% block content %}
      <div class="row">
-         <p class="btn-primary col-4 d-flex justify-content-center"><a href="">Ajouter un événement</a> </p>
+         <p class=" btn-primary offset-1 col-4 d-flex justify-content-center"><a href="/admin/eventAdmin/add">Ajouter un événement</a> </p>
      </div>
      <div class="row d-flex justify-content-center ">
-         <table class="text-primary table-bordered col-10 text-center">
+         <table class="adminTable text-primary table-bordered col-10 text-center">
              <thead >
              <tr>
                  <th scope="col">Titre</th>
@@ -54,7 +54,7 @@
                      </div>
 
                  </td>
-                 <td class="p-3"><a href="" class="btn btn-warning">Modifier</a></td>
+                 <td class="p-3"><a href="/admin/eventAdmin/update/{{ event.id }}" class="btn btn-warning">Modifier</a></td>
              </tr>
              {% endfor %}
              </tbody>
