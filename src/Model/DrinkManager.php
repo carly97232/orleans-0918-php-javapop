@@ -39,4 +39,17 @@ class DrinkManager extends AbstractManager
         $stmt->setFetchMode(\PDO::FETCH_ASSOC);
         return $stmt->fetchAll();
     }
+
+    public function insert(DrinkVolume $drinkVolume)
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("INSERT INTO $this->table (drink_id, volume_id, prix) VALUES (:drink_id, :volume_id, :prix)");
+        $statement->bindValue('drink_id', $drinkVolume->getDrinkId(), \PDO::PARAM_INT);
+        $statement->bindValue('volume_id', $drinkVolume->getVolumeId(), \PDO::PARAM_INT);
+        $statement->bindValue('prix', $drinkVolume->getPrix(), \PDO::PARAM_STR);
+
+        if ($statement->execute()) {
+            return $this->pdo->lastInsertId();
+        }
+    }
 }
