@@ -518,3 +518,8 @@ footer a:hover
     height: 150px;
 }
 
+.modal-text
+{
+    color: #000000;
+    font-size: 0.8em!important;
+}
