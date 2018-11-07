@@ -46,12 +46,12 @@ h1:before, h1:after {
 .banner1
 {
     height: 40vh;
-    background-image: url("../images/img-bg/evenements2.jpeg");
+    background-image: url("../images/img-bg/evenement-bg.jpg");
 }
 .banner2
 {
     height: 40vh;
-    background-image: url("../images/img-bg/carte-bg.jpg");
+    background-image: url("../images/img-bg/photo-bg.jpg");
 }
 .banner3
 {
@@ -69,9 +69,20 @@ h1:before, h1:after {
 .banner4
 {
     height: 40vh;
-    background-image: url("../images/img-bg/carte-bg.jpg");
+    background-image: url("../images/img-bg/photos-bg.jpg");
 }
 
+.banner5
+{
+    height: 40vh;
+    background-image: url("../images/img-bg/contact-bg.jpg");
+}
+
+.banner6
+{
+    height: 40vh;
+    background-image: url("../images/img-bg/carte-bg.jpg");
+}
 
 .location p
 {
@@ -518,3 +529,8 @@ footer a:hover
     height: 150px;
 }
 
+.modal-text
+{
+    color: #000000;
+    font-size: 0.8em!important;
+}

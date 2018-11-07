@@ -2,7 +2,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block title %}Eventadmin{% endblock %}
-{% block banner %}banner2{% endblock %}
+{% block banner %}banner1{% endblock %}
 {% block titre_de_page %}Administration <br/>des événements{% endblock %}
 
 
@@ -40,14 +40,15 @@
                                      </button>
                                  </div>
                                  <div class="modal-body">
-                                     <p>Souhaitez-vous vraiment supprimer: {{ event.title }} à la date du {{ event.date|date("d/m/Y")}} ?</p>
+                                     <p class="modal-text">Souhaitez-vous vraiment supprimer: {{ event.title }} à la date du {{ event.date|date("d/m/Y")}} ?</p>
                                  </div>
                                  <div class="modal-footer">
                                      <form action="" method="post" role="form">
-                                         <input type="hidden"  name="deleteEvent" value="{{ event.id }}" >
+                                         <input type="hidden" name="deleteEvent" value="{{ event.id }}">
                                          <button type="submit" class="btn btn-danger" name="delete">Supprimer</button>
+                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler
+                                         </button>
                                      </form>
-                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
                                  </div>
                              </div>
                          </div>
