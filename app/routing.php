@@ -63,6 +63,8 @@ $routes = [
 
     'DrinkAdmin' => [ // Controller
         ['index', '/admin/drinkAdmin/index', 'GET'], // action, url, method
+        ['add', '/admin/drinkAdmin/add', 'GET'],
+        ['insert', '/admin/drinkAdmin/insert', 'POST'],
     ],
 
 ];

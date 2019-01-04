@@ -1,0 +1,44 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Drinkadmin{% endblock %}
+{% block banner %}banner4{% endblock %}
+{% block titre_de_page %}Administration<br/>des boissons{% endblock %}
+
+
+ {% block content %}
+     <div class="row">
+         <p class="btn-primary"><a href="/admin/drinkAdmin/index">Retour</a></p>
+     </div>
+     <div class="row">
+         <form action="/admin/drinkAdmin/insert" class="drink-add" method="post">
+             <div class="form-group">
+                 <label for="type">Type de boisson</label>
+                 <select name="type" id="type" class="form-control">
+                     {% for type in types %}
+                         <option value="{{ type.id }}">{{ type.name }}</option>
+                     {% endfor %}
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label for="name">Nom de la boisson</label>
+                 <input type="text" id="name" name="name" value="" class="form-control" />
+             </div>
+             <div class="form-group">
+                 <label for="ingredients">Ingrédients (optionnel)</label>
+                 <input type="text" id="ingredients" name="ingredients" value="" class="form-control" />
+             </div>
+             <div class="form-group">
+                 <label for="prix">Prix</label>
+                 <input type="text" id="prix" name="prix" value="" class="form-control" />
+             </div>
+             <div class="form-group">
+                 <label for="volume">Volume</label>
+                 <select name="volume" id="volume" class="form-control">
+                     {% for volume in volumes %}
+                        <option value="{{ volume.id }}">{{ volume.volume }}</option>
+                     {% endfor %}
+                 </select>
+             </div>
+             <button type="submit" class="btn btn-primary">Ajouter</button>
+         </form>
+     </div>
+ {% endblock %}
