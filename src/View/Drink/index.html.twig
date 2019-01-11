@@ -1,4 +1,5 @@
 {% extends 'layout.html.twig' %}
+
 {% block banner %}banner4{% endblock %}
 {% block titre_de_page %}La carte{% endblock %}
 {% block content %}
@@ -6,8 +7,10 @@
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             {% for type, drinks in drinksByType %}
                 <li class="nav-item">
-                    <a class="mx-5 hoverDrink nav-link {{ loop.first ? 'active' }}" id="{{ type }}-tab" data-toggle="tab" href="#{{ type }}"
-                       role="tab" aria-controls="{{ type }}" aria-selected="{{ loop.first ? 'selected' }}">{{ drinks[0].type_name }}</a>
+                    <a class="mx-5 hoverDrink nav-link {{ loop.first ? 'active' }}" id="{{ type }}-tab"
+                       data-toggle="tab" href="#{{ type }}"
+                       role="tab" aria-controls="{{ type }}"
+                       aria-selected="{{ loop.first ? 'selected' }}">{{ drinks[0].type_name }}</a>
                 </li>
             {% endfor %}
         </ul>
@@ -23,12 +26,14 @@
                             {% for drink in drinks %}
                             <tr class="border-0">
                                 <td class="font-weight-bold drinkFonts border-0">
-                                    <p> {{drink.name}} <br/>
+                                    <p> {{ drink.name }} <br/>
                                         <span class="text-lowercase small">  {{ drink.ingredients }} </span>
                                     </p>
                                 </td>
                                 <td class="text-center drinkFonts border-0">{{ drink.volume }}</td>
-                                <td class="text-center drinkFonts border-0">{{ drink.prix |number_format(2, '.', ',') }} €</td>
+                                <td class="text-center drinkFonts border-0">{{ drink.prix |number_format(2, '.', ',') }}
+                                    €
+                                </td>
                                 {% endfor %}
                             </tr>
                             </tbody>

@@ -1,21 +1,21 @@
 {% extends 'layout.html.twig' %}
+
 {% block banner %} banner2 {% endblock %}
 {% block title %}Photo{% endblock %}
 {% block titre_de_page %}Photos{% endblock %}
 {% block content %}
 
-
     <!-- Grid row -->
     <div class="gallery" id="gallery">
         {% for picture in pictures %}
-        <button type="button" class="imgModal" data-toggle="modal"
-                data-target="#exampleModal{{ picture.id }}">
-        <!-- Grid column -->
-        <div class="mb-2 pics animation all 2">
-            <img class="img-fluid" src="../assets/images/gallery/{{ picture.imgName }}"
-                 alt="images des evenements de la javapop"/>
-        </div>
-        </button>
+            <button type="button" class="imgModal" data-toggle="modal"
+                    data-target="#exampleModal{{ picture.id }}">
+                <!-- Grid column -->
+                <div class="mb-2 pics animation all 2">
+                    <img class="img-fluid" src="../assets/images/gallery/{{ picture.imgName }}"
+                         alt="images des evenements de la javapop"/>
+                </div>
+            </button>
             <!-- Modal -->
             <div class="modal fade" id="exampleModal{{ picture.id }}" tabindex="-1" role="dialog"
                  aria-labelledby="exampleModalLabel" aria-hidden="true">

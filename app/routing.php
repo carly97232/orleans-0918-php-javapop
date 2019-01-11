@@ -12,20 +12,15 @@ $routes = [
     'Home' => [ // Controller
         ['index', '/', 'GET'], // action, url, method
     ],
-  
-    'Item' => [ // Controller
-        ['index', '/item', 'GET'], // action, url, method
-        ['add', '/item/add', ['GET', 'POST']], // action, url, method
-        ['edit', '/item/edit/{id:\d+}', ['GET', 'POST']], // action, url, method
-        ['show', '/item/{id:\d+}', 'GET'], // action, url, method
-        ['delete', '/item/delete/{id:\d+}', 'GET'], // action, url, method
-    ],
+
     'Contact' => [ // Controller
         ['index', '/contact', ['GET', 'POST']], // action, url, method
     ],
+
     'Drink' => [ // Controller
         ['index', '/drink', 'GET'], // action, url, method
     ],
+
     'Admin' => [ // Controller
         ['admin', '/admin', 'GET'], // action, url, method
     ],
@@ -35,7 +30,6 @@ $routes = [
         ['add', '/admin/eventAdmin/add', ['GET', 'POST']], // action, url, method
         ['delete', '/admin/eventAdmin/index', 'POST'], // action, url, method
         ['update', '/admin/eventAdmin/update/{id:\d+}', ['GET', 'POST']], // action, url, method
-
     ],
 
     'Location' => [ // Controller
@@ -44,7 +38,6 @@ $routes = [
 
     'Event' => [ // Controller
         ['index', '/event', 'GET'], // action, url, method
-
      ],
   
     'Artist' => [ // Controller
@@ -66,5 +59,4 @@ $routes = [
         ['add', '/admin/drinkAdmin/add', 'GET'],
         ['insert', '/admin/drinkAdmin/insert', 'POST'],
     ],
-
 ];

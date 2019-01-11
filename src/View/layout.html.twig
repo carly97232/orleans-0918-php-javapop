@@ -11,13 +11,17 @@
     <title>{% block title %}{% endblock %}</title>
     {% block stylesheet %}
         <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
         <!-- Custom fonts for this template -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet"> 
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+              type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet'
+              type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 
         <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Righteous" rel="stylesheet">
@@ -32,11 +36,9 @@
     <link rel="icon" href="/assets/images/favicon.png">
     <link href="/assets/css/card.css" rel="stylesheet">
 
-
 </head>
 
-<body class="pageStandard {{ homeBackImg }}" >
-
+<body class="pageStandard {{ homeBackImg }}">
 
 <header class="container-fluid bodycontainer ">
     {% block header %}{% include 'navbar.html.twig' %}{% endblock %}
@@ -52,10 +54,13 @@
 
 </section>
 <footer class="container-fluid justify-content-center">
-    <p>la Java Pop - 45 rue de la Charpenterie 45000 Orleans, Centre - <span data-toggle="modal" data-target=".bd-example-modal-lg"> Mentions Légales</span> - Design by WCS - <a href="/contact">Contact</a></p>
+    <p>la Java Pop - 45 rue de la Charpenterie 45000 Orleans, Centre - <span data-toggle="modal"
+                                                                             data-target=".bd-example-modal-lg"> Mentions Légales</span>
+        - Design by WCS - <a href="/contact">Contact</a></p>
     <!-- Large modal -->
 
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="row d-flex justify-content-left m-2 text-primary">
@@ -65,7 +70,7 @@
                         <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans
                             l'économie numérique, il est précisé aux utilisateurs du site www.javapop.fr l'identité des
                             différents intervenants dans le cadre de sa réalisation et de son suivi :<br>
-                        Propriétaire : Java Pop<br>Créateur : WCS<br></p>
+                            Propriétaire : Java Pop<br>Créateur : WCS<br></p>
                     </div>
                     <div>
                         <h3>2. Conditions generales d utilisation du site et des services proposes.</h3>
@@ -110,11 +115,15 @@
 </footer>
 
 
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
 <!-- Plugin JavaScript -->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -127,6 +136,4 @@
 <script src="js/agency.min.js"></script>
 
 </body>
-
-
 </html>

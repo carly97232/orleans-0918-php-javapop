@@ -1,18 +1,16 @@
 {% extends 'layout.html.twig' %}
+
 {% block title %}Drinkadmin{% endblock %}
 {% block banner %}banner4{% endblock %}
 {% block titre_de_page %}Administration<br/>des boissons{% endblock %}
 
-
-
-
  {% block content %}
      <div class="row">
-         <p class="btn-primary"><a href="/admin/drinkAdmin/add">Ajouter un produit</a> </p>
+         <p class="btn-primary"><a href="/admin/drinkAdmin/add">Ajouter un produit</a></p>
      </div>
      <div class="row">
          <table class="text-primary table-bordered col-8 text-center">
-             <thead >
+             <thead>
              <tr>
                  <th scope="col">Nom</th>
                  <th scope="col">volume</th>
@@ -24,7 +22,7 @@
              <tbody>
              {% for drink in drinks %}
                  <tr>
-                     <td>{{drink.name }}</td>
+                     <td>{{ drink.name }}</td>
                      <td>{{ drink.volume }}</td>
                      <td>{{ drink.prix |number_format(2, '.', ',') }}</td>
                      <th class="p-3"><a href="" class="btn btn-danger">Supprimer</a></th>
@@ -34,6 +32,4 @@
              </tbody>
          </table>
      </div>
-
-
  {% endblock %}

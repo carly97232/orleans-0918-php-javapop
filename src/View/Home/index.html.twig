@@ -1,6 +1,5 @@
 {% extends 'layout.html.twig' %}
 
-
 {% block title %}Home{% endblock %}
 
 {% block titre_de_page %}<img src="/assets/images/logos/javapop-live.png" alt="logo live javapop">{% endblock %}
@@ -14,13 +13,15 @@
                     {% set view='' %}
                     {% if loop.index is even %}
 
-                    <div class="carousel-item active">
-                        <p class="carousel-content">Le {{ nextEvent.date|date ('d/m/Y') }} <br/> Venez nombreux voir {{ nextEvent.title }}</p>
-                    </div>
-                        {% else %}
-                    <div class="carousel-item ">
-                        <p class="carousel-content">Le {{ nextEvent.date|date ('d/m/Y') }} <br/>  {{ nextEvent.title }} en concert!</p>
-                    </div>
+                        <div class="carousel-item active">
+                            <p class="carousel-content">Le {{ nextEvent.date|date ('d/m/Y') }} <br/> Venez nombreux
+                                voir {{ nextEvent.title }}</p>
+                        </div>
+                    {% else %}
+                        <div class="carousel-item ">
+                            <p class="carousel-content">Le {{ nextEvent.date|date ('d/m/Y') }}
+                                <br/> {{ nextEvent.title }} en concert!</p>
+                        </div>
                     {% endif %}
                 {% endfor %}
             </div>
@@ -32,11 +33,16 @@
     <div class="container-fluid menuclic">
         <div class="row"><img class="bulles" src="https://i.goopics.net/8nQnn.jpeg">
             <div class="col-lg-12 ">
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mr-1 ml-1" style="width: 220px; height: 69px;" href="/drink">Cartes</a>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mr-1 ml-1" style="width: 220px; height: 69px;" href="/gallery">Photos</a>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mr-1 ml-1" style="width: 220px; height: 69px;" href="/artist">Artistes</a>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mr-1 ml-1" style="width: 220px; height: 69px;" href="/event">Évènements</a>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mr-1 ml-1" style="width: 220px; height: 69px;" href="/location">Nous trouver</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mr-1 ml-1"
+                   style="width: 220px; height: 69px;" href="/drink">Cartes</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mr-1 ml-1"
+                   style="width: 220px; height: 69px;" href="/gallery">Photos</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mr-1 ml-1"
+                   style="width: 220px; height: 69px;" href="/artist">Artistes</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mr-1 ml-1"
+                   style="width: 220px; height: 69px;" href="/event">Évènements</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger mr-1 ml-1"
+                   style="width: 220px; height: 69px;" href="/location">Nous trouver</a>
             </div>
         </div>
     </div>

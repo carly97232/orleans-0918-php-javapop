@@ -29,7 +29,8 @@ class RealDrinkManager extends AbstractManager
     public function insert(RealDrink $drink)
     {
         // prepared request
-        $statement = $this->pdo->prepare("INSERT INTO $this->table (name, ingredients, type_id) VALUES (:name, :ingredients, :type_id)");
+        $statement = $this->pdo->prepare("INSERT INTO $this->table (name, ingredients, type_id) 
+                                                      VALUES (:name, :ingredients, :type_id)");
         $statement->bindValue('name', $drink->getName(), \PDO::PARAM_STR);
         $statement->bindValue('ingredients', $drink->getIngredients(), \PDO::PARAM_STR);
         $statement->bindValue('type_id', $drink->getTypeId(), \PDO::PARAM_INT);

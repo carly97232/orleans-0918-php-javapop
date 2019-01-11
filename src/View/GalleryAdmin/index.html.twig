@@ -1,57 +1,60 @@
 {% extends 'layout.html.twig' %}
+
 {% block banner %} banner2 {% endblock %}
 {% block title %}Gallery Admin{% endblock %}
 {% block titre_de_page %}Administration<br/>des photos{% endblock %}
+
 {% block content %}
     <div class="row">
         <a class="col-3 offset-1" href="/admin">Revenir à la page administration</a>
         <a class="col-3 offset-1" href="/admin/galleryAdmin/add">Ajouter une image </a>
     </div>
     <div>
-    <div class="row card_galery">
-    {% for picture in pictures %}
-        <div class="col-lg-2 col-xs-12">
-            <img class="card-img-top pb-3  galleryAdmin" src="../assets/images/gallery/{{ picture.imgName }}"
-                 alt="images des evenements de la javapop"/>
+        <div class="row card_galery">
+            {% for picture in pictures %}
+                <div class="col-lg-2 col-xs-12">
+                    <img class="card-img-top pb-3  galleryAdmin" src="../assets/images/gallery/{{ picture.imgName }}"
+                         alt="images des evenements de la javapop"/>
 
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal"
-                    data-target="#exampleModal{{ picture.id }}">
-                Supprimer l'image
-            </button>
-            <div class="modal fade" id="exampleModal{{ picture.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#exampleModal{{ picture.id }}">
+                        Supprimer l'image
+                    </button>
+                    <div class="modal fade" id="exampleModal{{ picture.id }}" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title pl-1" >Confirmation de la
-                            suppression</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p class="modal-text">Souhaitez-vous vraiment supprimer ?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <form action="" method="post" role="form">
-                            <input type="hidden" name="id" value="{{ picture.id }}">
-                            <input type="hidden" name="imgName" value="{{ picture.imgName }}">
-                            <button type="submit" class="btn btn-danger" name="delete">Supprimer</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler
-                            </button>
-                        </form>
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title pl-1">Confirmation de la
+                                        suppression</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="modal-text">Souhaitez-vous vraiment supprimer ?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <form action="" method="post" role="form">
+                                        <input type="hidden" name="id" value="{{ picture.id }}">
+                                        <input type="hidden" name="imgName" value="{{ picture.imgName }}">
+                                        <button type="submit" class="btn btn-danger" name="delete">Supprimer</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            </div>
+
+            {% else %}
+                <div class="addPicture">Aucune image à afficher</div>
+            {% endfor %}
+
         </div>
-
-    {% else %}
-        <div class="addPicture">Aucune image à afficher</div>
-    {% endfor %}
-
-    </div>
     </div>
 {% endblock %}

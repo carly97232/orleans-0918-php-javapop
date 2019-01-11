@@ -1,4 +1,5 @@
 {% extends 'layout.html.twig' %}
+
 {% block title %}Drinkadmin{% endblock %}
 {% block banner %}banner4{% endblock %}
 {% block titre_de_page %}Administration<br/>des boissons{% endblock %}
@@ -20,21 +21,21 @@
              </div>
              <div class="form-group">
                  <label for="name">Nom de la boisson</label>
-                 <input type="text" id="name" name="name" value="" class="form-control" />
+                 <input type="text" id="name" name="name" value="" class="form-control"/>
              </div>
              <div class="form-group">
                  <label for="ingredients">Ingrédients (optionnel)</label>
-                 <input type="text" id="ingredients" name="ingredients" value="" class="form-control" />
+                 <input type="text" id="ingredients" name="ingredients" value="" class="form-control"/>
              </div>
              <div class="form-group">
                  <label for="prix">Prix</label>
-                 <input type="text" id="prix" name="prix" value="" class="form-control" />
+                 <input type="text" id="prix" name="prix" value="" class="form-control"/>
              </div>
              <div class="form-group">
                  <label for="volume">Volume</label>
                  <select name="volume" id="volume" class="form-control">
                      {% for volume in volumes %}
-                        <option value="{{ volume.id }}">{{ volume.volume }}</option>
+                         <option value="{{ volume.id }}">{{ volume.volume }}</option>
                      {% endfor %}
                  </select>
              </div>
