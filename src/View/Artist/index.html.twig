@@ -1,5 +1,7 @@
 {% extends 'layout.html.twig' %}
 
+{% block title %}Artistes{% endblock %}
+
 {% block banner %}bannerArtist{% endblock %}
 {% block titre_de_page %}Artistes{% endblock %}
 
@@ -11,15 +13,15 @@
                 <div class="artspace col-lg-6">
                     <div class="row m-2">
                         <div class="artistlg col-lg-3"><img class="imgart card-img-top imgArtist"
-                                                            src="{{ artist.picture }}" alt="Artiste"></a></div>
+                                                            src="{{ artist.picture }}" alt="Artiste"></div>
                         <div class="artistlg col-lg-5">
                             <p class="name">{{ artist.name }}</p>
                             {% if artist.favorite == true %}
                                 <img class="favorite"
-                                     src="https://d3dxokg0h8luw0.cloudfront.net/assets/images/icon_coeur.png">
+                                     src="https://d3dxokg0h8luw0.cloudfront.net/assets/images/icon_coeur.png" alt="coeur">
                             {% endif %}
                             {% if artist.local == true %}
-                                <img class="local" src="https://i.goopics.net/bGXwp.png">
+                                <img class="local" src="https://i.goopics.net/bGXwp.png" alt="emblème d'orléans">
                             {% endif %}
                         </div>
                     </div>
